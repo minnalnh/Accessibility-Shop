@@ -1,11 +1,11 @@
 import Settings from './Settings';
+import * as React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
         <div className="header">
-            <h1>Clothing.com</h1>
-            <p>Find Your Own Style</p>
-            <hr></hr>
+            <h1>Art Supplies</h1>
 
             <div>
                 <Settings />
@@ -13,17 +13,22 @@ const Header = () => {
             
             <nav>
                 <ul className="navbar">
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Kids</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li>
+                        <NavLink to="/brushes">Brushes</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/paint">Paint</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/paper">Paper</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/pencils">Pencils</NavLink>
+                    </li>
                 </ul>
             </nav>
 
         </div>
-
     )
 }
 

@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+import HomePage from './components/pages/HomePage';
+import BrushesPage from './components/pages/BrushesPage';
+import PaintPage from './components/pages/PaintPage';
+import PaperPage from './components/pages/PaperPage';
+import PencilsPage from './components/pages/PencilsPage';
+import CheckoutPage from './components/pages/CheckoutPage';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Header />
       </header>
+
+      <main>
+
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/brushes" element={<BrushesPage />}/>
+          <Route path="/paper" element={<PaperPage />}/>
+          <Route path="/paint" element={<PaintPage />}/>
+          <Route path="/pencils" element={<PencilsPage />}/>
+        </Routes>
+      </main>
+
+      <footer className="footer">
+        <Footer />
+      </footer>
     </div>
+    </BrowserRouter>
   );
 }
 
