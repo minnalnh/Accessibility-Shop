@@ -58,7 +58,7 @@ header {
  background-color: #ABC7A1;
 }
 
-.main {
+.flex-container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -69,13 +69,13 @@ img {
 }
 
 .item {
+  display: block;
   flex: 1;
   margin-left: 0.5em;
   margin-right: 0.5em;
   text-align: center;
   border-radius: 5px;
   margin-top: 1em;
-  padding-bottom: 2em;
 }
 
 .settings-btn {
@@ -93,11 +93,12 @@ img {
 .settings-box {
   display: hidden;
   position: fixed;
+  top: 7em;
   right: 0;
   margin-top: -1.7em;
   height: 10em;
   width: 20em;
-  background-color: grey;
+  background-color: #DAE7D5;
   border-radius: 7px;
 }
 
@@ -107,7 +108,25 @@ img {
 }
 
 @media (min-width: 48rem) {
-  .main {
+  .flex-container {
     flex-direction: row;
   }
+}
+
+.cart-btn {
+  background-color: pink;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-btn:hover {
+  cursor: pointer;
+  
+}
+
+.product {
+  padding: 1em 1em 1em 1em;
+  background-color: white;
+  border-style: inset;
+  border-radius: 10px;
 }

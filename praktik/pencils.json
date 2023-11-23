@@ -1,0 +1,77 @@
+{
+    "pencils": [
+      {
+        "type": "Graphite Pencil",
+        "grade": "HB",
+        "brand": "Artisan Sketch",
+        "price": "19 kr"
+      },
+      {
+        "type": "Graphite Pencil",
+        "grade": "2B",
+        "brand": "Master Draftsman",
+        "price": "24 kr"
+      },
+      {
+        "type": "Colored Pencil",
+        "colors": ["Red", "Blue", "Green"],
+        "brand": "ColorBlend",
+        "price": "84 kr"
+      },
+      {
+        "type": "Colored Pencil",
+        "colors": ["Yellow", "Purple", "Orange"],
+        "brand": "Rainbow Hue",
+        "price": "99 kr"
+      },
+      {
+        "type": "Mechanical Pencil",
+        "leadSize": 0.5,
+        "brand": "Precision Draft",
+        "price": "59 kr"
+      },
+      {
+        "type": "Mechanical Pencil",
+        "leadSize": 0.9,
+        "brand": "TechWriter",
+        "price": "64 kr"
+      },
+      {
+        "type": "Charcoal Pencil",
+        "softness": "Soft",
+        "brand": "Charcoal Express",
+        "price": "37 kr"
+      },
+      {
+        "type": "Charcoal Pencil",
+        "softness": "Medium",
+        "brand": "Artistic Charcoal",
+        "price": "42 kr"
+      },
+      {
+        "type": "Watercolor Pencil",
+        "colors": ["Brown", "Green", "Blue"],
+        "brand": "AquaSketch",
+        "price": "129 kr"
+      },
+      {
+        "type": "Watercolor Pencil",
+        "colors": ["Pink", "Purple", "Turquoise"],
+        "brand": "WaterArt Pro",
+        "price": "149 kr"
+      },
+      {
+        "type": "Drawing Pencil",
+        "grade": "4B",
+        "brand": "Artistic Pro",
+        "price": "29 kr"
+      },
+      {
+        "type": "Drawing Pencil",
+        "grade": "6B",
+        "brand": "SmoothSketch",
+        "price": "34 kr"
+      }
+    ]
+  }
+  

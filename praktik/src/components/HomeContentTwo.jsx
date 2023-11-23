@@ -1,7 +1,7 @@
 
 const HomeContentTwo = () => {
     return (
-        <div className="main">
+        <div className="flex-container">
             <div className="item">
                 <div>
                     <img src="https://placehold.jp/150x150.png"></img>
