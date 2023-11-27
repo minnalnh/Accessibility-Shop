@@ -2,7 +2,7 @@
 const Footer = () => {
     return (
         <div className="footer">
-            <h3>Clothing.com</h3>
+            <h3>Art Supplies</h3>
             <a href="#">Contact us</a>
         </div>
     )

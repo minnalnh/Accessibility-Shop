@@ -1,5 +1,5 @@
-import HomeContentOne from '../HomeContentOne';
-import HomeContentTwo from '../HomeContentTwo';
+import SlideShow from '../SlideShow';
+import HomeCategories from '../HomeCategories';
 
 
 const HomePage = () => {
@@ -7,8 +7,8 @@ const HomePage = () => {
         <div>
             <h2>HomePage</h2>
 
-            <HomeContentOne />
-            <HomeContentTwo />
+            <SlideShow />
+            <HomeCategories />
 
         </div>
     );

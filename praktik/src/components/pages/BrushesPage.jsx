@@ -16,5 +16,4 @@ const BrushesPage = () => {
     );
 
 }
-
 export default BrushesPage;
