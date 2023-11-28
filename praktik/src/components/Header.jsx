@@ -5,12 +5,13 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
     return (
         <div className="header">
-            <a href="/" className="logo">Art Supplies</a>
+            <div className="flex-container">
+                <a href="/" className="logo">Art Supplies</a>
 
-            <div>
-                <Settings />
+                <div>
+                    <Settings />
+                </div>
             </div>
-            
             <nav>
                 <ul className="navbar">
                     <li>

@@ -107,12 +107,10 @@ img {
 }
 
 .settings-btn {
-  position: fixed;
   z-index: 2;
   display: block;
-  top: 0;
   right: 0;
-  border-radius: 100%;
+  border-radius: 12px;
   height: 7em;
   width: 7em;
   margin-top: 1.5em;
@@ -132,14 +130,17 @@ img {
   margin-top: -1.7em;
   height: 10em;
   width: 20em;
-  background-color: #DAE7D5;
+  background-color: #fff;
   border-radius: 7px;
+  border-style: solid;
 }
 
 .cart-btn {
   background-color: pink;
   font-size: 1rem;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cart-btn:hover {
@@ -152,12 +153,6 @@ img {
   background-color: #fff;
   border-style: inset;
   border-radius: 10px;
-}
-
-.main-img {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
 }
 
 .category {
@@ -192,17 +187,6 @@ h1, h2, h4, p, a {
   box-sizing: border-box;
 }
 
-.slideshow-container {
-  position: relative;
-}
-
-.mySlides > img {
-  width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .numbertext {
   background-color: black;
 }
@@ -215,17 +199,23 @@ h1, h2, h4, p, a {
   cursor: pointer;
   z-index: 0;
   position: absolute;
-  top: 50%;
+  top: 80%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: #fff;
+  color: #2F261D;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  background-color: black;
+  background-color: #FFF8F8;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.prev {
+  left: 0;
 }
 
 .next {
@@ -234,14 +224,14 @@ h1, h2, h4, p, a {
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  background-color: #2F261D;
 }
 
-.text {
+.slideshow-container {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
@@ -280,8 +270,37 @@ h1, h2, h4, p, a {
 }
 
 .mySlides > img {
-  max-width: 500px;
-  height: auto;
+  max-width: 1300px;
+  height: 400px;
+  background-size: cover;
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+.slideshow-text {
+  position: absolute;
+  top: 7%;
+  width: 400px;
+  left: 0;
+  background-color: #FFF8F8;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+.slideshow-caption {
+  top: 5%;
+}
+
+.slideshow-p {
+  top: 12%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.product-price {
+  text-align: center;
 }
 
 @keyframes fade {

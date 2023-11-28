@@ -5,11 +5,12 @@ const BrushesPage = () => {
     return (
         <div>
             <a className="page-title">Brushes</a>
-            <img src="https://placehold.jp/150x150.png"></img>
-            <img src="https://placehold.jp/150x150.png"></img>
+            <img src="images/main-2.jpg" alt="Painting brush getting dipped in paint"></img>
             <div className="flex-container">
                 {
-                    brushes.forEach(brush => <Product {...{brush }} />)
+                    brushes.map(brush => (
+                        <Product key={brush} {...brush} />
+                    ))
                 }
             </div>
         </div>

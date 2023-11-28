@@ -10,7 +10,7 @@ function Settings() {
 
         return (
             <div className="accessibility">
-                <button className="settings-btn" onClick={toggleBoxVisibility}>Settings</button>
+                <button className="settings-btn" onClick={toggleBoxVisibility}>Accessibility</button>
 
                 {isBoxVisible && (
                     <div className="settings-box">
