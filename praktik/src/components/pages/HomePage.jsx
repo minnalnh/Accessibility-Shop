@@ -5,7 +5,7 @@ import HomeCategories from '../HomeCategories';
 const HomePage = () => {
     return (
         <div>
-            <h2>HomePage</h2>
+            <a className="page-title">HomePage</a>
 
             <SlideShow />
             <HomeCategories />

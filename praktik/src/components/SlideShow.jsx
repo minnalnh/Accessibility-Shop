@@ -14,7 +14,7 @@ const SlideShow = () => {
     const showSlides = (n) => {
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
-        console.log(slideIndex);
+
         if(n > slides.length) {
             setSlideIndex(1);
         } else if(n < 1) {
@@ -26,7 +26,6 @@ const SlideShow = () => {
                 slides[i].style.display = "none";
             }
         }
-        console.log(slideIndex);
 
         for(let i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace("active", "");
@@ -39,30 +38,28 @@ const SlideShow = () => {
     }
 
     return (
-        <div className="flex-container slideshow-container">
-                <div className="slideshow-container">
-                <div className="mySlides fade">
-                    <div className="numbertext">1 / 3</div>
-                    <img src="../images/main.jpg" alt="Painting brush and color palette"></img>
-                    <div className="text">Caption Text</div>
-                </div>
-
-                <div className="mySlides fade">
-                    <div className="numbertext">2 / 3</div>
-                    <img src="https://placehold.jp/150x150.png"></img>
-                    <div className="text">Caption Two</div>
-                </div>
-
-                <div className="mySlides fade">
-                    <div className="numbertext">3 / 3</div>
-                    <img src="https://placehold.jp/150x150.png"></img>
-                    <div className="text">Caption Three</div>
-                </div>
-
-                <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
-                <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
+        <div className="slideshow-container">
+            <div className="mySlides fade">
+                <div className="numbertext">1 / 3</div>
+                <img src="images/main.jpg" alt="Painting brush and color palette"></img>
+                <div className="text">Caption Text</div>
             </div>
 
+            <div className="mySlides fade">
+                <div className="numbertext">2 / 3</div>
+                <img src="https://placehold.jp/150x150.png"></img>
+                <div className="text">Caption Two</div>
+            </div>
+
+            <div className="mySlides fade">
+                <div className="numbertext">3 / 3</div>
+                <img src="https://placehold.jp/150x150.png"></img>
+                <div className="text">Caption Three</div>
+            </div>
+
+            <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
+            <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
+      
             <div style={{textAlign: "center"}} className="dots">
                 <span className="dot" onclick="currentSlide(1)"></span>
                 <span className="dot" onclick="currentSlide(2)"></span>

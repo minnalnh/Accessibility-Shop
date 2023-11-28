@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
     return (
         <div className="header">
-            <h1><a href="/">Art Supplies</a></h1>
+            <a href="/" className="logo">Art Supplies</a>
 
             <div>
                 <Settings />
@@ -27,6 +27,8 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
+
+            <br />
 
         </div>
     )

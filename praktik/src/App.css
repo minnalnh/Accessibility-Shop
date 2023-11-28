@@ -4,6 +4,27 @@
   }
 }
 
+@font-face {
+  font-family: 'Yuji Syuku';
+  src: url('../public/fonts/Yuji_Syuku.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+@font-face {
+  font-family: 'Amiko-Bold';
+  src: url('../public/fonts/Amiko-Bold.tff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amiko Regular';
+  src: url('../public/fonts/Amiko-Regular.tff');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -25,7 +46,7 @@
 }
 
 body {
-  background-color: #FFFEF1;
+  background-color: #FFFEE7;
 }
 
 /* Footer */
@@ -56,6 +77,10 @@ a {
   color: #2F261D;
 }
 
+h2 {
+  text-align: center;
+}
+
 nav li a:hover {
   text-decoration: underline;
 }
@@ -68,7 +93,7 @@ header {
 .flex-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
 }
 
 img {
@@ -83,6 +108,7 @@ img {
 
 .settings-btn {
   position: fixed;
+  z-index: 2;
   display: block;
   top: 0;
   right: 0;
@@ -93,8 +119,13 @@ img {
   margin-right: 2em;
 }
 
+.settings-btn:hover {
+  cursor: pointer;
+}
+
 .settings-box {
   display: hidden;
+  z-index: 3;
   position: fixed;
   top: 7em;
   right: 0;
@@ -140,12 +171,13 @@ h1, h2, h4, p, a {
   color: #2F261D;
 }
 
-h1 {
-  font-family: './fonts/Yuji_Syuku', sans-serif;
+.logo {
+  font-family: 'Yuji Syuku', sans-serif;
+  font-size: 2rem;
 }
 
-h2 {
-  text-align: center;
+.page-title {
+  text-decoration: underline;
 }
 
 .flex-container > div > h3 {
@@ -161,9 +193,18 @@ h2 {
 }
 
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
-  margin: auto;
+}
+
+.mySlides > img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.numbertext {
+  background-color: black;
 }
 
 .mySlides {
@@ -172,6 +213,7 @@ h2 {
 
 .prev, .next {
   cursor: pointer;
+  z-index: 0;
   position: absolute;
   top: 50%;
   width: auto;
@@ -183,6 +225,7 @@ h2 {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: black;
 }
 
 .next {
@@ -218,7 +261,6 @@ h2 {
 }
 
 .dot {
-  cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -228,8 +270,18 @@ h2 {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dots {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.active {
   background-color: #717171;
+}
+
+.mySlides > img {
+  max-width: 500px;
+  height: auto;
 }
 
 @keyframes fade {

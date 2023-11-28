@@ -4,7 +4,7 @@ import Product from '../Product';
 const BrushesPage = () => {
     return (
         <div>
-            <h2>Brushes</h2>
+            <a className="page-title">Brushes</a>
             <img src="https://placehold.jp/150x150.png"></img>
             <img src="https://placehold.jp/150x150.png"></img>
             <div className="flex-container">
