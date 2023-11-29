@@ -69,6 +69,7 @@ nav li {
 
 li {
   float: left;
+  font-size: 1.1rem;
   padding-right: 1em;
   padding-left: 1em;
 }
@@ -276,11 +277,29 @@ h1, h2, h4, p, a {
 
 .prev {
   left: 0;
+  margin-left: 0.5em;
 }
 
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  margin-right: 0.5em;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2F261D;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2F261D;
 }
 
 .prev:hover, .next:hover {
