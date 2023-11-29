@@ -5,7 +5,7 @@ const BrushesPage = () => {
     return (
         <div>
             <a className="page-title">Brushes</a>
-            <img src="images/main-2.jpg" alt="Painting brush getting dipped in paint"></img>
+            <img src="images/main-2.jpg" alt="Painting brush getting dipped in paint" className="brushpage-img"></img>
             <div className="flex-container">
                 {
                     brushes.map(brush => (

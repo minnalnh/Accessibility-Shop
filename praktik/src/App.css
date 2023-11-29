@@ -55,6 +55,7 @@ footer {
   border-style: inset;
   text-align: center;
   padding-bottom: 1em;
+  background-color: #EEFFE8;
 }
 
 /* Navbar */
@@ -106,29 +107,87 @@ img {
   margin-top: 1em;
 }
 
-.settings-btn {
+.header-btn {
   z-index: 2;
-  display: block;
+  position: absolute;
   right: 0;
+  margin-left: auto;
+  margin-right: 0;
   border-radius: 12px;
-  height: 7em;
-  width: 7em;
-  margin-top: 1.5em;
-  margin-right: 2em;
+  height: 3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: 1em;
+  margin-right: 1em;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2F261D;
+  border-color: #fff;
 }
 
-.settings-btn:hover {
+.header-btn:hover {
   cursor: pointer;
+  background-color: #fff;
+  color: #2F261D;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio-container {
+  display: inline-block;
+  padding-right: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.custom-radio {
+  position: absolute;
+  right: 0;
+  margin-top: 0.1em;
+  margin-right: 3em;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+}
+
+.radio-container input:checked + .custom-radio::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.radio-label {
+  font-size: 1.1rem;
+  margin-left: 0.5em;
+}
+
+.header-btn:active {
+  text-decoration: underline;
+  background-color: #fff;
+  color: #2F261D;
+  border-color: #2F261D;
 }
 
 .settings-box {
   display: hidden;
   z-index: 3;
-  position: fixed;
+  position: absolute;
   top: 7em;
   right: 0;
-  margin-top: -1.7em;
-  height: 10em;
+  margin-top: -3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   width: 20em;
   background-color: #fff;
   border-radius: 7px;
@@ -212,6 +271,7 @@ h1, h2, h4, p, a {
   background-color: #FFF8F8;
   border-radius: 10px;
   border-style: solid;
+  border-color: #2F261D;
 }
 
 .prev {
@@ -226,6 +286,7 @@ h1, h2, h4, p, a {
 .prev:hover, .next:hover {
   color: #fff;
   background-color: #2F261D;
+  border-color: #fff;
 }
 
 .slideshow-container {
@@ -272,7 +333,6 @@ h1, h2, h4, p, a {
 .mySlides > img {
   max-width: 1300px;
   height: 400px;
-  background-size: cover;
 }
 
 .slideshow-container {
@@ -301,6 +361,11 @@ h1, h2, h4, p, a {
 
 .product-price {
   text-align: center;
+}
+
+.brushpage-img {
+  max-width: 1300px;
+  height: 400px;
 }
 
 @keyframes fade {

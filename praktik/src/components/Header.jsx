@@ -1,4 +1,5 @@
 import Settings from './Settings';
+import ShoppingBag from './ShoppingBag';
 import * as React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -7,7 +8,6 @@ const Header = () => {
         <div className="header">
             <div className="flex-container">
                 <a href="/" className="logo">Art Supplies</a>
-
                 <div>
                     <Settings />
                 </div>
@@ -27,6 +27,7 @@ const Header = () => {
                         <NavLink to="/pencils">Pencils</NavLink>
                     </li>
                 </ul>
+                <button className="header-btn">Shopping Bag</button>
             </nav>
 
             <br />

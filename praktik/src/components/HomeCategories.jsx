@@ -33,6 +33,7 @@ const HomeCategories = () => {
                     </div>
                 </div>
             </div>
+            <br />
         </div>
     )
 }

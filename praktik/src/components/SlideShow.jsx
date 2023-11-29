@@ -66,8 +66,8 @@ const SlideShow = () => {
                 </section>
             </div>
 
-            <a className="prev" onClick={() => plusSlides(-1)}>&#10094; Previous Slide</a>
-            <a className="next" onClick={() => plusSlides(1)}>Next Slide &#10095;</a>
+            <button className="prev" onClick={() => plusSlides(-1)}>&#10094; Previous Slide</button>
+            <button className="next" onClick={() => plusSlides(1)}>Next Slide &#10095;</button>
       
             <div style={{textAlign: "center"}} className="dots">
                 <span className="dot" onclick="currentSlide(1)"></span>

@@ -18,7 +18,6 @@ function App() {
       </header>
 
       <main>
-
         <Routes>
           <Route path="/" element={<HomePage />}/>
           <Route path="/brushes" element={<BrushesPage />}/>
@@ -28,7 +27,7 @@ function App() {
         </Routes>
       </main>
 
-      <footer className="footer">
+      <footer>
         <Footer />
       </footer>
     </div>
