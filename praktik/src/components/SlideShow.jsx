@@ -52,7 +52,7 @@ const SlideShow = () => {
                 <div className="numbertext">2 / 3</div>
                 <img src="https://placehold.jp/150x150.png"></img>
                 <section className="slideshow-text">
-                    <h1 className="slideshow-caption">Paint With Class</h1>
+                    <h1 className="slideshow-caption">Paint With Style</h1>
                     <p className="slideshow-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
                 </section>
             </div>
@@ -70,9 +70,9 @@ const SlideShow = () => {
             <button className="next" onClick={() => plusSlides(1)}>Next Slide &#10095;</button>
       
             <div style={{textAlign: "center"}} className="dots">
-                <span className="dot" onclick="currentSlide(1)"></span>
-                <span className="dot" onclick="currentSlide(2)"></span>
-                <span className="dot" onclick="currentSlide(3)"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
             </div>
         </div>
     )

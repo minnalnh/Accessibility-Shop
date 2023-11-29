@@ -27,6 +27,7 @@ const Header = () => {
                         <NavLink to="/pencils">Pencils</NavLink>
                     </li>
                 </ul>
+                <button className="menu-btn">Menu</button>
                 <button className="header-btn">Shopping Bag</button>
             </nav>
 
