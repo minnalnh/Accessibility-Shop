@@ -18,11 +18,11 @@ function Settings() {
 
     useEffect(() => {
         if(isChecked === "Mouse") {
-            boxRef.current.classList.add("hide-cursor");
+            boxRef.current.classList.add("disable-click");
             setCursorHidden(true);
 
         } else {
-            boxRef.current.classList.remove("hide-cursor");
+            boxRef.current.classList.remove("disable-click");
             setCursorHidden(false);
         }
 
@@ -44,9 +44,9 @@ function Settings() {
 
         return (
             <div className="accessibility">
-                <div ref={boxRef} className={`${isChecked ? 'hide-cursor' : ''}`}>test</div>
+                <div ref={boxRef} className={`${isChecked ? 'disable-click' : ''}`}></div>
                 <div className="btn-container">
-                <button className="header-btn" onClick={toggleBoxVisibility}>Accessibility Settings</button>
+                    <button className="header-btn accessibility-btn" onClick={toggleBoxVisibility}>Accessibility Settings</button>
                 </div>
 
                 {isBoxVisible && (

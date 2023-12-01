@@ -8,9 +8,7 @@ const Header = () => {
         <div className="header">
             <div className="flex-container">
                 <a href="/" className="logo">Art Supplies</a>
-                <div className="accessibility-settings">
                 <Settings />
-                </div>
             </div>
             <nav>
                 <ul className="navbar">
