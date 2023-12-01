@@ -377,6 +377,21 @@ button:hover {
   border-radius: 12px;
 }
 
+.box-ref {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.hide-cursor {
+  cursor: none;
+  border-style: solid;
+  background-color: black;
+}
+
 .slideshow-caption {
   top: 5%;
 }

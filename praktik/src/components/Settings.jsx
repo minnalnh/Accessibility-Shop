@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function Settings() {
 
     const [isBoxVisible, setBoxVisibility] = useState(false);
     const [isChecked, setIsChecked] = useState(null);
+    const [isCursorHidden, setCursorHidden] = useState(false);
+    const boxRef = useRef(null);
 
     const toggleBoxVisibility = () => {
         setBoxVisibility((prevVisibility) => !prevVisibility);
@@ -13,6 +15,14 @@ function Settings() {
         const value = event.target.value;
         setIsChecked(value);
     };
+
+    useEffect(() => {
+        if(isChecked === "Mouse") {
+            boxRef.current.classList.add("hide-cursor");
+            setCursorHidden(true);
+            console.log(boxRef);
+        }
+    }, [isChecked]);
 
     const handleButtonClick = () => {
         setBoxVisibility(false);
@@ -24,6 +34,7 @@ function Settings() {
 
         return (
             <div className="accessibility">
+                <div ref={boxRef} className={`${isChecked ? 'hide-cursor' : ''}`}>test</div>
                 <button className="header-btn" onClick={toggleBoxVisibility}>Accessibility Settings</button>
 
                 {isBoxVisible && (
@@ -64,8 +75,20 @@ function Settings() {
                 )}
             </div>
         );
-    
 
 }
 
 export default Settings;
+
+
+
+/*
+
+const box = document.querySelector(".test");
+box.classList.add("hide-cursor");
+
+.hide-cursor {
+    cursor : none;
+}
+
+*/
