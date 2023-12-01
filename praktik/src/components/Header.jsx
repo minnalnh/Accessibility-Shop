@@ -8,10 +8,12 @@ const Header = () => {
         <div className="header">
             <div className="flex-container">
                 <a href="/" className="logo">Art Supplies</a>
+                <div className="accessibility-settings">
                 <Settings />
+                </div>
             </div>
             <nav>
-                <ul className="navbar item">
+                <ul className="navbar">
                     <li>
                         <NavLink to="/brushes">Brushes</NavLink>
                     </li>
@@ -25,14 +27,11 @@ const Header = () => {
                         <NavLink to="/pencils">Pencils</NavLink>
                     </li>
                 </ul>
-                <div className="btn-container item">
+                <div className="btn-container">
                     <button className="menu-btn">Menu</button>
                     <button className="header-btn">Shopping Bag</button>
                 </div>
             </nav>
-
-            <br />
-
         </div>
     )
 }

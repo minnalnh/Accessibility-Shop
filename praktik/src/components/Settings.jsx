@@ -46,7 +46,7 @@ function Settings() {
             <div className="accessibility">
                 <div ref={boxRef} className={`${isChecked ? 'hide-cursor' : ''}`}>test</div>
                 <div className="btn-container">
-                <button className="header-btn accessibility-settings" onClick={toggleBoxVisibility}>Accessibility Settings</button>
+                <button className="header-btn" onClick={toggleBoxVisibility}>Accessibility Settings</button>
                 </div>
 
                 {isBoxVisible && (
