@@ -103,11 +103,7 @@ img {
 }
 
 .header-btn {
-  position: absolute;
   z-index: 2;
-  right: 0;
-  margin-left: auto;
-  margin-right: 0;
   border-radius: 12px;
   height: 3em;
   padding-left: 0.5em;
@@ -123,14 +119,19 @@ img {
 .menu-btn {
   height: 3em;
   border-radius: 12px;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
   margin-top: 1em;
   margin-right: 1em;
   font-size: 1rem;
   color: #fff;
   background-color: #2F261D;
   border-color: #fff;
+}
+
+.menu-btn:active {
+  border-color: #2F261D;
+  text-decoration: underline;
 }
 
 .header-btn:hover {
@@ -190,8 +191,8 @@ input[type="radio"] {
 .settings-box {
   display: hidden;
   z-index: 3;
-  position: absolute;
-  top: 7em;
+  position: fixed;
+  top: 8em;
   right: 0;
   margin-top: -3em;
   padding-top: 0.5em;
@@ -300,8 +301,14 @@ h1, h2, h4, p, a {
   font-size: 1rem;
 }
 
-.close-btn {
-  top: 0;
+.accessibility-settings {
+  position: absolute;
+  right:0;
+}
+
+.close-btn, .reset-btn {
+  display: block;
+  margin-left: 0.5em;
 }
 
 button:hover {
@@ -386,6 +393,10 @@ button:hover {
   z-index: 999;
 }
 
+.btn-container {
+  text-align: right;
+}
+
 .hide-cursor {
   cursor: none;
   border-style: solid;
@@ -425,11 +436,11 @@ button:hover {
   .navbar {
     display: block;
     list-style-type: none;
-    background-color: #EEFFE8;
   }
   
   nav li {
     float: left;
+    background-color: #EEFFE8;
   }
   
   nav li a:hover {

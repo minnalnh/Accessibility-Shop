@@ -20,10 +20,20 @@ function Settings() {
         if(isChecked === "Mouse") {
             boxRef.current.classList.add("hide-cursor");
             setCursorHidden(true);
-            console.log(boxRef);
-        }
-    }, [isChecked]);
 
+        } else {
+            boxRef.current.classList.remove("hide-cursor");
+            setCursorHidden(false);
+        }
+
+    }, [isChecked]);
+/*
+    useEffect(() => {
+        if(isChecked) {
+            console.log("icheckad");
+        }
+    })
+*/
     const handleButtonClick = () => {
         setBoxVisibility(false);
     };
@@ -35,11 +45,12 @@ function Settings() {
         return (
             <div className="accessibility">
                 <div ref={boxRef} className={`${isChecked ? 'hide-cursor' : ''}`}>test</div>
-                <button className="header-btn" onClick={toggleBoxVisibility}>Accessibility Settings</button>
+                <div className="btn-container">
+                <button className="header-btn accessibility-settings" onClick={toggleBoxVisibility}>Accessibility Settings</button>
+                </div>
 
                 {isBoxVisible && (
                     <div className="settings-box">
-                        <button className="close-btn settings-btn" onClick={handleButtonClick}>Close Settings</button>
                         <br />
                         <div className={`box ${isBoxVisible ? "" : "hidden"}`}>
                                 <label className="radio-container">
@@ -69,7 +80,10 @@ function Settings() {
                                     <span className="custom-radio"></span>
                                 </label>
                                 <hr />
-                                <button className="reset-btn settings-btn" onClick={resetSettings}>Reset Settings</button>
+                                <div className="flex-container">
+                                    <button className="close-btn settings-btn" onClick={handleButtonClick}>Close Settings</button>
+                                    <button className="reset-btn settings-btn" onClick={resetSettings}>Reset Settings</button>
+                                </div>
                         </div>
                     </div>
                 )}
@@ -79,16 +93,3 @@ function Settings() {
 }
 
 export default Settings;
-
-
-
-/*
-
-const box = document.querySelector(".test");
-box.classList.add("hide-cursor");
-
-.hide-cursor {
-    cursor : none;
-}
-
-*/

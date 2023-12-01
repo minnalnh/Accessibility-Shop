@@ -1,10 +1,9 @@
 import SlideShow from '../SlideShow';
 import HomeCategories from '../HomeCategories';
 
-
 const HomePage = () => {
     return (
-        <div>
+        <div className="test">
             <a className="page-title">HomePage</a>
 
             <SlideShow />
