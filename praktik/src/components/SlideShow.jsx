@@ -38,15 +38,19 @@ const SlideShow = () => {
         }
 
         if(slideIndex === 1) {
+            slideRef.current.classList.remove("slide-3")
             slideRef.current.classList.add("slide-1");
+            console.log(slideRef);
 
         } else if(slideIndex === 2) {
             slideRef.current.classList.remove("slide-1");
             slideRef.current.classList.add("slide-2");
+            console.log(slideRef);
 
         } else if(slideIndex === 3) {
             slideRef.current.classList.remove("slide-2");
             slideRef.current.classList.add("slide-3");
+            console.log(slideRef);
         }
     }
 

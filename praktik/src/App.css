@@ -279,9 +279,8 @@ h1, h2, h4, p, a {
   cursor: pointer;
   z-index: 0;
   position: absolute;
-  top: 80%;
+  bottom: 0;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
   color: #2F261D;
   font-weight: bold;
@@ -297,13 +296,15 @@ h1, h2, h4, p, a {
 
 .prev {
   left: 0;
-  margin-left: 0.5em;
 }
 
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-  margin-right: 0.5em;
+}
+
+.slideshow-bg {
+  background-color: #2F261D;
 }
 
 .settings-btn {
@@ -346,6 +347,7 @@ button:hover {
   padding: 8px 12px;
   bottom: 8px;
   text-align: center;
+  background-image: url('../public/images/main.jpg'); /* byt ut beroende på slide */
   max-width: 1300px;
   height: 30em;
   background-size: cover;

@@ -5,10 +5,8 @@ const HomePage = () => {
     return (
         <div className="test">
             <a className="page-title">HomePage</a>
-
             <SlideShow />
             <HomeCategories />
-
         </div>
     );
 
