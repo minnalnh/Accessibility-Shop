@@ -6,7 +6,8 @@ function Settings() {
     const [isChecked, setIsChecked] = useState(null);
     const [isClickDisabled, setClickDisabled] = useState(false);
     const [alertText, setAlertText] = useState();
-
+    const [counter, setCounter] = useState(0);
+   
     const overlayRef = useRef(null);
     const contrastRef = useRef(null);
 
@@ -17,46 +18,52 @@ function Settings() {
     const handleRadioChange = (event) => {
         const value = event.target.value;
         setIsChecked(value);
+/*
+        setCounter((prevCount) => prevCount + 1);
+
+        if(counter === 1 && value ) {
+            console.log(counter + " klickat två gånger");
+            setCounter(0);
+        }*/
     };
 
-    useEffect(() => {
-        if(isChecked === "Mouse") {
-            overlayRef.current.classList.add("disable-click");
-            contrastRef.current.classList.remove("change-contrast");
-            setAlertText("Mouse click is disabled");
-            setClickDisabled(true);
-
-        } else if(isChecked === "ColorContrast") {
-            contrastRef.current.classList.add("change-contrast");
-            overlayRef.current.classList.remove("disable-click");
-            setAlertText("The color contrast has been decreased");
-
-        } else {
-            overlayRef.current.classList.remove("disable-click");
-            contrastRef.current.classList.remove("change-contrast");
-            setAlertText("");
-            setClickDisabled(false);
-
-        }
-    }, [isChecked]);
-/*
-    useEffect(() => {
-        if(isChecked) {
-            console.log("icheckad");
-        }
-    })
-*/
     const handleButtonClick = () => {
         setBoxVisibility(false);
     };
 
     const resetSettings = () => {
         setIsChecked(null);
-    }
+    };
+
+    useEffect(() => {
+        if(isChecked === "Mouse") {
+            overlayRef.current.classList.add("disable-click");
+            contrastRef.current.classList.remove("overlay");
+            setAlertText("Mouse click is disabled");
+            setClickDisabled(true);
+
+        } else if(isChecked === "ColorContrast") {
+            contrastRef.current.classList.add("overlay");
+            overlayRef.current.classList.remove("disable-click");
+            setAlertText("The color contrast has been decreased");
+
+        } else if(isChecked === "FontSize") {
+            document.body.style.fontSize = "big";
+            setAlertText("Font size has been decreased");
+
+        } else {
+            overlayRef.current.classList.remove("disable-click");
+            contrastRef.current.classList.remove("overlay");
+            document.body.style.fontSize = "";
+            setAlertText();
+            setClickDisabled(false);
+
+        }
+    }, [isChecked]);
 
         return (
             <div className="accessibility">
-                <p className="alert-text">{alertText}</p>
+                <p className="alert-text"><strong>{alertText}</strong></p>
                 <div ref={overlayRef} className={`${isChecked ? 'disable-click' : ''}`}></div>
                 <div ref={contrastRef} className={`${isChecked ? 'change-contrast' : ''}`}></div>
                 <div className="btn-container">

@@ -4,7 +4,7 @@ const HomeCategories = () => {
         <div>
             <h2>Popular Products:</h2>
             <hr />
-            <div className="flex-container">
+            <div className="flex-container home-categories">
                 <div>
                     <h3 className="category-title">Brushes</h3>
                     <div className="category">
