@@ -11,7 +11,6 @@ function Settings() {
     const overlayRef = useRef(null);
     const contrastRef = useRef(null);
     const shadowRef = useRef(null);
-    const tabIndexRef = useRef(null);
 
     const toggleBoxVisibility = () => {
         setBoxVisibility((prevVisibility) => !prevVisibility);
@@ -45,6 +44,12 @@ function Settings() {
         setIsChecked(null);
     };
 
+    const handleKeyPress = (event) => {
+        if(event.key === "Tab") {
+            event.preventDefault();
+        }
+    }
+
     useEffect(() => {
         if(isChecked === "Mouse") {
             overlayRef.current.classList.add("disable-click");
@@ -58,13 +63,18 @@ function Settings() {
             setAlertText("Color contrast has been decreased");
 
         } else if(isChecked === "FontSize") {
-            document.body.style.fontSize = "small"; // funkar inte
+            // kod
             setAlertText("Font size has been decreased");
+
+        } else if(isChecked === "Keyboard") {
+            window.addEventListener("keydown", handleKeyPress);
+            setAlertText("Keyboard navigation is disabled");
 
         } else {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
-            document.body.style.fontSize = "";
+            window.removeEventListener("keydown", handleKeyPress);
+  
             setAlertText();
             setClickDisabled(false);
         }
@@ -76,16 +86,22 @@ function Settings() {
                 <div ref={overlayRef} className={`${isChecked ? 'disable-click' : ''}`}></div>
                 <div ref={contrastRef} className={`${isChecked ? 'change-contrast' : ''}`}></div>
                 <div ref={shadowRef}></div>
-                <div ref={tabIndexRef} tabIndex={isChecked === "Keyboard" ? -1 : 0}></div>
 
                 <div className="btn-container">
-                    <button className="header-btn accessibility-btn" onClick={toggleBoxVisibility}>Accessibility Settings</button>
+                    <button className="header-btn accessibility-btn" onClick={toggleBoxVisibility}><img src="icons/gear-solid.svg" alt="Gear" className="icon"></img>Accessibility Settings</button>
                 </div>
 
                 {isBoxVisible && (
-                    <div className="settings-box">
+                    <div className="settings-box" tabIndex="1">
                         <br />
                         <div className={`box ${isBoxVisible ? "" : "hidden"}`}>
+
+                                <label className="radio-container">
+                                <span className="radio-label">Hide alt text</span>
+                                    <input type="radio" id="hideAltText" name="setting" value="HideAltText" checked={isChecked === "HideAltText"}></input>
+                                    <span className="custom-radio"></span>
+                                </label>
+                                <hr />
 
                                 <label className="radio-container">
                                 <span className="radio-label">Hide button text</span>
@@ -123,8 +139,8 @@ function Settings() {
                                 <hr />
 
                                 <div className="flex-container">
-                                    <button className="close-btn settings-btn" onClick={handleCloseButtonClick}>Close Settings</button>
-                                    <button className="reset-btn settings-btn" onClick={resetSettings}>Reset Settings</button>
+                                    <button className="close-btn settings-btn" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon"></img>Close Settings</button>
+                                    <button className="reset-btn settings-btn" onClick={resetSettings}><img src="icons/rotate-left-solid.svg" alt="Reverse" className="icon"></img>Reset Settings</button>
                                 </div>
                         </div>
                     </div>

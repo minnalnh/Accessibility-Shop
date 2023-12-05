@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,6 +11,7 @@ import PencilsPage from './components/pages/PencilsPage';
 import CheckoutPage from './components/pages/CheckoutPage';
 
 function App() {
+
   return (
     <BrowserRouter>
     <div className="App">

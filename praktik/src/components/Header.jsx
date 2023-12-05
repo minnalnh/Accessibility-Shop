@@ -26,8 +26,8 @@ const Header = () => {
                     </li>
                 </ul>
                 <div className="btn-container">
-                    <button className="menu-btn">Menu</button>
-                    <button className="header-btn">Shopping Bag</button>
+                    <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img>Menu</button>
+                    <button className="header-btn"><img src="icons/bag-shopping-solid.svg" alt="Shopping Bag" className="icon"></img>Shopping Bag</button>
                 </div>
             </nav>
         </div>
