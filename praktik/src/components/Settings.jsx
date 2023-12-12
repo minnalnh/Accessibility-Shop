@@ -1,24 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-function Settings() {
+function Settings( { btnTextRef }) {
 
     const [isBoxVisible, setBoxVisibility] = useState(false);
     const [isChecked, setIsChecked] = useState(null);
     const [isClickDisabled, setClickDisabled] = useState(false);
     const [alertText, setAlertText] = useState();
     const [counter, setCounter] = useState(0);
-   
+
     const overlayRef = useRef(null);
     const contrastRef = useRef(null);
     const shadowRef = useRef(null);
-
+/*
+    useImperativeHandle(ref, () => ({
+        btnTextRef,
+    }));
+*/
     const toggleBoxVisibility = () => {
         setBoxVisibility((prevVisibility) => !prevVisibility);
         
-        if(!isBoxVisible) {
+        if(!isBoxVisible) { // If settings box is visible
             shadowRef.current.classList.add("shadow-box");
 
-        } else {
+        } else { // If settings box is not visible
             shadowRef.current.classList.remove("shadow-box");
         }
     };
@@ -26,13 +30,13 @@ function Settings() {
     const handleRadioChange = (event) => {
         const value = event.target.value;
         setIsChecked(value);
-/*
+
         setCounter((prevCount) => prevCount + 1);
 
         if(counter === 1 && value ) {
             console.log(counter + " klickat två gånger");
             setCounter(0);
-        }*/
+        }
     };
 
     const handleCloseButtonClick = () => {
@@ -54,25 +58,33 @@ function Settings() {
         if(isChecked === "Mouse") {
             overlayRef.current.classList.add("disable-click");
             contrastRef.current.classList.remove("overlay");
+            btnTextRef.current.classList.remove("hide-btn-text");
             setAlertText("Mouse click is disabled");
             setClickDisabled(true);
 
         } else if(isChecked === "ColorContrast") {
             contrastRef.current.classList.add("overlay");
             overlayRef.current.classList.remove("disable-click");
+            btnTextRef.current.classList.remove("hide-btn-text");
             setAlertText("Color contrast has been decreased");
 
         } else if(isChecked === "FontSize") {
             // kod
+            btnTextRef.current.classList.remove("hide-btn-text");
             setAlertText("Font size has been decreased");
 
         } else if(isChecked === "Keyboard") {
-            window.addEventListener("keydown", handleKeyPress);
+            window.addEventListener("keydown", handleKeyPress); // inaktiverar även musklick
+            btnTextRef.current.classList.remove("hide-btn-text");
             setAlertText("Keyboard navigation is disabled");
+
+        } else if(isChecked === "HideButtonText") {
+            btnTextRef.current.classList.add("hide-btn-text");
 
         } else {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
+            btnTextRef.current.classList.remove("hide-btn-text");
             window.removeEventListener("keydown", handleKeyPress);
   
             setAlertText();
@@ -98,14 +110,14 @@ function Settings() {
 
                                 <label className="radio-container">
                                 <span className="radio-label">Hide alt text</span>
-                                    <input type="radio" id="hideAltText" name="setting" value="HideAltText" checked={isChecked === "HideAltText"}></input>
+                                    <input type="radio" id="hideAltText" name="setting" value="HideAltText" checked={isChecked === "HideAltText"} onChange={handleRadioChange}></input>
                                     <span className="custom-radio"></span>
                                 </label>
                                 <hr />
 
                                 <label className="radio-container">
                                 <span className="radio-label">Hide button text</span>
-                                    <input type="radio" id="hideButtonText" name="setting" value="HideButtonText" checked={isChecked === "HideButtonText"}></input>
+                                    <input type="radio" id="hideButtonText" name="setting" value="HideButtonText" checked={isChecked === "HideButtonText"} onChange={handleRadioChange}></input>
                                     <span className="custom-radio"></span>
                                 </label>
                                 <hr />

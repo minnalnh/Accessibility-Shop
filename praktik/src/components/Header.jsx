@@ -1,14 +1,18 @@
+import React, { useRef } from "react";
 import Settings from './Settings';
+import SlideShow from "./SlideShow";
 import ShoppingBag from './ShoppingBag';
-import * as React from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+
+    const btnTextRef = useRef(null);
+
     return (
         <div className="header">
             <div className="flex-container">
                 <a href="/" className="logo">Art Supplies</a>
-                <Settings />
+                <Settings btnTextRef={btnTextRef} />
             </div>
             <nav>
                 <ul className="navbar">
@@ -26,8 +30,8 @@ const Header = () => {
                     </li>
                 </ul>
                 <div className="btn-container">
-                    <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img>Menu</button>
-                    <button className="header-btn"><img src="icons/bag-shopping-solid.svg" alt="Shopping Bag" className="icon"></img>Shopping Bag</button>
+                    <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img><span ref={btnTextRef}>Menu</span></button>
+                    <button className="header-btn"><img src="icons/bag-shopping-solid.svg" alt="Shopping Bag" className="icon"></img><span ref={btnTextRef}>Shopping Bag</span></button>
                 </div>
             </nav>
         </div>

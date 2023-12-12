@@ -243,6 +243,10 @@ input[type="radio"] {
   margin-right: 0.2em;
 }
 
+.hide-btn-text {
+  display: none;
+}
+
 .product-img {
   width: 50%;
   height: auto;

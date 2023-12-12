@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const SlideShow = () => {
+const SlideShow = ( { btnTextRef }) => {
     const [slideIndex, setSlideIndex] = useState(1);
     const slideRef = useRef(null);
 
     useEffect(() => {
         showSlides(slideIndex);
-    }, [slideIndex]);
+    }, [slideIndex, btnTextRef]);
 
     const plusSlides = (n) => {
         setSlideIndex(slideIndex + n);
@@ -67,7 +67,7 @@ const SlideShow = () => {
             <div className="mySlides fade">
                 <div className="numbertext">2 / 3</div>
                 <section className="slideshow-text">
-                    <h1 className="slideshow-caption">Paint With CS</h1>
+                    <h1 className="slideshow-caption">Paint With Style</h1>
                     <p className="slideshow-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
                 </section>
             </div>
@@ -80,8 +80,8 @@ const SlideShow = () => {
                 </section>
             </div>
 
-            <button className="prev" onClick={() => plusSlides(-1)}>&#10094; Previous Slide</button>
-            <button className="next" onClick={() => plusSlides(1)}>Next Slide &#10095;</button>
+            <button className="prev" onClick={() => plusSlides(-1)}>&#10094; <span ref={btnTextRef}>Previous Slide</span></button>
+            <button className="next" onClick={() => plusSlides(1)}><span ref={btnTextRef}>Next Slide</span> &#10095;</button>
       
             <div style={{textAlign: "center"}} className="dots">
                 <span className="dot"></span>
