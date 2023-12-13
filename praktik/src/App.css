@@ -235,16 +235,16 @@ input[type="radio"] {
   border-radius: 10px;
 }
 
+body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, body.change-font-size h4, body.change-font-size p, body.change-font-size button span, body.change-font-size nav ul li {
+  font-size: 0.7rem;
+}
+
 .category {
   background-color: #2F261D;
   padding: 0.7em 0.7em 0.7em 0.7em;
   margin-top: -1.4em;
   margin-left: 0.2em;
   margin-right: 0.2em;
-}
-
-.hide-btn-text {
-  display: none;
 }
 
 .product-img {
@@ -470,6 +470,7 @@ body {
 
 .alert-text {
   position: fixed;
+  background-color: #fff;
   font-size: 1.2rem;
   margin-left: 4em;
   margin-top: 1em;
@@ -483,6 +484,10 @@ body {
 .brushpage-img {
   max-width: 1300px;
   height: 400px;
+}
+
+body.hide-btn-text button span {
+  display: none;
 }
 
 @keyframes fade {

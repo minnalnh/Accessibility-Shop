@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import "../App.css";
 
-function Settings( { btnTextRef }) {
+function Settings() {
 
     const [isBoxVisible, setBoxVisibility] = useState(false);
     const [isChecked, setIsChecked] = useState(null);
@@ -11,11 +12,7 @@ function Settings( { btnTextRef }) {
     const overlayRef = useRef(null);
     const contrastRef = useRef(null);
     const shadowRef = useRef(null);
-/*
-    useImperativeHandle(ref, () => ({
-        btnTextRef,
-    }));
-*/
+
     const toggleBoxVisibility = () => {
         setBoxVisibility((prevVisibility) => !prevVisibility);
         
@@ -34,7 +31,7 @@ function Settings( { btnTextRef }) {
         setCounter((prevCount) => prevCount + 1);
 
         if(counter === 1 && value ) {
-            console.log(counter + " klickat två gånger");
+            console.log("klickat " + counter + " gånger");
             setCounter(0);
         }
     };
@@ -58,43 +55,76 @@ function Settings( { btnTextRef }) {
         if(isChecked === "Mouse") {
             overlayRef.current.classList.add("disable-click");
             contrastRef.current.classList.remove("overlay");
-            btnTextRef.current.classList.remove("hide-btn-text");
+
+            window.removeEventListener("keydown", handleKeyPress);
+            document.body.classList.remove("change-font-size");
+            document.body.classList.remove("hide-btn-text");
+
             setAlertText("Mouse click is disabled");
             setClickDisabled(true);
 
         } else if(isChecked === "ColorContrast") {
             contrastRef.current.classList.add("overlay");
             overlayRef.current.classList.remove("disable-click");
-            btnTextRef.current.classList.remove("hide-btn-text");
+
+            window.removeEventListener("keydown", handleKeyPress);
+            document.body.classList.remove("change-font-size");
+            document.body.classList.remove("hide-btn-text");
+
             setAlertText("Color contrast has been decreased");
 
         } else if(isChecked === "FontSize") {
-            // kod
-            btnTextRef.current.classList.remove("hide-btn-text");
+            overlayRef.current.classList.remove("disable-click");
+            contrastRef.current.classList.remove("overlay");
+            document.body.classList.add("change-font-size");
+            document.body.classList.remove("hide-btn-text");
+            window.removeEventListener("keydown", handleKeyPress);
+
             setAlertText("Font size has been decreased");
 
         } else if(isChecked === "Keyboard") {
+            overlayRef.current.classList.remove("disable-click");
+            contrastRef.current.classList.remove("overlay");
             window.addEventListener("keydown", handleKeyPress); // inaktiverar även musklick
-            btnTextRef.current.classList.remove("hide-btn-text");
+
+            document.body.classList.remove("change-font-size");
+            document.body.classList.remove("hide-btn-text");
+
             setAlertText("Keyboard navigation is disabled");
 
         } else if(isChecked === "HideButtonText") {
-            btnTextRef.current.classList.add("hide-btn-text");
+            overlayRef.current.classList.remove("disable-click");
+            contrastRef.current.classList.remove("overlay");
+
+            window.removeEventListener("keydown", handleKeyPress);
+            document.body.classList.add("hide-btn-text");
+            document.body.classList.remove("change-font-size");
+
+            setAlertText("Button text is hidden");
+
+        } else if(isChecked === "HideAltText") {
+            document.body.classList.add("hide-alt");
+            overlayRef.current.classList.remove("disable-click");
+            contrastRef.current.classList.remove("overlay");
+
+            window.removeEventListener("keydown", handleKeyPress);
+            document.body.classList.remove("change-font-size");
 
         } else {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
-            btnTextRef.current.classList.remove("hide-btn-text");
+
+            document.body.classList.remove("hide-btn-text");
             window.removeEventListener("keydown", handleKeyPress);
   
-            setAlertText();
+            setAlertText("");
             setClickDisabled(false);
         }
     }, [isChecked]);
 
         return (
             <div className="accessibility">
-                <p className="alert-text"><strong>{alertText}</strong></p>
+                <span className="alert-text"><strong>{alertText}</strong></span>
                 <div ref={overlayRef} className={`${isChecked ? 'disable-click' : ''}`}></div>
                 <div ref={contrastRef} className={`${isChecked ? 'change-contrast' : ''}`}></div>
                 <div ref={shadowRef}></div>

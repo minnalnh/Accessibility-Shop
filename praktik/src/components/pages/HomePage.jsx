@@ -1,11 +1,15 @@
+import React, { useRef } from "react";
+import Header from "../Header";
 import SlideShow from '../SlideShow';
+import Settings from "../Settings";
 import HomeCategories from '../HomeCategories';
 
-const HomePage = () => {
+const HomePage = ({ btnTextRef_3, btnTextRef_4 }) => {
+
     return (
-        <div className="test">
+        <div>
             <a className="page-title">HomePage</a>
-            <SlideShow />
+            <SlideShow btnTextRef_3={btnTextRef_3} btnTextRef_4={btnTextRef_4} />
             <HomeCategories />
         </div>
     );
