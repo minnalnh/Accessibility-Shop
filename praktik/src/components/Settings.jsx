@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "../App.css";
 
-function Settings() {
+function Settings({ isBoxVisible, toggleBoxVisibility, handleCloseButtonClick, shadowRef }) {
 
-    const [isBoxVisible, setBoxVisibility] = useState(false);
+    //const [isBoxVisible, setBoxVisibility] = useState(false);
     const [isChecked, setIsChecked] = useState(null);
     const [isClickDisabled, setClickDisabled] = useState(false);
     const [alertText, setAlertText] = useState();
@@ -11,8 +11,8 @@ function Settings() {
 
     const overlayRef = useRef(null);
     const contrastRef = useRef(null);
-    const shadowRef = useRef(null);
-
+    //const shadowRef = useRef(null);
+/*
     const toggleBoxVisibility = () => {
         setBoxVisibility((prevVisibility) => !prevVisibility);
         
@@ -23,7 +23,7 @@ function Settings() {
             shadowRef.current.classList.remove("shadow-box");
         }
     };
-
+*/
     const handleRadioChange = (event) => {
         const value = event.target.value;
         setIsChecked(value);
@@ -35,12 +35,12 @@ function Settings() {
             setCounter(0);
         }
     };
-
+/*
     const handleCloseButtonClick = () => {
         setBoxVisibility(false);
         shadowRef.current.classList.remove("shadow-box");
     };
-
+*/
     const resetSettings = () => {
         setIsChecked(null);
     };
