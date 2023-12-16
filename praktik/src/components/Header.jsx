@@ -4,24 +4,37 @@ import ShoppingBag from './ShoppingBag';
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-    const [isBoxVisible, setBoxVisibility] = useState(false);
+    const [isBox1Visible, setBox1Visibility] = useState(false);
+    const [isBox2Visible, setBox2Visibility] = useState(false);
     const shadowRef = useRef(null);
 
-    const toggleBoxVisibility = () => {
-        setBoxVisibility((prevVisibility) => !prevVisibility);
-        
-        if(!isBoxVisible) { // If settings box is visible
+    const toggleBoxVisibility = (event) => {
+        const target = event.target;
+
+        if(!isBox1Visible && target.classList.contains("accessibility-btn")) {
+            setBox1Visibility((prevVisibility) => !prevVisibility);
             shadowRef.current.classList.add("shadow-box");
 
-        } else { // If settings box is not visible
+        } else if(!isBox2Visible && target.classList.contains("shopping-btn")) {
+            console.log("funkar");
+            setBox2Visibility((prevVisibility) => !prevVisibility);
+        }
+        
+        if(isBox1Visible && isBox2Visible) { // om intällningarna inte är synliga före klick
+            shadowRef.current.classList.remove("shadow-box");
+
+        } else { // om inställningarna är synliga före klick
             shadowRef.current.classList.remove("shadow-box");
         }
     };
 
-
-
     const handleCloseButtonClick = () => {
-        setBoxVisibility(false);
+        if(isBox1Visible) {
+            setBox1Visibility(false);
+
+        } else if(isBox2Visible) {
+            setBox2Visibility(false);
+        }
         shadowRef.current.classList.remove("shadow-box");
     };
 
@@ -30,7 +43,7 @@ const Header = () => {
             <div className="flex-container">
                 <a href="/" className="logo">Art Supplies</a>
                 <Settings
-                isBoxVisible={isBoxVisible}
+                isBox1Visible={isBox1Visible}
                 toggleBoxVisibility={toggleBoxVisibility}
                 handleCloseButtonClick={handleCloseButtonClick}
                 shadowRef={shadowRef} />
@@ -53,7 +66,7 @@ const Header = () => {
                 <div className="btn-container">
                     <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img><span>Menu</span></button>
                     <ShoppingBag
-                    isBoxVisible={isBoxVisible}
+                    isBox2Visible={isBox2Visible}
                     toggleBoxVisibility={toggleBoxVisibility}
                     handleCloseButtonClick={handleCloseButtonClick} />
                 </div>

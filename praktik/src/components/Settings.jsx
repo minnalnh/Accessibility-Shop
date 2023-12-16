@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "../App.css";
 
-function Settings({ isBoxVisible, toggleBoxVisibility, handleCloseButtonClick, shadowRef }) {
+function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, shadowRef }) {
 
     //const [isBoxVisible, setBoxVisibility] = useState(false);
     const [isChecked, setIsChecked] = useState(null);
@@ -134,10 +134,10 @@ function Settings({ isBoxVisible, toggleBoxVisibility, handleCloseButtonClick, s
                     <button className="header-btn accessibility-btn" onClick={toggleBoxVisibility}><img src="icons/gear-solid.svg" alt="Gear" className="icon"></img>Accessibility Settings</button>
                 </div>
 
-                {isBoxVisible && (
+                {isBox1Visible && (
                     <div className="settings-box pop-up" tabIndex="1">
                         <br />
-                        <div className={`box ${isBoxVisible ? "" : "hidden"}`}>
+                        <div className={`box ${isBox1Visible ? "" : "hidden"}`}>
 
                                 <label className="radio-container">
                                 <span className="radio-label">Hide alt text</span>
