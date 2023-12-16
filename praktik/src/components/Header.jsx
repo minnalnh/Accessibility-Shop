@@ -7,7 +7,7 @@ const Header = () => {
     const [isBoxVisible, setBoxVisibility] = useState(false);
     const shadowRef = useRef(null);
 
-    const toggleBoxVisibility_1 = () => {
+    const toggleBoxVisibility = () => {
         setBoxVisibility((prevVisibility) => !prevVisibility);
         
         if(!isBoxVisible) { // If settings box is visible
@@ -18,16 +18,7 @@ const Header = () => {
         }
     };
 
-    const toggleBoxVisibility_2 = () => {
-        setBoxVisibility((prevVisibility) => !prevVisibility);
-        
-        if(!isBoxVisible) { // If settings box is visible
-            shadowRef.current.classList.add("shadow-box");
 
-        } else { // If settings box is not visible
-            shadowRef.current.classList.remove("shadow-box");
-        }
-    };
 
     const handleCloseButtonClick = () => {
         setBoxVisibility(false);
@@ -40,7 +31,7 @@ const Header = () => {
                 <a href="/" className="logo">Art Supplies</a>
                 <Settings
                 isBoxVisible={isBoxVisible}
-                toggleBoxVisibility_1={toggleBoxVisibility}
+                toggleBoxVisibility={toggleBoxVisibility}
                 handleCloseButtonClick={handleCloseButtonClick}
                 shadowRef={shadowRef} />
             </div>
@@ -63,7 +54,7 @@ const Header = () => {
                     <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img><span>Menu</span></button>
                     <ShoppingBag
                     isBoxVisible={isBoxVisible}
-                    toggleBoxVisibility_2={toggleBoxVisibility}
+                    toggleBoxVisibility={toggleBoxVisibility}
                     handleCloseButtonClick={handleCloseButtonClick} />
                 </div>
             </nav>
