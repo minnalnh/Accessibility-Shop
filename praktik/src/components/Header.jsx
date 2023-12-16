@@ -11,28 +11,38 @@ const Header = () => {
     const toggleBoxVisibility = (event) => {
         const target = event.target;
 
-        if(!isBox1Visible && target.classList.contains("accessibility-btn")) {
-            setBox1Visibility((prevVisibility) => !prevVisibility);
-            shadowRef.current.classList.add("shadow-box");
+        if(target.classList.contains("accessibility-btn")) {
+            if(isBox1Visible === false) {
+                setBox1Visibility((prevVisibility) => !prevVisibility);
+                shadowRef.current.classList.add("shadow-box");
 
-        } else if(!isBox2Visible && target.classList.contains("shopping-btn")) {
-            console.log("funkar");
-            setBox2Visibility((prevVisibility) => !prevVisibility);
-        }
-        
-        if(isBox1Visible && isBox2Visible) { // om intällningarna inte är synliga före klick
-            shadowRef.current.classList.remove("shadow-box");
+            } else if(isBox1Visible === true) {
+                console.log(isBox1Visible);
+                setBox1Visibility(false);
+                shadowRef.current.classList.remove("shadow-box");
+            }
 
-        } else { // om inställningarna är synliga före klick
-            shadowRef.current.classList.remove("shadow-box");
+        } else if(target.classList.contains("shopping-btn")) {
+            if(isBox2Visible === false) {
+                setBox2Visibility((prevVisibility) => !prevVisibility);
+                shadowRef.current.classList.add("shadow-box");
+
+            } else if(isBox2Visible === true) {
+
+                setBox2Visibility(false);
+                shadowRef.current.classList.remove("shadow-box");
+            }
+
         }
     };
 
-    const handleCloseButtonClick = () => {
-        if(isBox1Visible) {
+    const handleCloseButtonClick = (event) => {
+        const target = event.target;
+        
+        if(target.classList.contains("close-btn") && isBox1Visible === true) {
             setBox1Visibility(false);
 
-        } else if(isBox2Visible) {
+        } else if(target.classList.contains("bag-close-btn") && isBox2Visible === true) {
             setBox2Visibility(false);
         }
         shadowRef.current.classList.remove("shadow-box");

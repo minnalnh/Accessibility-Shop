@@ -8,14 +8,11 @@ const ShoppingBag = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClic
             {isBox2Visible && (
                     <div className="shopping-box pop-up" tabIndex="1">
                         <br />
-                        <div className={`box ${isBox2Visible ? "" : "hidden"}`}>
                             <div className="flex-container">
                                 <h3 className="your-items">Your Items:</h3>
-                                <button className="close-btn"><span>Close</span></button>
+                                <button className="bag-close-btn" onClick={handleCloseButtonClick}><span>Close</span></button>
                             </div>
                             <hr />
-
-                        </div>
 
 
                     </div>

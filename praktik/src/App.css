@@ -530,6 +530,14 @@ body.hide-btn-text button span {
   display: none;
 }
 
+.your-items {
+  padding-left: 2em;
+}
+
+.bag-close-btn {
+  margin-left: 3em;
+}
+
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}

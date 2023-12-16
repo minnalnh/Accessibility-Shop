@@ -137,8 +137,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
                 {isBox1Visible && (
                     <div className="settings-box pop-up" tabIndex="1">
                         <br />
-                        <div className={`box ${isBox1Visible ? "" : "hidden"}`}>
-
                                 <label className="radio-container">
                                 <span className="radio-label">Hide alt text</span>
                                     <input type="radio" id="hideAltText" name="setting" value="HideAltText" checked={isChecked === "HideAltText"} onChange={handleRadioChange}></input>
@@ -185,7 +183,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
                                     <button className="close-btn settings-btn" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon"></img>Close Settings</button>
                                     <button className="reset-btn settings-btn" onClick={resetSettings}><img src="icons/rotate-left-solid.svg" alt="Reverse" className="icon"></img>Reset Settings</button>
                                 </div>
-                        </div>
                     </div>
                 )}
             </div>
