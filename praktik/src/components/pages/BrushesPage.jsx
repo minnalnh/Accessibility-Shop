@@ -5,7 +5,9 @@ const BrushesPage = () => {
     return (
         <div>
             <a className="page-title">Brushes</a>
-            <img src="images/main-2.jpg" alt="Painting brush getting dipped in paint" className="brushpage-img"></img>
+            <div className="brush-page-img">
+                <p class="sr-only">Painting brush getting dipped in paint</p>
+            </div>
             <div className="flex-container">
                 {
                     brushes.map(brush => (

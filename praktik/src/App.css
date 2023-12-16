@@ -200,12 +200,11 @@ input[type="radio"] {
   z-index: 3;
 }
 
-.settings-box {
+.pop-up {
+  position: fixed;
+  right: 0;
   display: hidden;
   z-index: 5;
-  position: fixed;
-  top: 8em;
-  right: 0;
   margin-top: -4.8em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -213,6 +212,15 @@ input[type="radio"] {
   background-color: #fff;
   border-radius: 7px;
   border-style: solid;
+  
+}
+
+.settings-box {
+  top: 8em;
+}
+
+.shopping-box {
+  top: 12em;
 }
 
 .cart-btn {
@@ -349,19 +357,41 @@ button:hover {
   border-color: #fff;
 }
 
-.slideshow-container {
+.slide-1, .slide-2, .slide-3 {
   margin-top: 8em; /* resten av innehållet förutom headern */
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
   bottom: 8px;
   text-align: center;
-  background-image: url('../public/images/main.jpg'); /* byt ut beroende på slide */
   max-width: 1300px;
   height: 30em;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
+}
+
+.slide-1 {
+  background-image: url('../public/images/wall-painting.jpg'); /* byt ut beroende på slide */
+}
+
+.slide-2 {
+  background-image: url('../public/images/wall-painting.jpg');
+}
+
+.slide-3 {
+  background-image: url('../public/images/painting-dark.jpg');
+}
+
+.sr-only { /* "alt-text" för bakgrundsbilder – är inte synlig men läses upp av skärmläsare */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .tab-index-overlay {
@@ -417,14 +447,8 @@ button:hover {
   background-color: #717171;
 }
 
-
-
 .slideshow-container {
   position: relative;
-}
-
-.slide-1 {
-  background-image: url('../public/images/main.jpg');
 }
 
 .slideshow-text {
@@ -481,9 +505,24 @@ body {
   text-align: center;
 }
 
-.brushpage-img {
+.brush-page-img {
   max-width: 1300px;
   height: 400px;
+}
+
+.brush-page-img {
+  margin-top: 8em; /* resten av innehållet förutom headern */
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  text-align: center;
+  background-image: url('../public/images/main-2.jpg'); /* byt ut beroende på slide */
+  max-width: 1300px;
+  height: 30em;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body.hide-btn-text button span {

@@ -108,6 +108,7 @@ function Settings() {
             contrastRef.current.classList.remove("overlay");
 
             window.removeEventListener("keydown", handleKeyPress);
+            document.body.classList.add("hide-btn-text");
             document.body.classList.remove("change-font-size");
 
         } else {
@@ -134,7 +135,7 @@ function Settings() {
                 </div>
 
                 {isBoxVisible && (
-                    <div className="settings-box" tabIndex="1">
+                    <div className="settings-box pop-up" tabIndex="1">
                         <br />
                         <div className={`box ${isBoxVisible ? "" : "hidden"}`}>
 

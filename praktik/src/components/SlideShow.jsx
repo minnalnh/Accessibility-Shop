@@ -53,8 +53,8 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
     }
 
     return (
-        <div ref={slideRef} className="slideshow-container slide-1">
-            <div className="mySlides fade">
+        <div ref={slideRef} className="slideshow-container">
+            <div className="mySlides fade ">
                 <div className="numbertext">1 / 3</div>
                 <section className="slideshow-text">
                     <h1 className="slideshow-caption">Paint With Class</h1>

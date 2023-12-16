@@ -28,7 +28,7 @@ const Header = () => {
                 </ul>
                 <div className="btn-container">
                     <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img><span>Menu</span></button>
-                    <button className="header-btn"><img src="icons/bag-shopping-solid.svg" alt="Shopping Bag" className="icon"></img><span>Shopping Bag</span></button>
+                    <ShoppingBag />
                 </div>
             </nav>
         </div>
