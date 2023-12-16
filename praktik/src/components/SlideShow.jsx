@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
     const [slideIndex, setSlideIndex] = useState(1);
+    const [srText, setSrText] = useState();
     const slideRef = useRef(null);
 
     useEffect(() => {
@@ -41,19 +42,26 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
             slideRef.current.classList.remove("slide-3")
             slideRef.current.classList.add("slide-1");
 
+            setSrText("Woman painting on a mural wall"); // lösning för alt-text, då den är osynlig men fångas upp av skärmläsare
+
         } else if(slideIndex === 2) {
             slideRef.current.classList.remove("slide-1");
             slideRef.current.classList.add("slide-2");
+
+            setSrText("Man painting by the ocean");
 
         } else if(slideIndex === 3) {
             slideRef.current.classList.remove("slide-2");
             slideRef.current.classList.add("slide-3");
 
+            setSrText("Woman painting a house in her garden");
         }
     }
 
     return (
         <div ref={slideRef} className="slideshow-container">
+            <p className="sr-only">{srText}</p>
+
             <div className="mySlides fade ">
                 <div className="numbertext">1 / 3</div>
                 <section className="slideshow-text">

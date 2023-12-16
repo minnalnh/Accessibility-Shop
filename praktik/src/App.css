@@ -376,11 +376,11 @@ button:hover {
 }
 
 .slide-2 {
-  background-image: url('../public/images/wall-painting.jpg');
+  background-image: url('../public/images/painting-ocean.jpg');
 }
 
 .slide-3 {
-  background-image: url('../public/images/painting-dark.jpg');
+  background-image: url('../public/images/painting-house.jpg');
 }
 
 .sr-only { /* "alt-text" för bakgrundsbilder – är inte synlig men läses upp av skärmläsare */
@@ -393,6 +393,7 @@ button:hover {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
 
 .tab-index-overlay {
   position: fixed;
