@@ -475,7 +475,12 @@ button:hover {
 }
 
 .active {
-  background-color: #717171;
+  color: #fff;
+  background-color: #2F261D;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .slideshow-container {
