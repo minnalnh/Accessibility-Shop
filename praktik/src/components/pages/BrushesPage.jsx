@@ -1,7 +1,11 @@
 import brushes from "../../json/brushes.json";
 import Product from '../Product';
+import ShoppingBag from "../ShoppingBag";
 
 const BrushesPage = () => {
+    const addToCart = (product) => {
+        console.log("Product added to cart: ", product);
+    }
     return (
         <div>
             <a className="page-title">Brushes</a>
@@ -11,7 +15,7 @@ const BrushesPage = () => {
             <div className="flex-container">
                 {
                     brushes.map(brush => (
-                        <Product key={brushes} {...brush} />
+                        <Product key={brushes} {...brush} addToCart={addToCart} />
                     ))
                 }
             </div>

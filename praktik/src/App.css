@@ -254,6 +254,8 @@ input[type="radio"] {
   background-color: #fff;
   border-style: inset;
   border-radius: 10px;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
 }
 
 body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, body.change-font-size h4, body.change-font-size p, body.change-font-size button span, body.change-font-size nav ul li, body.change-font-size a {
@@ -319,10 +321,6 @@ h1, h2, h4, p, a {
   display: none;
 }
 
-.slide-1, .slide-2, .slide-3 {
-  background-attachment: fixed;
-}
-
 .prev, .next {
   cursor: pointer;
   z-index: 0;
@@ -341,6 +339,7 @@ h1, h2, h4, p, a {
   border-radius: 10px;
   border-style: solid;
   border-color: #2F261D;
+  box-shadow: 4px #000;
 }
 
 .prev {
@@ -491,6 +490,7 @@ button:hover {
   background-color: #FFF8F8;
   display: inline-block;
   border-radius: 12px;
+  box-shadow: 4px 4px 6px #000;
 }
 
 .btn-container {

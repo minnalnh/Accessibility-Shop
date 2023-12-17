@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import brushes from '../json/brushes.json';
 import paint from '../json/paint.json';
 import paper from '../json/paper.json';
 import pencils from '../json/pencils.json';
+import ShoppingBag from './ShoppingBag';
 
-const Product = ({ name, type, size, shape, material, description, brand, price, image, alt}) => {
-
-    const addToCart = (event) => {
-        const target = event.target;
-        console.log(target);
-    }
+const Product = ({ name, type, size, shape, material, description, brand, price, image, alt, addToCart}) => {
+/* onClick={() => addToCart({ name, price, image, alt })} */
 
     return (
         <div className="product item">

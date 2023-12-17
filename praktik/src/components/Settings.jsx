@@ -6,7 +6,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
     const [isChecked, setIsChecked] = useState(null);
     const [isClickDisabled, setClickDisabled] = useState(false);
     const [alertText, setAlertText] = useState();
-    const [counter, setCounter] = useState(0);
 
     const overlayRef = useRef(null);
     const contrastRef = useRef(null);
@@ -14,13 +13,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
     const handleRadioChange = (event) => {
         const value = event.target.value;
         setIsChecked(value);
-
-        setCounter((prevCount) => prevCount + 1);
-
-        if(counter === 1 && value ) {
-            console.log("klickat " + counter + " gånger");
-            setCounter(0);
-        }
     };
 
     const resetSettings = () => {

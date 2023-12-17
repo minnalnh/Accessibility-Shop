@@ -12,7 +12,7 @@ const Header = () => {
         const target = event.target;
 
         if(target.classList.contains("accessibility-btn")) {
-            console.log(isBox1Visible);
+
             if(isBox1Visible === false) {
                 setBox1Visibility((prevVisibility) => !prevVisibility);
                 shadowRef.current.classList.add("shadow-box");
