@@ -4,15 +4,21 @@ import paint from '../json/paint.json';
 import paper from '../json/paper.json';
 import pencils from '../json/pencils.json';
 
-const Product = ({ name, type, size, shape, material, usage, brand, price, image, alt}) => {
+const Product = ({ name, type, size, shape, material, description, brand, price, image, alt}) => {
+
+    const addToCart = (event) => {
+        const target = event.target;
+        console.log(target);
+    }
+
     return (
         <div className="product item">
             <div className="product-img-container">
                 <img src={image} alt={alt} className="product-img"></img>
             </div>
             <h2>{name}</h2>
-            <p className="product-price">Price: <b>{price}</b></p>
-            <button className="cart-btn"><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add to Cart</span></button>
+            <p className="product-price">Price: <b>{price} kr</b></p>
+            <button className="cart-btn" onClick={() => addToCart({ name, price, image, alt })}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add to Cart</span></button>
         </div>
     )
 }

@@ -39,13 +39,14 @@ const Header = () => {
 
     const handleCloseButtonClick = (event) => {
         const target = event.target;
-        shadowRef.current.classList.remove("shadow-box");
 
         if(target.classList.contains("close-btn") && isBox1Visible === true) {
             setBox1Visibility(false);
+            shadowRef.current.classList.remove("shadow-box");
 
-        } else if(target.classList.contains("bag-close-btn") && isBox2Visible === true) {
+        } else if(target.classList.contains("cart-close-btn") && isBox2Visible === true) {
             setBox2Visibility(false);
+            shadowRef.current.classList.remove("shadow-box");
         }
     };
 

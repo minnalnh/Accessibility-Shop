@@ -107,7 +107,6 @@ img {
 
 .item {
   flex: 1;
-  margin-top: 1em;
 }
 
 .header-btn {
@@ -569,16 +568,17 @@ body.img-size img {
 }
 
 .your-items {
+  flex: 3;
   padding-left: 2em;
 }
 
-.bag-close-btn-layout {
+.cart-close-btn-layout {
   display: block;
+  flex: 2;
   color: #fff;
   font-size: 1rem;
   background-color: #2F261D;
-  margin-top: 0.8em;
-  margin-left: 6em;
+  margin-bottom: 0.5em;
 }
 
 @keyframes fade {
