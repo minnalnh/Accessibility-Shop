@@ -6,12 +6,12 @@ const BrushesPage = () => {
         <div>
             <a className="page-title">Brushes</a>
             <div className="brush-page-img">
-                <p class="sr-only">Painting brush getting dipped in paint</p>
+                <p className="sr-only">Painting brush getting dipped in paint</p>
             </div>
             <div className="flex-container">
                 {
                     brushes.map(brush => (
-                        <Product key={brush} {...brush} />
+                        <Product key={brushes} {...brush} />
                     ))
                 }
             </div>

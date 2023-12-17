@@ -39,6 +39,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             contrastRef.current.classList.remove("overlay");
 
             window.removeEventListener("keydown", handleKeyPress);
+            document.body.classList.remove("img-size");
             document.body.classList.remove("change-font-size");
             document.body.classList.remove("hide-btn-text");
 
@@ -50,6 +51,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             overlayRef.current.classList.remove("disable-click");
 
             window.removeEventListener("keydown", handleKeyPress);
+            document.body.classList.remove("img-size");
             document.body.classList.remove("change-font-size");
             document.body.classList.remove("hide-btn-text");
 
@@ -58,6 +60,8 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
         } else if(isChecked === "FontSize") {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
+
+            document.body.classList.remove("img-size");
             document.body.classList.add("change-font-size");
             document.body.classList.remove("hide-btn-text");
             window.removeEventListener("keydown", handleKeyPress);
@@ -69,6 +73,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             contrastRef.current.classList.remove("overlay");
             window.addEventListener("keydown", handleKeyPress); // inaktiverar även musklick
 
+            document.body.classList.remove("img-size");
             document.body.classList.remove("change-font-size");
             document.body.classList.remove("hide-btn-text");
 
@@ -79,6 +84,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             contrastRef.current.classList.remove("overlay");
 
             window.removeEventListener("keydown", handleKeyPress);
+            document.body.classList.remove("img-size");
             document.body.classList.add("hide-btn-text");
             document.body.classList.remove("change-font-size");
 
@@ -97,7 +103,9 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
 
+            document.body.classList.remove("img-size");
             document.body.classList.remove("hide-btn-text");
+            document.body.classList.remove("change-font-size");
             window.removeEventListener("keydown", handleKeyPress);
   
             setAlertText("");
@@ -113,7 +121,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
                 <div ref={shadowRef}></div>
 
                 <div className="btn-container">
-                    <button className="header-btn accessibility-btn" onClick={toggleBoxVisibility}><img src="icons/gear-solid.svg" alt="Gear" className="icon"></img>Accessibility Settings</button>
+                    <button className="header-btn accessibility-btn" onClick={toggleBoxVisibility}><img src="icons/gear-solid.svg" alt="Gear" className="icon"></img> Accessibility Settings</button>
                 </div>
 
                 {isBox1Visible && (
@@ -162,8 +170,8 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
                             <hr />
 
                             <div className="flex-container">
-                                <button className="close-btn settings-btn" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon"></img>Close Settings</button>
-                                <button className="reset-btn settings-btn" onClick={resetSettings}><img src="icons/rotate-left-solid.svg" alt="Reverse" className="icon"></img>Reset Settings</button>
+                                <button className="close-btn settings-btn" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon"></img> Close Settings</button>
+                                <button className="reset-btn settings-btn" onClick={resetSettings}><img src="icons/rotate-left-solid.svg" alt="Reverse" className="icon"></img> Reset Settings</button>
                             </div>
                     </div>
                 )}

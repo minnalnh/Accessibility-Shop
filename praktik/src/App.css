@@ -64,17 +64,21 @@ footer {
 }
 
 nav {
+  display: inline-block;
   background-color: #EEFFE8;
 }
 
 li {
-  font-size: 1.1rem;
   padding-right: 1em;
   padding-left: 1em;
 }
 
 a {
   text-decoration: none;
+}
+
+li a {
+  font-size: 1.2rem;
   color: #2F261D;
 }
 
@@ -102,7 +106,6 @@ img {
 }
 
 .item {
-  display: block;
   flex: 1;
   margin-top: 1em;
 }
@@ -225,6 +228,10 @@ input[type="radio"] {
   top: 12em;
 }
 
+.shopping-btn {
+  margin-top: 1em;
+}
+
 .cart-btn {
   display: block;
   background-color: #2F261D;
@@ -240,22 +247,23 @@ input[type="radio"] {
 
 .cart-btn:hover {
   cursor: pointer;
-  
 }
 
 .product {
+  display: block;
   padding: 1em 1em 1em 1em;
   background-color: #fff;
   border-style: inset;
   border-radius: 10px;
 }
 
-body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, body.change-font-size h4, body.change-font-size p, body.change-font-size button span, body.change-font-size nav ul li {
+body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, body.change-font-size h4, body.change-font-size p, body.change-font-size button span, body.change-font-size nav ul li, body.change-font-size a {
   font-size: 0.7rem;
 }
 
 .category {
   display: flex;
+  flex: 1;
   background-color: #2F261D;
   padding: 0.7em 0.7em 0.7em 0.7em;
   margin-top: -1.4em;
@@ -263,12 +271,21 @@ body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, bo
   margin-right: 0.2em;
 }
 
+.product-img-container {
+  height: 150px;
+  overflow: hidden;
+}
+
 .product-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-img {
+  width: 50%;
 }
 
 h1, h2, h4, p, a {
@@ -303,12 +320,17 @@ h1, h2, h4, p, a {
   display: none;
 }
 
+.slide-1, .slide-2, .slide-3 {
+  background-attachment: fixed;
+}
+
 .prev, .next {
   cursor: pointer;
   z-index: 0;
   position: absolute;
   bottom: 0;
-  width: auto;
+  width: 11em;
+  height: 4em;
   padding: 16px;
   color: #2F261D;
   font-weight: bold;
@@ -316,7 +338,7 @@ h1, h2, h4, p, a {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  background-color: #FFF8F8;
+  background-color: #fff;
   border-radius: 10px;
   border-style: solid;
   border-color: #2F261D;
@@ -328,11 +350,6 @@ h1, h2, h4, p, a {
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.slideshow-bg {
-  background-color: #2F261D;
 }
 
 .settings-btn {
@@ -381,6 +398,10 @@ button:hover {
   margin-left: auto;
   margin-right: auto;
 }
+/*
+.slide-1, .slide-2, .slide-3, .brush-page-img {
+  background-attachment: fixed;
+} */
 
 .slide-1 {
   background-image: url('../public/images/wall-painting.jpg'); /* byt ut beroende på slide */
@@ -421,7 +442,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 1;
   opacity: 0.5;
   pointer-events: none;
   background-color: black;
@@ -463,10 +484,10 @@ button:hover {
   position: relative;
 }
 
-.slideshow-text {
+.slideshow-box {
   position: absolute;
   top: 7%;
-  width: 400px;
+  width: 300px;
   left: 0;
   background-color: #FFF8F8;
   display: inline-block;
@@ -474,14 +495,15 @@ button:hover {
 }
 
 .btn-container {
-  text-align: right;
+  display: flex;
+  flex-direction: row;
 }
 
 .slideshow-caption {
   top: 5%;
 }
 
-.slideshow-p {
+.slideshow-text {
   top: 12%;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -529,7 +551,7 @@ body {
   padding: 8px 12px;
   bottom: 8px;
   text-align: center;
-  background-image: url('../public/images/main-2.jpg'); /* byt ut beroende på slide */
+  background-image: url('../public/images/main-2.jpg');
   max-width: 1300px;
   height: 30em;
   background-size: cover;
@@ -542,8 +564,8 @@ body.hide-btn-text button span {
 }
 
 body.img-size img {
-  width: 50px;
-  height: auto;
+  width: 20%;
+  height: 20%;
 }
 
 .your-items {
@@ -572,6 +594,7 @@ body.img-size img {
 
   .navbar {
     display: block;
+    flex: 2;
     list-style-type: none;
   }
 
@@ -586,10 +609,10 @@ body.img-size img {
   }
 
   .menu-btn {
-    display: none;
+    visibility: hidden;
   }
 
   .accessibility-btn {
-    margin-top: -0.1em;
+    margin-top: 0;
   }
 }

@@ -60,29 +60,31 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
 
     return (
         <div ref={slideRef} className="slideshow-container">
+
+            <div className="mySlides fade">
             <p className="sr-only">{srText}</p>
-
-            <div className="mySlides fade ">
                 <div className="numbertext">1 / 3</div>
-                <section className="slideshow-text">
+                <section className="slideshow-box">
                     <h1 className="slideshow-caption">Paint With Class</h1>
-                    <p className="slideshow-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
+                    <p className="slideshow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
                 </section>
             </div>
 
             <div className="mySlides fade">
+            <p className="sr-only">{srText}</p>
                 <div className="numbertext">2 / 3</div>
-                <section className="slideshow-text">
+                <section className="slideshow-box">
                     <h1 className="slideshow-caption">Paint With Style</h1>
-                    <p className="slideshow-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
+                    <p className="slideshow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
                 </section>
             </div>
 
             <div className="mySlides fade">
+            <p className="sr-only">{srText}</p>
                 <div className="numbertext">3 / 3</div>
-                <section className="slideshow-text">
+                <section className="slideshow-box">
                     <h1 className="slideshow-caption">Paint With Class</h1>
-                    <p className="slideshow-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
+                    <p className="slideshow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
                 </section>
             </div>
 
