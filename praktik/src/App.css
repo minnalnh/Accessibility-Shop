@@ -228,7 +228,7 @@ input[type="radio"] {
   top: 12em;
 }
 
-.shopping-btn {
+.shopping-btn-layout {
   margin-top: 1em;
 }
 
@@ -572,7 +572,7 @@ body.img-size img {
   padding-left: 2em;
 }
 
-.bag-close-btn {
+.bag-close-btn-layout {
   display: block;
   color: #fff;
   font-size: 1rem;

@@ -24,7 +24,7 @@ const Header = () => {
             }
 
         } else if(target.classList.contains("shopping-btn")) {
-            console.log(isBox2Visible);
+    
             if(isBox2Visible === false) {
                 setBox2Visibility((prevVisibility) => !prevVisibility);
                 shadowRef.current.classList.add("shadow-box");
