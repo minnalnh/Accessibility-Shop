@@ -7,7 +7,9 @@
         "material": "Bristle",
         "usage": "General purpose painting",
         "brand": "Artisan Brushes",
-        "price": "159 kr"
+        "price": "159 kr",
+        "image" : "json-images/round-brush.jpg",
+        "alt" : "Round brush"
       },
       {
         "name": "Flat Brush",
@@ -17,7 +19,9 @@
         "material": "Synthetic",
         "usage": "Covering large areas",
         "brand": "Masterstroke",
-        "price": "129 kr"
+        "price": "129 kr",
+        "image" : "json-images/flat-brush.jpg",
+        "alt" : "Flat brush"
       },
       {
         "name": "Detail Brush",
@@ -27,7 +31,9 @@
         "material": "Sable",
         "usage": "Fine details and lines",
         "brand": "Fine Art Supplies",
-        "price": "204 kr"
+        "price": "204 kr",
+        "image" : "json-images/detail-brush.jpg",
+        "alt" : "Detail brush"
       },
       {
         "name": "Fan Brush",
@@ -37,7 +43,9 @@
         "material": "Synthetic",
         "usage": "Creating texture and blending",
         "brand": "BrushCraft",
-        "price": "187 kr"
+        "price": "187 kr",
+        "image" : "json-images/fan-brush.jpg",
+        "alt" : "Fan Brush"
       },
       {
         "name": "Calligraphy Pen",
@@ -47,6 +55,8 @@
         "material": "Nylon",
         "usage": "Calligraphy and line work",
         "brand": "Quill & Ink",
-        "price": "149 kr"
+        "price": "149 kr",
+        "image": "json-images/calligraphy.jpg",
+        "alt" : "Calligraphy Pen"
       }
     ]

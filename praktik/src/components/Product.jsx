@@ -4,13 +4,13 @@ import paint from '../json/paint.json';
 import paper from '../json/paper.json';
 import pencils from '../json/pencils.json';
 
-const Product = ({ name, type, size, shape, material, usage, brand, price, image}) => {
+const Product = ({ name, type, size, shape, material, usage, brand, price, image, alt}) => {
     return (
         <div className="product item">
-            <img src="https://placehold.jp/150x150.png"></img>
+            <img src={image} alt={alt} className="product-img"></img>
             <h2>{name}</h2>
             <p className="product-price">Price: <b>{price}</b></p>
-            <button className="cart-btn">Add to Cart</button>
+            <button className="cart-btn"><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span>Add to Cart</span></button>
         </div>
     )
 }

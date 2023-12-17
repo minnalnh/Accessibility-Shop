@@ -92,6 +92,7 @@ header {
 
 .flex-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   max-width: 100%;
 }
@@ -220,15 +221,21 @@ input[type="radio"] {
 }
 
 .shopping-box {
+  z-index: 3;
   top: 12em;
 }
 
 .cart-btn {
-  background-color: pink;
+  display: block;
+  background-color: #2F261D;
   font-size: 1rem;
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cart-btn span {
+  color: #fff;
 }
 
 .cart-btn:hover {
@@ -248,6 +255,7 @@ body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, bo
 }
 
 .category {
+  display: flex;
   background-color: #2F261D;
   padding: 0.7em 0.7em 0.7em 0.7em;
   margin-top: -1.4em;
@@ -256,7 +264,10 @@ body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, bo
 }
 
 .product-img {
-  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
   height: auto;
 }
 
@@ -530,12 +541,22 @@ body.hide-btn-text button span {
   display: none;
 }
 
+body.img-size img {
+  width: 50px;
+  height: auto;
+}
+
 .your-items {
   padding-left: 2em;
 }
 
 .bag-close-btn {
-  margin-left: 3em;
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #2F261D;
+  margin-top: 0.8em;
+  margin-left: 6em;
 }
 
 @keyframes fade {

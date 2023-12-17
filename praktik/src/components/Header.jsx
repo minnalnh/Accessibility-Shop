@@ -12,6 +12,7 @@ const Header = () => {
         const target = event.target;
 
         if(target.classList.contains("accessibility-btn")) {
+
             if(isBox1Visible === false) {
                 setBox1Visibility((prevVisibility) => !prevVisibility);
                 shadowRef.current.classList.add("shadow-box");
@@ -20,15 +21,16 @@ const Header = () => {
                 console.log(isBox1Visible);
                 setBox1Visibility(false);
                 shadowRef.current.classList.remove("shadow-box");
+
             }
 
         } else if(target.classList.contains("shopping-btn")) {
+
             if(isBox2Visible === false) {
                 setBox2Visibility((prevVisibility) => !prevVisibility);
                 shadowRef.current.classList.add("shadow-box");
 
             } else if(isBox2Visible === true) {
-
                 setBox2Visibility(false);
                 shadowRef.current.classList.remove("shadow-box");
             }
