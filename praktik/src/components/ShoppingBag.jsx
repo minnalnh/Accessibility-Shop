@@ -17,14 +17,15 @@ const ShoppingBag = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClic
                             </div>
                             <hr />
                             {cartItems.map((item, index) => (
-                                <div key={index}>
+                                <div key={index} className="cart-flex-container">
                                     <img src={item.image} alt={item.alt} style=
-                                    {{ width: "100px", height: "100px" }} />
-                                    <button>Remove Item</button>
-                                    <br />
-                                    {item.name}
-                                    <br />
-                                    {item.price} kr
+                                    {{ width: "100px", height: "100px" }} className="cart-img" />
+                                    <button className="cart-remove-btn">Remove Item</button>
+                                    <div className="cart-item-info">
+                                        {item.name}
+                                        <br />
+                                        {item.price} kr
+                                    </div>
                                 </div>
                             ))}
 
