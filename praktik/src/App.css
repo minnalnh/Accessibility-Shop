@@ -234,15 +234,12 @@ input[type="radio"] {
 
 .cart-btn {
   display: block;
+  color: #fff;
   background-color: #2F261D;
   font-size: 1rem;
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
-}
-
-.cart-btn span {
-  color: #fff;
 }
 
 .cart-btn:hover {
@@ -581,22 +578,28 @@ body.img-size img {
 
 .cart-flex-container {
   display: flex;
+  border-style: solid;
+  border-color: #2F261D;
+  border-width: 2px;
+  margin: 0.5em 0.5em 0.3em 0.3em;
 }
 
 .cart-img {
   flex: 2.5;
-  order: 1;
 }
 
 .cart-remove-btn {
   flex: 1;
-  order: 3;
   height: 50%;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #2F261D;
 }
 
 .cart-item-info {
   flex: 2.5;
-  order: 2;
+  text-align: center;
+  margin-top: 1.5em;
 }
 
 .cart-close-btn-layout {
