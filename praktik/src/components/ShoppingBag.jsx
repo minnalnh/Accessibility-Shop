@@ -1,20 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useContext } from 'react';
 import Product from './Product';
+import { CartContext } from './CartContext';
 
 const ShoppingBag = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClick }) => {
-
-    const [cartItems, setCartItems] = useState([]);
-/*
-    const addToCart = (product) => {
-        setCartItems((prevItems) => [...prevItems, product]);
-    }*/
-
-
-    const addToCart = (product) => {
-        setCartItems((prevItems) => [...prevItems, product]);
-        console.log("Product added to cart: ", product);
-    }
- 
+    const { cartItems } = useContext(CartContext);
 
     return (
         <div className="shopping-bag">
@@ -27,14 +16,24 @@ const ShoppingBag = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClic
                                 <button className="cart-close-btn cart-close-btn-layout" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon cart-close-btn"></img><span className="cart-close-btn"> Close Cart</span></button>
                             </div>
                             <hr />
-                            {addToCart}
+                            {cartItems.map((item, index) => (
+                                <div key={index}>
+                                    <img src={item.image} alt={item.alt} style=
+                                    {{ width: "100px", height: "100px" }} />
+                                    <button>Remove Item</button>
+                                    <br />
+                                    {item.name}
+                                    <br />
+                                    {item.price} kr
+                                </div>
+                            ))}
 
                     </div>
 
             )}
 
         </div>
-    )
-}
+    );
+};
 
 export default ShoppingBag;

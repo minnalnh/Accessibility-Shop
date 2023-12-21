@@ -12,7 +12,7 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
     const plusSlides = (n) => {
         setSlideIndex(slideIndex + n);
     }
-
+// funkar inte om jag trycker på föregående slide
     const showSlides = (n) => {
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
