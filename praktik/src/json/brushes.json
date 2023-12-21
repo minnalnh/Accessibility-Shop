@@ -1,5 +1,6 @@
 [
       {
+        "id": 1,
         "name": "Round Brush",
         "type": "Painting",
         "size": "Medium",
@@ -12,6 +13,7 @@
         "alt" : "Round brush"
       },
       {
+        "id": 2,
         "name": "Flat Brush",
         "type": "Painting",
         "size": "Large",
@@ -24,6 +26,7 @@
         "alt" : "Flat brush"
       },
       {
+        "id": 3,
         "name": "Detail Brush",
         "type": "Detailing",
         "size": "Small",
@@ -36,6 +39,7 @@
         "alt" : "Detail brush"
       },
       {
+        "id": 4,
         "name": "Fan Brush",
         "type": "Texture",
         "size": "Medium",
@@ -48,6 +52,7 @@
         "alt" : "Fan Brush"
       },
       {
+        "id": 5,
         "name": "Calligraphy Pen",
         "type": "Inking",
         "size": "Variable",

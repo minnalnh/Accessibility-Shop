@@ -4,21 +4,20 @@ import { CartContext } from './CartContext';
 
 const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClick }) => {
     const { cartItems, setCartItems } = useContext(CartContext);
+
+    const initialTotalSum = cartItems.reduce((sum, item) => sum + item.price, 0);
+    const [totalSum, setTotalSum] = React.useState(initialTotalSum);
+
+    useEffect(() => {
+        const newTotalSum = cartItems.reduce((sum, item) => sum + item.price, 0);
+        setTotalSum(newTotalSum);
+    }, [cartItems]);
+
     const removeItem = (index) => {
         const currentCartItems = [...cartItems];
         currentCartItems.splice(index, 1);
         setCartItems(currentCartItems);
     }
-
-    useEffect(() => {
-        const newTotalSum = cartItems.reduce((sum, item) => sum + item.price, 0);
-        setCartItems((prevCartItems) => {
-            return prevCartItems.map(item => ({...item, totalSum: newTotalSum }));
-        });
-    }, [cartItems]);
-
-    const initialTotalSum = cartItems.reduce((sum, item) => sum + item.price, 0);
- 
     return (
         <div className="shopping-cart">
             <button className="header-btn shopping-btn shopping-btn-layout" onClick={toggleBoxVisibility}><img src="icons/bag-shopping-solid.svg" alt="Shopping Bag" className="icon shopping-btn"></img><span className="shopping-btn"> Your Cart</span></button>
