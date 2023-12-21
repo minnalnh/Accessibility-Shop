@@ -366,6 +366,7 @@ h1, h2, h4, p, a {
 
 .close-btn, .reset-btn {
   display: block;
+  flex: 1;
   margin-left: 0.5em;
 }
 

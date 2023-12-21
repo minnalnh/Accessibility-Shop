@@ -20,7 +20,7 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
     const initialTotalSum = cartItems.reduce((sum, item) => sum + item.price, 0);
  
     return (
-        <div className="shopping-bag">
+        <div className="shopping-cart">
             <button className="header-btn shopping-btn shopping-btn-layout" onClick={toggleBoxVisibility}><img src="icons/bag-shopping-solid.svg" alt="Shopping Bag" className="icon shopping-btn"></img><span className="shopping-btn"> Your Cart</span></button>
 
             {isBox2Visible && (
@@ -42,12 +42,12 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                                 <br />
                                 <b>{item.price} kr</b>
                                 </div>
-                                <button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon cart-close-btn"></img><span>Remove Item</span></button>
+                                <button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon cart-close-btn"></img><span> Remove Item</span></button>
                             </div>
                         ))}
                     </div>
                     <p className="total-sum">Total sum: {initialTotalSum} kr</p>
-                    <button className="checkout-btn">Checkout</button>
+                    <button className="checkout-btn"><img src="icons/cash-register-solid.svg" alt="Cash Register" className="icon shopping-btn"></img><span> Checkout</span></button>
                     </>
                     )}
                     </div>

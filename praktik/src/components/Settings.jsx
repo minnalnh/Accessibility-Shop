@@ -118,6 +118,12 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
 
                 {isBox1Visible && (
                     <div className="settings-box pop-up" tabIndex="1">
+
+                        <div className="flex-container">
+                                <button className="close-btn settings-btn" onClick={handleCloseButtonClick} tabIndex="1"><img src="icons/xmark-solid.svg" alt="X Mark" className="icon"></img> Close Settings</button>
+                                <button className="reset-btn settings-btn" onClick={resetSettings}><img src="icons/rotate-left-solid.svg" alt="Reverse" className="icon"></img> Reset Settings</button>
+                            </div>
+                            
                         <br />
                             <label className="radio-container">
                             <span className="radio-label">Hide button text</span>
@@ -160,11 +166,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
                                 <span className="custom-radio"></span>
                             </label>
                             <hr />
-
-                            <div className="flex-container">
-                                <button className="close-btn settings-btn" onClick={handleCloseButtonClick} tabIndex="1"><img src="icons/xmark-solid.svg" alt="X Mark" className="icon"></img> Close Settings</button>
-                                <button className="reset-btn settings-btn" onClick={resetSettings}><img src="icons/rotate-left-solid.svg" alt="Reverse" className="icon"></img> Reset Settings</button>
-                            </div>
                     </div>
                 )}
             </div>
