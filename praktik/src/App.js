@@ -11,7 +11,6 @@ import PencilsPage from './components/pages/PencilsPage';
 import CheckoutPage from './components/pages/CheckoutPage';
 import { CartProvider } from './components/CartContext';
 import Product from './components/Product';
-import ShoppingBag from './components/ShoppingBag';
 
 const App = () => {
   return (

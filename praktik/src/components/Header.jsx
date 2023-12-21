@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Settings from './Settings';
-import ShoppingBag from './ShoppingBag';
+import ShoppingCart from './ShoppingCart';
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -78,7 +78,7 @@ const Header = () => {
                 <div className="btn-container">
                     <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img><span>Menu</span></button>
                     <div className="shopping-btn">
-                        <ShoppingBag
+                        <ShoppingCart
                         isBox2Visible={isBox2Visible}
                         toggleBoxVisibility={toggleBoxVisibility}
                         handleCloseButtonClick={handleCloseButtonClick} />

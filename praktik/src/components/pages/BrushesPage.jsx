@@ -1,7 +1,6 @@
 import React from 'react';
 import brushes from "../../json/brushes.json";
 import Product from '../Product';
-import ShoppingBag from "../ShoppingBag";
 
 const BrushesPage = () => {
     return (
