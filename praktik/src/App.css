@@ -613,7 +613,12 @@ body.img-size img {
   color: #fff;
   font-size: 1rem;
   background-color: #2F261D;
+  margin-right: 0.5em;
   margin-bottom: 0.5em;
+}
+
+.total-sum {
+  text-align: center;
 }
 
 .checkout-btn {
@@ -623,10 +628,6 @@ body.img-size img {
   color: #fff;
   background-color: #2F261D;
   font-size: 1rem;
-}
-
-.total-sum {
-  text-align: center;
 }
 
 @keyframes fade {
