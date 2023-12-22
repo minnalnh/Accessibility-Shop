@@ -1,12 +1,18 @@
 import React, { createContext, useState } from 'react';
-
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
     const addToCart = (item) => {
-        setCartItems((prevItems) => [...prevItems, item]);
+        const isItemInCart = cartItems.some(cartItem => cartItem.id === item.id);
+        
+        if (!isItemInCart) {
+            setCartItems((prevItems) => [...prevItems, item]);
+
+        } else {
+            console.log(`Item with id ${item.id} is already in the cart`);
+        }
     };
 
     return (

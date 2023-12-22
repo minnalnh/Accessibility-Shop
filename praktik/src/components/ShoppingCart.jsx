@@ -20,6 +20,13 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
         currentCartItems.splice(index, 1);
         setCartItems(currentCartItems);
     }
+/*
+    {cartItems.map((item, index) => {
+        if(item.id > 1) {
+            console.log("funkar");
+        }
+    })};*/
+
 
     return (
         <div className="shopping-cart">
