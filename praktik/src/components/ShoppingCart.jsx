@@ -4,10 +4,14 @@ import { CartContext } from './CartContext';
 const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClick }) => {
     const { cartItems, setCartItems } = useContext(CartContext);
     const [price, setPrice] = useState([]);
+    const [totalSum, setTotalSum] = useState(0);
 
     useEffect(() => {
         const newPrice = cartItems.map(item => item.price);
-        setPrice(prevPrice => [...newPrice]);
+        setPrice(newPrice);
+
+        const newTotalSum = newPrice.reduce((sum, itemPrice) => sum + itemPrice, 0);
+        setTotalSum(newTotalSum);
 
     }, [cartItems]);
 
@@ -17,9 +21,6 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
         setCartItems(currentCartItems);
     }
 
-  
-
-    console.log(price);
     return (
         <div className="shopping-cart">
             <button className="header-btn shopping-btn shopping-btn-layout" onClick={toggleBoxVisibility}><img src="icons/bag-shopping-solid.svg" alt="Shopping Bag" className="icon shopping-btn"></img><span className="shopping-btn"> Your Cart</span></button>
@@ -47,7 +48,7 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                             </div>
                         ))}
                     </div>
-                    <p className="total-sum">Total sum: {price.join(", ")} kr</p>
+                    <p className="total-sum">Total sum: {totalSum} kr</p>
                     <button className="checkout-btn"><img src="icons/cash-register-solid.svg" alt="Cash Register" className="icon shopping-btn"></img><span> Checkout</span></button>
                     </>
                     )}
