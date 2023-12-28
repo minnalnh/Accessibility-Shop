@@ -1,8 +1,4 @@
 import React, { useContext } from 'react';
-import brushes from '../json/brushes.json';
-import paint from '../json/paint.json';
-import paper from '../json/paper.json';
-import pencils from '../json/pencils.json';
 import { CartContext } from './CartContext';
 
 const Product = ({ id, name, type, size, shape, material, description, brand, price, image, alt }) => {

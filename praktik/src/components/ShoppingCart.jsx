@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from './CartContext';
 
 const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClick }) => {
-    const { cartItems, setCartItems } = useContext(CartContext);
+    const { cartItems, setCartItems, counters } = useContext(CartContext);
     const [price, setPrice] = useState([]);
     const [totalSum, setTotalSum] = useState(0);
 
@@ -10,23 +10,19 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
         const newPrice = cartItems.map(item => item.price);
         setPrice(newPrice);
 
-        const newTotalSum = newPrice.reduce((sum, itemPrice) => sum + itemPrice, 0);
+        const newTotalSum = newPrice.reduce((sum, itemPrice, index) => {
+            const item = cartItems[index];
+            return sum + itemPrice * (counters[item.id] || 1);
+        }, 0);
         setTotalSum(newTotalSum);
 
-    }, [cartItems]);
+    }, [cartItems, counters]);
 
     const removeItem = (index) => {
         const currentCartItems = [...cartItems];
         currentCartItems.splice(index, 1);
         setCartItems(currentCartItems);
     }
-/*
-    {cartItems.map((item, index) => {
-        if(item.id > 1) {
-            console.log("funkar");
-        }
-    })};*/
-
 
     return (
         <div className="shopping-cart">
@@ -50,6 +46,8 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                                 {item.name}
                                 <br />
                                 Price: <b>{item.price} kr</b>
+                                <br />
+                                Quantity: {counters[item.id] || 1}
                                 </div>
                                 <button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon cart-close-btn"></img><span> Remove Item</span></button>
                             </div>
