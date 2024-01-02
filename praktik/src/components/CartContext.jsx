@@ -14,7 +14,6 @@ const CartProvider = ({ children }) => {
 
         } else {
             setCounters((prevCounters) => ({...prevCounters, [item.id]: (prevCounters[item.id] || 0) + 1}));
-            console.log(`Item with id ${item.id} is already in the cart`);
         }
     };
 

@@ -225,6 +225,7 @@ input[type="radio"] {
 
 .shopping-box {
   z-index: 3;
+  width: 27em;
   top: 12em;
 }
 
@@ -589,11 +590,9 @@ body.img-size img {
   flex: 3;
 }
 
-.cart-remove-btn {
-  flex: 1;
-  height: 50%;
+.cart-add-btn, .cart-remove-btn {
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: #2F261D;
 }
 

@@ -34,13 +34,19 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                 currentCartItems.splice(index, 1);
                 setCartItems(currentCartItems);
             }
-            
+
             return updatedCounters;
         })
 
         const updatedCartItems = currentCartItems.filter((_, i) => i !== index);
         setCartItems(currentCartItems);
     };
+
+    const incrementQuantity = (itemId) => {
+        if(counters[itemId] && counters[itemId] > 1) {
+            setCounters((prevCounters) => ({...prevCounters, [itemId]: (prevCounters[itemId] || 0) + 1}));
+        }
+    }
 
     return (
         <div className="shopping-cart">
@@ -65,9 +71,8 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                                 <br />
                                 Price: <b>{item.price * counters[item.id]} kr</b>
                                 <br />
-                                Quantity: {counters[item.id] || 1}
+                                Quantity:<br /><button className="cart-add-btn" onClick={() => incrementQuantity(item.id)}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add</span></button><b>{counters[item.id] || 1}</b><button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon cart-close-btn"></img><span> Remove</span></button>
                                 </div>
-                                <button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon cart-close-btn"></img><span> Remove Item</span></button>
                             </div>
                         ))}
                     </div>
