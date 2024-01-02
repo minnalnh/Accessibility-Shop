@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from './CartContext';
 
 const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClick }) => {
-    const { cartItems, setCartItems, counters } = useContext(CartContext);
+    const { cartItems, setCartItems, counters, setCounters } = useContext(CartContext);
     const [price, setPrice] = useState([]);
     const [totalSum, setTotalSum] = useState(0);
 
@@ -20,9 +20,27 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
 
     const removeItem = (index) => {
         const currentCartItems = [...cartItems];
-        currentCartItems.splice(index, 1);
+        const removedItem = currentCartItems[index];
+
+        setCounters((prevCounters) => {
+            const updatedCounters = { ...prevCounters };
+
+            if(updatedCounters[removedItem.id] && updatedCounters[removedItem.id] > 1) {
+                updatedCounters[removedItem.id]--;
+
+            } else {
+                delete updatedCounters[removedItem.id];
+
+                currentCartItems.splice(index, 1);
+                setCartItems(currentCartItems);
+            }
+            
+            return updatedCounters;
+        })
+
+        const updatedCartItems = currentCartItems.filter((_, i) => i !== index);
         setCartItems(currentCartItems);
-    }
+    };
 
     return (
         <div className="shopping-cart">
@@ -45,7 +63,7 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                                 <div className="cart-item-info">
                                 {item.name}
                                 <br />
-                                Price: <b>{item.price} kr</b>
+                                Price: <b>{item.price * counters[item.id]} kr</b>
                                 <br />
                                 Quantity: {counters[item.id] || 1}
                                 </div>
