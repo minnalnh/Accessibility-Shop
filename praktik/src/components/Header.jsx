@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import Settings from './Settings';
 import ShoppingCart from './ShoppingCart';
-import { NavLink } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
@@ -9,6 +9,7 @@ const Header = () => {
     const [isBox1Visible, setBox1Visibility] = useState(false);
     const [isBox2Visible, setBox2Visibility] = useState(false);
     const shadowRef = useRef(null);
+    const location = useLocation();
 
     const toggleBoxVisibility = (event) => {
         const target = event.target;
@@ -52,22 +53,22 @@ const Header = () => {
         }
     };
 
-    /*
-                 <ul className="navbar">
-                    <li>
-                        <NavLink to="/brushes">Brushes</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/paint">Paint</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/paper">Paper</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/pencils">Pencils</NavLink>
-                    </li>
-                </ul>
-    */
+    const getBreadcrumbTrail = () => {
+        const pathArray = location.pathname.split('/').filter(Boolean);
+        const breadcrumbTrail = [];
+
+        pathArray.forEach((path, index) => {
+            const pathUrl = `/${pathArray.slice(0, index + 1).join('/')}`;
+            breadcrumbTrail.push({
+                name: path.charAt(0).toUpperCase() + path.slice(1),
+                url: pathUrl,
+            });
+        });
+
+        return breadcrumbTrail;
+    };
+
+    const breadcrumbTrail = getBreadcrumbTrail();
 
     return (
         <div className="header">
@@ -115,6 +116,15 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
+
+            <div className="breadcrumb">
+                {breadcrumbTrail.map((item, index) => (
+                    <span key={index}>
+                        {index > 0 && <span className="breadcrumb-separator"> / </span>}
+                        <NavLink to="/">Home Page </NavLink><NavLink to={item.url}>{item.name}</NavLink>
+                    </span>
+                ))}
+            </div>
         </div>
     )
 }

@@ -225,11 +225,14 @@ input[type="radio"] {
 
 .shopping-box {
   z-index: 3;
-  width: 27em;
+  width: 26em;
   top: 12em;
 }
 
+
 .shopping-btn-layout {
+  position: absolute;
+  right: 0;
   margin-top: 1em;
 }
 
@@ -293,6 +296,8 @@ h1, h2, h4, p, a {
 }
 
 .logo {
+  color: #2F261D;
+  text-decoration: none;
   margin-left: 0.5em;
   font-family: 'Yuji Syuku', sans-serif;
   font-size: 2rem;
@@ -630,6 +635,15 @@ body.img-size img {
   margin-top: 1.3em;
   font-size: 1rem;
   margin-left: 3em;
+}
+
+#dropdown-basic-button {
+  background-color: transparent;
+  color: #2F261D;
+  border-color: #2F261D;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1.3em;
 }
 
 .checkout-btn {

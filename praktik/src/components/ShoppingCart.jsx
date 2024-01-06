@@ -37,9 +37,6 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
 
             return updatedCounters;
         })
-
-        const updatedCartItems = currentCartItems.filter((_, i) => i !== index);
-        setCartItems(currentCartItems);
     };
 
     const incrementQuantity = (itemId) => {
