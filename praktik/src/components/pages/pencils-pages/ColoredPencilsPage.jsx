@@ -2,7 +2,7 @@ import React from 'react';
 import artSupplies from "../../../json/pencils/colored-pencils.json";
 import Product from '../../Product';
 
-const BrushesPage = () => {
+const ColoredPencilsPage = () => {
     return (
         <div>
             <a className="page-title">Brushes</a>
@@ -19,4 +19,4 @@ const BrushesPage = () => {
     );
 
 }
-export default BrushesPage;
+export default ColoredPencilsPage;
