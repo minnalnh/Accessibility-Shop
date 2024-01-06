@@ -83,27 +83,27 @@ const Header = () => {
             <nav className="flex-container">
 
             <DropdownButton id="dropdown-basic-button" title="Brushes">
-                <Dropdown.Item><NavLink to="/fan-brushes">Fan Brushes</NavLink></Dropdown.Item>
-                <Dropdown.Item><NavLink to="/round-brushes">Round Brushes</NavLink></Dropdown.Item>
-                <Dropdown.Item><NavLink to="/flat-brushes">Flat Brushes</NavLink></Dropdown.Item>
+                <Dropdown.Item><NavLink to="/fan-brushes" className="dropdown-content">Fan Brushes</NavLink></Dropdown.Item>
+                <Dropdown.Item><NavLink to="/round-brushes" className="dropdown-content">Round Brushes</NavLink></Dropdown.Item>
+                <Dropdown.Item><NavLink to="/flat-brushes" className="dropdown-content">Flat Brushes</NavLink></Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Paint">
-            <Dropdown.Item><NavLink to="/acrylic-paint">Acrylic Paint</NavLink></Dropdown.Item>
-                <Dropdown.Item href="/oil-paint">Oil Paint</Dropdown.Item>
-                <Dropdown.Item href="/watercolor-paint">Watercolor Paint</Dropdown.Item>
+            <Dropdown.Item><NavLink to="/acrylic-paint" className="dropdown-content">Acrylic Paint</NavLink></Dropdown.Item>
+            <Dropdown.Item><NavLink to="/oil-paint" className="dropdown-content">Oil Paint</NavLink></Dropdown.Item>
+            <Dropdown.Item><NavLink to="/watercolor-paint" className="dropdown-content">Watercolor Paint</NavLink></Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Paper">
-            <Dropdown.Item><NavLink to="/watercolor-paper">Watercolor Paper</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/drawing-paper">Drawing Paper</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/canvas-paper">Canvas Paper</NavLink></Dropdown.Item>
+            <Dropdown.Item><NavLink to="/watercolor-paper" className="dropdown-content">Watercolor Paper</NavLink></Dropdown.Item>
+            <Dropdown.Item><NavLink to="/drawing-paper" className="dropdown-content">Drawing Paper</NavLink></Dropdown.Item>
+            <Dropdown.Item><NavLink to="/canvas-paper" className="dropdown-content">Canvas Paper</NavLink></Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Pencils">
-            <Dropdown.Item><NavLink to="/graphite-pencils">Graphite Pencils</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/colored-pencils">Colored Pencils</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/charcoal-pencils">Charcoal Pencils</NavLink></Dropdown.Item>
+            <Dropdown.Item><NavLink to="/graphite-pencils" className="dropdown-content">Graphite Pencils</NavLink></Dropdown.Item>
+            <Dropdown.Item><NavLink to="/colored-pencils" className="dropdown-content">Colored Pencils</NavLink></Dropdown.Item>
+            <Dropdown.Item><NavLink to="/charcoal-pencils" className="dropdown-content">Charcoal Pencils</NavLink></Dropdown.Item>
             </DropdownButton>
 
                 <div className="btn-container">
@@ -121,7 +121,7 @@ const Header = () => {
                 {breadcrumbTrail.map((item, index) => (
                     <span key={index}>
                         {index > 0 && <span className="breadcrumb-separator"> / </span>}
-                        <NavLink to="/">Home Page </NavLink><NavLink to={item.url}>{item.name}</NavLink>
+                        <NavLink className="home-page-breadcrumb" to="/">Home Page </NavLink><NavLink to={item.url}>{item.name}</NavLink>
                     </span>
                 ))}
             </div>

@@ -223,6 +223,11 @@ input[type="radio"] {
   top: 8em;
 }
 
+.home-page-breadcrumb {
+  color: #2F261D;
+  font-size: 1rem;
+}
+
 .shopping-box {
   z-index: 3;
   width: 26em;
@@ -644,6 +649,20 @@ body.img-size img {
   margin-left: 0.5em;
   margin-right: 0.5em;
   margin-top: 1.3em;
+}
+
+.dropdown-content {
+  color: #2F261D;
+  text-decoration: none;
+}
+
+.dropdown-content:hover {
+  text-decoration: underline;
+}
+
+#dropdown-basic-button:hover {
+  background-color: #2F261D;
+  color: #fff;
 }
 
 .checkout-btn {
