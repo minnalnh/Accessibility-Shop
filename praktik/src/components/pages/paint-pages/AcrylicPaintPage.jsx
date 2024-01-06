@@ -1,8 +1,8 @@
 import React from 'react';
-import brushes from "../../../json/paint/acrylic-paint.json";
+import artSupplies from "../../../json/paint/acrylic-paint.json";
 import Product from '../../Product';
 
-const BrushesPage = () => {
+const AcrylicPaintPage = () => {
     return (
         <div>
             <a className="page-title">Brushes</a>
@@ -10,8 +10,8 @@ const BrushesPage = () => {
                 <p className="sr-only">Painting brush getting dipped in paint</p>
             </div>
             <div className="flex-container">
-                {brushes.map(brush => (
-                        <Product key={brush.id} {...brush} />
+            {artSupplies.map(artSupply => (
+                        <Product key={artSupply.id} {...artSupply} />
                     ))
                 }
             </div>
@@ -19,4 +19,4 @@ const BrushesPage = () => {
     );
 
 }
-export default BrushesPage;
+export default AcrylicPaintPage;

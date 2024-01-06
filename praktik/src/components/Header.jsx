@@ -99,7 +99,7 @@ const Header = () => {
             <Dropdown.Item><NavLink to="/canvas-paper">Canvas Paper</NavLink></Dropdown.Item>
             </DropdownButton>
 
-            <DropdownButton id="dropdown-basic-button" title="Paper">
+            <DropdownButton id="dropdown-basic-button" title="Pencils">
             <Dropdown.Item><NavLink to="/graphite-pencils">Graphite Pencils</NavLink></Dropdown.Item>
             <Dropdown.Item><NavLink to="/colored-pencils">Colored Pencils</NavLink></Dropdown.Item>
             <Dropdown.Item><NavLink to="/charcoal-pencils">Charcoal Pencils</NavLink></Dropdown.Item>

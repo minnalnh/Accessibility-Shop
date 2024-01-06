@@ -1,5 +1,5 @@
 import React from 'react';
-import brushes from "../../../json/paper/canvas-paper.json";
+import artSupplies from "../../../json/paper/canvas-paper.json";
 import Product from '../../Product';
 
 const BrushesPage = () => {
@@ -10,8 +10,8 @@ const BrushesPage = () => {
                 <p className="sr-only">Painting brush getting dipped in paint</p>
             </div>
             <div className="flex-container">
-                {brushes.map(brush => (
-                        <Product key={brush.id} {...brush} />
+            {artSupplies.map(artSupply => (
+                        <Product key={artSupply.id} {...artSupply} />
                     ))
                 }
             </div>

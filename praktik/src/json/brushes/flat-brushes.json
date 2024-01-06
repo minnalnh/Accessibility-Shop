@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 11,
     "name": "Square Flat Brush",
     "size": "Medium",
     "material": "Synthetic",
@@ -9,7 +9,7 @@
     "price": 149
   },
   {
-    "id": 2,
+    "id": 12,
     "name": "Wide Flat Brush",
     "size": "Large",
     "material": "Bristle",
@@ -18,7 +18,7 @@
     "price": 179
   },
   {
-    "id": 3,
+    "id": 13,
     "name": "Fine Detail Flat Brush",
     "size": "Small",
     "material": "Synthetic",
@@ -27,7 +27,7 @@
     "price": 129
   },
   {
-    "id": 4,
+    "id": 14,
     "name": "Angled Flat Brush",
     "size": "Medium",
     "material": "Synthetic",
@@ -36,7 +36,7 @@
     "price": 159
   },
   {
-    "id": 5,
+    "id": 15,
     "name": "Large Flat Brush Set",
     "size": "Assorted",
     "material": "Mixed",

@@ -1,9 +1,22 @@
+import React from 'react';
+import artSupplies from "../../../json/paper/drawing-paper.json";
+import Product from '../../Product';
 
-const PaperPage = () => {
+const BrushesPage = () => {
     return (
-        <h2>Paper</h2>
+        <div>
+            <a className="page-title">Brushes</a>
+            <div className="shopping-page-img">
+                <p className="sr-only">Painting brush getting dipped in paint</p>
+            </div>
+            <div className="flex-container">
+            {artSupplies.map(artSupply => (
+                        <Product key={artSupply.id} {...artSupply} />
+                    ))
+                }
+            </div>
+        </div>
     );
 
 }
-
-export default PaperPage;
+export default BrushesPage;

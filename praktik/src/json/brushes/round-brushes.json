@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 6,
     "name": "Precision Round Brush",
     "size": "Small",
     "material": "Synthetic",
@@ -9,7 +9,7 @@
     "price": 79
   },
   {
-    "id": 2,
+    "id": 7,
     "name": "Versatile Round Brush",
     "size": "Medium",
     "material": "Mixed Bristles",
@@ -18,7 +18,7 @@
     "price": 99
   },
   {
-    "id": 3,
+    "id": 8,
     "name": "Fine Art Round Brush",
     "size": "Large",
     "material": "Sable",
@@ -27,7 +27,7 @@
     "price": 149
   },
   {
-    "id": 4,
+    "id": 9,
     "name": "Round Brush Set of 3",
     "size": "Assorted",
     "material": "Synthetic",
@@ -36,7 +36,7 @@
     "price": 119
   },
   {
-    "id": 5,
+    "id": 10,
     "name": "Watercolor Round Brush",
     "size": "Medium",
     "material": "Squirrel Hair",

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 56,
+    "name": "Premium Graphite Pencil Set",
+    "size": "Assorted",
+    "material": "Graphite",
+    "description": "High-quality graphite pencil set with assorted hardness levels for drawing and shading.",
+    "brand": "Artisan Pencils",
+    "price": 149
+  },
+  {
+    "id": 57,
+    "name": "HB Drawing Pencil",
+    "size": "Medium",
+    "material": "Graphite",
+    "description": "HB graphite pencil for general-purpose drawing, writing, and shading.",
+    "brand": "Masterpiece Pencils",
+    "price": 79
+  },
+  {
+    "id": 58,
+    "name": "4B Sketching Pencil",
+    "size": "Medium",
+    "material": "Graphite",
+    "description": "4B graphite sketching pencil for expressive and dark lines in sketches.",
+    "brand": "SketchPro Tools",
+    "price": 99
+  },
+  {
+    "id": 59,
+    "name": "2H Technical Pencil",
+    "size": "Fine",
+    "material": "Graphite",
+    "description": "2H graphite technical pencil for precise and technical drawing.",
+    "brand": "Precision Drawing Supplies",
+    "price": 119
+  },
+  {
+    "id": 60,
+    "name": "6B Art Pencil",
+    "size": "Soft",
+    "material": "Graphite",
+    "description": "6B graphite art pencil for soft and bold strokes in artistic drawings.",
+    "brand": "Creative Artistry",
+    "price": 89
+  }
+]
