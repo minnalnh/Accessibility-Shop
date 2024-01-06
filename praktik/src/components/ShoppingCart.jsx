@@ -43,7 +43,7 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
     };
 
     const incrementQuantity = (itemId) => {
-        if(counters[itemId] && counters[itemId] > 1) {
+        if(counters[itemId] && counters[itemId] >= 1) {
             setCounters((prevCounters) => ({...prevCounters, [itemId]: (prevCounters[itemId] || 0) + 1}));
         }
     }
@@ -78,8 +78,10 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                             </div>
                         ))}
                     </div>
-                    <p className="total-sum">Total sum: {totalSum} kr</p>
-                    <button className="checkout-btn"><img src="icons/cash-register-solid.svg" alt="Cash Register" className="icon shopping-btn"></img><span> Checkout</span></button>
+                    <div className="flex-container">
+                        <p className="total-sum">Total sum: <b>{totalSum} kr</b></p>
+                        <button className="checkout-btn"><img src="icons/cash-register-solid.svg" alt="Cash Register" className="icon shopping-btn"></img><span> Checkout</span></button>
+                    </div>
                     </>
                     )}
                     </div>

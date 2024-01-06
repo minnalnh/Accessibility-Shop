@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Precision Round Brush",
+    "size": "Small",
+    "material": "Synthetic",
+    "description": "Ideal for detailed work and fine lines.",
+    "brand": "Artisan Brushes",
+    "price": 79
+  },
+  {
+    "id": 2,
+    "name": "Versatile Round Brush",
+    "size": "Medium",
+    "material": "Mixed Bristles",
+    "description": "Suitable for various painting techniques.",
+    "brand": "Masterpiece Brushes",
+    "price": 99
+  },
+  {
+    "id": 3,
+    "name": "Fine Art Round Brush",
+    "size": "Large",
+    "material": "Sable",
+    "description": "High-quality brush for professional artists.",
+    "brand": "Premium Art Supplies",
+    "price": 149
+  },
+  {
+    "id": 4,
+    "name": "Round Brush Set of 3",
+    "size": "Assorted",
+    "material": "Synthetic",
+    "description": "A set of round brushes for various applications.",
+    "brand": "Creative Expressions",
+    "price": 119
+  },
+  {
+    "id": 5,
+    "name": "Watercolor Round Brush",
+    "size": "Medium",
+    "material": "Squirrel Hair",
+    "description": "Specifically designed for watercolor painting.",
+    "brand": "Aquatic Artistry",
+    "price": 129
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Watercolor - Cobalt Blue",
+    "size": "15ml",
+    "material": "Watercolor",
+    "description": "High-quality cobalt blue watercolor paint for professional artists.",
+    "brand": "Artisan Watercolors",
+    "price": 119
+  },
+  {
+    "id": 2,
+    "name": "Vivid Watercolor Set - Tropical Palette",
+    "size": "12 colors, 5ml each",
+    "material": "Watercolor",
+    "description": "Vibrant tropical palette watercolor set for diverse artistic applications.",
+    "brand": "Masterpiece Watercolors",
+    "price": 229
+  },
+  {
+    "id": 3,
+    "name": "Transparent Watercolor - Quinacridone Rose",
+    "size": "10ml",
+    "material": "Watercolor",
+    "description": "Transparent quinacridone rose watercolor for delicate washes and layering.",
+    "brand": "Clear Hue Art Supplies",
+    "price": 159
+  },
+  {
+    "id": 4,
+    "name": "Granulating Watercolor - Raw Sienna",
+    "size": "20ml",
+    "material": "Watercolor",
+    "description": "Granulating raw sienna watercolor for textured and granulated effects.",
+    "brand": "Textura Colors",
+    "price": 139
+  },
+  {
+    "id": 5,
+    "name": "Metallic Watercolor - Gold Glitter",
+    "size": "8ml",
+    "material": "Watercolor",
+    "description": "Metallic gold glitter watercolor paint for shimmering highlights.",
+    "brand": "Metallic Radiance",
+    "price": 179
+  }
+]

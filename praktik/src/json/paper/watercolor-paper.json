@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Professional Watercolor Paper Block",
+    "size": "9x12 inches",
+    "material": "100% Cotton",
+    "description": "Professional-grade watercolor paper block with exceptional absorbency and texture.",
+    "brand": "Artisan Watercolor Papers",
+    "price": 249
+  },
+  {
+    "id": 2,
+    "name": "Cold-Pressed Watercolor Pad",
+    "size": "11x15 inches",
+    "material": "Cellulose",
+    "description": "Cold-pressed watercolor pad with a fine texture for various watercolor techniques.",
+    "brand": "Masterpiece Watercolor Pads",
+    "price": 189
+  },
+  {
+    "id": 3,
+    "name": "Hot-Pressed Watercolor Paper Set",
+    "size": "8x10 inches",
+    "material": "Wood Pulp",
+    "description": "Set of hot-pressed watercolor papers for smooth and detailed artworks.",
+    "brand": "SmoothArt Papers",
+    "price": 149
+  },
+  {
+    "id": 4,
+    "name": "Rough Watercolor Paper Roll",
+    "size": "22 inches x 5 yards",
+    "material": "Alpha Cellulose",
+    "description": "Rough watercolor paper roll for creating textured and expressive watercolor paintings.",
+    "brand": "TextureMaster Rolls",
+    "price": 299
+  },
+  {
+    "id": 5,
+    "name": "Handmade Watercolor Paper Sheets",
+    "size": "12x18 inches",
+    "material": "Cotton and Plant Fibers",
+    "description": "Handmade watercolor paper sheets with a unique blend of cotton and plant fibers.",
+    "brand": "ArtistryCraft Papers",
+    "price": 329
+  }
+]

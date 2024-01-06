@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
@@ -8,12 +8,14 @@ const CartProvider = ({ children }) => {
     const addToCart = (item) => {
         const isItemInCart = cartItems.some(cartItem => cartItem.id === item.id);
         
-        if (!isItemInCart) {
+        if (!isItemInCart) {    // om produkten precis lades till för första gången
             setCartItems((prevItems) => [...prevItems, item]);
             setCounters((prevCounters) => ({...prevCounters, [item.id]: (prevCounters[item.id] || 0) + 1}));
+            console.log("not empty");
 
-        } else {
+        } else {    // om produkten redan fanns i varukorgen
             setCounters((prevCounters) => ({...prevCounters, [item.id]: (prevCounters[item.id] || 0) + 1}));
+            console.log("empty");
         }
     };
 

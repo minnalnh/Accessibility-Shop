@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Square Flat Brush",
+    "size": "Medium",
+    "material": "Synthetic",
+    "description": "Versatile flat brush with a square tip for precise strokes.",
+    "brand": "Artisan Brushes",
+    "price": 149
+  },
+  {
+    "id": 2,
+    "name": "Wide Flat Brush",
+    "size": "Large",
+    "material": "Bristle",
+    "description": "Ideal for covering large areas and creating broad strokes.",
+    "brand": "Masterpiece Brushes",
+    "price": 179
+  },
+  {
+    "id": 3,
+    "name": "Fine Detail Flat Brush",
+    "size": "Small",
+    "material": "Synthetic",
+    "description": "Perfect for intricate details and fine lines.",
+    "brand": "Precision Art Supplies",
+    "price": 129
+  },
+  {
+    "id": 4,
+    "name": "Angled Flat Brush",
+    "size": "Medium",
+    "material": "Synthetic",
+    "description": "Angled shape for versatile strokes and shading.",
+    "brand": "Creative Expressions",
+    "price": 159
+  },
+  {
+    "id": 5,
+    "name": "Large Flat Brush Set",
+    "size": "Assorted",
+    "material": "Mixed",
+    "description": "Set of large flat brushes for various painting techniques.",
+    "brand": "Artistic Impressions",
+    "price": 299
+  }
+]
