@@ -53,6 +53,13 @@ const Header = () => {
         }
     };
 
+    const customRouteName = (name) => {
+        const strings = name.split('-');
+        return strings.map((string, index) => (
+            index === 0 || index === 1 ? string.charAt(0).toUpperCase() + string.slice(1) : string
+            )).join(' ');
+    };
+    
     const getBreadcrumbTrail = () => {
         const pathArray = location.pathname.split('/').filter(Boolean);
         const breadcrumbTrail = [];
@@ -60,7 +67,7 @@ const Header = () => {
         pathArray.forEach((path, index) => {
             const pathUrl = `/${pathArray.slice(0, index + 1).join('/')}`;
             breadcrumbTrail.push({
-                name: path.charAt(0).toUpperCase() + path.slice(1),
+                name: customRouteName(path),
                 url: pathUrl,
             });
         });
@@ -107,7 +114,7 @@ const Header = () => {
             </DropdownButton>
 
                 <div className="btn-container">
-                    <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img><span>Menu</span></button>
+                    <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img><span> Menu</span></button>
                     <div className="shopping-btn">
                         <ShoppingCart
                         isBox2Visible={isBox2Visible}
@@ -115,16 +122,16 @@ const Header = () => {
                         handleCloseButtonClick={handleCloseButtonClick} />
                     </div>
                 </div>
-            </nav>
 
-            <div className="breadcrumb">
+                <div className="breadcrumb">
                 {breadcrumbTrail.map((item, index) => (
                     <span key={index}>
                         {index > 0 && <span className="breadcrumb-separator"> / </span>}
-                        <NavLink className="home-page-breadcrumb" to="/">Home Page </NavLink><NavLink to={item.url}>{item.name}</NavLink>
+                        <NavLink className="home-page-breadcrumb" to="/">Home Page &rarr; </NavLink><NavLink to={item.url} className="breadcrumb-navlink"><b>{item.name}</b></NavLink>
                     </span>
                 ))}
-            </div>
+                </div>
+            </nav>
         </div>
     )
 }

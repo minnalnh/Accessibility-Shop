@@ -46,7 +46,7 @@
 }
 
 body {
-  background-color: #FFFEE7;
+  background-color: #f4f1e2 !important; /* Behöver använda important på grund av bootstrap */
 }
 
 /* Footer */
@@ -125,12 +125,13 @@ img {
 }
 
 .menu-btn {
+  display: block;
   height: 3em;
+  margin-top: 1em;
+  margin-left: 20em;
   border-radius: 12px;
   padding-left: 2em;
   padding-right: 2em;
-  margin-top: 1em;
-  margin-right: 1em;
   font-size: 1rem;
   color: #fff;
   background-color: #2F261D;
@@ -226,6 +227,21 @@ input[type="radio"] {
 .home-page-breadcrumb {
   color: #2F261D;
   font-size: 1rem;
+  background-color: #fff;
+  padding-left: 0.3em;
+  padding-bottom: 0.3em;
+  margin-right: 0.4em;
+}
+
+.breadcrumb-navlink {
+  background-color: #fff;
+  padding-bottom: 0.3em;
+}
+
+.breadcrumb {
+  position: absolute;
+  margin-top: 3.8em;
+  margin-left: 0.5em;
 }
 
 .shopping-box {
@@ -233,7 +249,6 @@ input[type="radio"] {
   width: 26em;
   top: 12em;
 }
-
 
 .shopping-btn-layout {
   position: absolute;
@@ -394,7 +409,6 @@ button:hover {
 }
 
 .slide-1, .slide-2, .slide-3 {
-  margin-top: 8em; /* resten av innehållet förutom headern */
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
@@ -485,16 +499,15 @@ button:hover {
 }
 
 .active {
-  color: #fff;
-  background-color: #2F261D;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  color: #2F261D;
+  margin-left: -0.6em;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 
 .slideshow-container {
   position: relative;
+  margin-top: 7em;
 }
 
 .slideshow-box {
@@ -547,6 +560,11 @@ body {
   margin-left: 4em;
   margin-top: 1em;
   z-index: 5;
+}
+
+.shopping-cart {
+  display: block;
+  flex: 1;
 }
 
 .product-price {
@@ -643,12 +661,7 @@ body.img-size img {
 }
 
 #dropdown-basic-button {
-  background-color: transparent;
-  color: #2F261D;
-  border-color: #2F261D;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-top: 1.3em;
+  display: none;
 }
 
 .dropdown-content {
@@ -686,20 +699,20 @@ body.img-size img {
     flex-direction: row;
   }
 
+  #dropdown-basic-button {
+    display: block;
+    background-color: transparent;
+    color: #2F261D;
+    border-color: #2F261D;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 1.3em;
+  }
+
   .navbar {
     display: block;
     flex: 2;
     list-style-type: none;
-  }
-
-  nav li {
-    float: left;
-    font-size: 1.2rem;
-    margin-top: 0.8em;
-  }
-  
-  nav li a:hover {
-    text-decoration: underline;
   }
 
   .menu-btn {
