@@ -2,28 +2,32 @@ import React, { useState, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Settings from './Settings';
 import ShoppingCart from './ShoppingCart';
+import MenuButton from './MenuButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
 const Header = () => {
     const [isBox1Visible, setBox1Visibility] = useState(false);
     const [isBox2Visible, setBox2Visibility] = useState(false);
+    const [isBox3Visible, setBox3Visibility] = useState(false);
     const shadowRef = useRef(null);
     const location = useLocation();
 
     const toggleBoxVisibility = (event) => {
         const target = event.target;
 
-        if(target.classList.contains("accessibility-btn")) {
+        if(target.classList.contains("accessibility")) {
 
             if(isBox1Visible === false) {
                 setBox1Visibility((prevVisibility) => !prevVisibility);
                 shadowRef.current.classList.add("shadow-box");
 
+                setBox2Visibility(false);
+                setBox3Visibility(false);
+
             } else if(isBox1Visible === true) {
                 setBox1Visibility(false);
                 shadowRef.current.classList.remove("shadow-box");
-
             }
 
         } else if(target.classList.contains("shopping-btn")) {
@@ -32,12 +36,30 @@ const Header = () => {
                 setBox2Visibility((prevVisibility) => !prevVisibility);
                 shadowRef.current.classList.add("shadow-box");
 
+                setBox1Visibility(false);
+                setBox3Visibility(false);
+
             } else if(isBox2Visible === true) {
                 setBox2Visibility(false);
                 shadowRef.current.classList.remove("shadow-box");
             }
 
+        } else if(target.classList.contains("menu-btn")) {
+
+            if(isBox3Visible === false) {
+                setBox3Visibility((prevVisibility) => !prevVisibility);
+                shadowRef.current.classList.add("shadow-box");
+
+                setBox1Visibility(false);
+                setBox2Visibility(false);
+
+            } else if(isBox3Visible === true) {
+                setBox3Visibility(false);
+                shadowRef.current.classList.remove("shadow-box");
+            }
+
         }
+
     };
 
     const handleCloseButtonClick = (event) => {
@@ -47,8 +69,12 @@ const Header = () => {
             setBox1Visibility(false);
             shadowRef.current.classList.remove("shadow-box");
 
-        } else if(target.classList.contains("cart-close-btn") && isBox2Visible === true) {
+        } else if(target.classList.contains("close-btn") && isBox2Visible === true) {
             setBox2Visibility(false);
+            shadowRef.current.classList.remove("shadow-box");
+
+        } else if(target.classList.contains("close-btn") && isBox3Visible === true) {
+            setBox3Visibility(false);
             shadowRef.current.classList.remove("shadow-box");
         }
     };
@@ -114,12 +140,18 @@ const Header = () => {
             </DropdownButton>
 
                 <div className="btn-container">
-                    <button className="menu-btn"><img src="icons/bars-solid.svg" alt="Menu Bars"></img><span> Menu</span></button>
+                    <div className="menu-button">
+                        <MenuButton isBox3Visible={isBox3Visible}
+                            toggleBoxVisibility={toggleBoxVisibility}
+                            handleCloseButtonClick={handleCloseButtonClick}
+                            shadowRef={shadowRef} />
+                        </div>
                     <div className="shopping-btn">
                         <ShoppingCart
-                        isBox2Visible={isBox2Visible}
-                        toggleBoxVisibility={toggleBoxVisibility}
-                        handleCloseButtonClick={handleCloseButtonClick} />
+                            isBox2Visible={isBox2Visible}
+                            toggleBoxVisibility={toggleBoxVisibility}
+                            handleCloseButtonClick={handleCloseButtonClick}
+                            shadowRef={shadowRef} />
                     </div>
                 </div>
 

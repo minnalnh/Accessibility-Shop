@@ -106,14 +106,14 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
     }, [isChecked]);
 
         return (
-            <div className="accessibility">
+            <div>
                 <span className="alert-text"><strong>{alertText}</strong></span>
                 <div ref={overlayRef} className={`${isChecked ? 'disable-click' : ''}`}></div>
                 <div ref={contrastRef} className={`${isChecked ? 'change-contrast' : ''}`}></div>
                 <div ref={shadowRef}></div>
 
                 <div className="btn-container">
-                    <button className="header-btn accessibility-btn" onClick={toggleBoxVisibility}><img src="icons/gear-solid.svg" alt="Gear" className="icon"></img> Accessibility Settings</button>
+                    <button className="header-btn accessibility-btn accessibility" onClick={toggleBoxVisibility}><img src="icons/gear-solid.svg" alt="Gear" className="icon accessibility"></img> Accessibility Settings</button>
                 </div>
 
                 {isBox1Visible && (

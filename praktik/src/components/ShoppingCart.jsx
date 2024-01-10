@@ -39,7 +39,7 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
         })
     };
 
-    const incrementQuantity = (itemId) => {
+    const addQuantity = (itemId) => {
         if(counters[itemId] && counters[itemId] >= 1) {
             setCounters((prevCounters) => ({...prevCounters, [itemId]: (prevCounters[itemId] || 0) + 1}));
         }
@@ -47,13 +47,13 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
 
     return (
         <div className="shopping-cart">
-            <button className="header-btn shopping-btn shopping-btn-layout" onClick={toggleBoxVisibility}><img src="icons/bag-shopping-solid.svg" alt="Shopping Bag" className="icon shopping-btn"></img><span className="shopping-btn"> Your Cart</span></button>
+            <button className="header-btn shopping-btn shopping-btn-layout" onClick={toggleBoxVisibility}><img src="icons/bag-shopping-solid.svg" alt="Shopping Cart" className="icon shopping-btn"></img><span className="shopping-btn"> Your Cart</span></button>
 
             {isBox2Visible && (
                     <div className="shopping-box pop-up" tabIndex="1">
                             <div className="flex-container">
                                 <h3 className="your-items">Your Items:</h3>
-                                <button className="cart-close-btn cart-close-btn-layout" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon cart-close-btn"></img><span className="cart-close-btn"> Close Cart</span></button>
+                                <button className="close-btn close-btn-layout" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img><span className="close-btn"> Close Cart</span></button>
                             </div>
                     {cartItems.length === 0 ? (
                         <p className="cart-empty-msg">Your cart is empty</p>
@@ -69,7 +69,7 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                                 Price: <b>{item.price * counters[item.id]} kr</b>
                                 <br />
                                 Quantity:<br />
-                                <div className="add-quantity-remove"><button className="cart-add-btn" onClick={() => incrementQuantity(item.id)}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add</span></button><b className="quantity">{counters[item.id] || 1}</b><button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon cart-close-btn"></img><span> Remove</span></button>
+                                <div className="add-quantity-remove"><button className="cart-add-btn" onClick={() => addQuantity(item.id)}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add</span></button><b className="quantity">{counters[item.id] || 1}</b><button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon cart-close-btn"></img><span> Remove</span></button>
                                 </div>
                                 </div>
                             </div>

@@ -70,18 +70,8 @@ nav {
   padding-bottom: 0.7em;
 }
 
-li {
-  padding-right: 1em;
-  padding-left: 1em;
-}
-
 a {
   text-decoration: none;
-}
-
-li a {
-  font-size: 1.2rem;
-  color: #2F261D;
 }
 
 h2 {
@@ -125,18 +115,9 @@ img {
   border-color: #fff;
 }
 
-.menu-btn {
-  display: block;
-  height: 3em;
+.menu-button {
   margin-top: 1em;
-  margin-left: 0.5em;
-  border-radius: 12px;
-  padding-left: 2em;
-  padding-right: 2em;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #2F261D;
-  border-color: #fff;
+  margin-left: 1em;
 }
 
 .menu-btn:active {
@@ -258,8 +239,6 @@ input[type="radio"] {
 }
 
 .cart-btn {
-  position: absolute;
-  bottom: 0;
   color: #fff;
   background-color: #2F261D;
   font-size: 1rem;
@@ -395,7 +374,6 @@ h1, h2, h4, p, a {
 .close-btn, .reset-btn {
   display: block;
   flex: 1;
-  margin-left: 0.5em;
 }
 
 button:hover {
@@ -469,7 +447,12 @@ button:hover {
   z-index: 1;
   opacity: 0.5;
   pointer-events: none;
-  background-color: black;
+  background-color: #000;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .numbertext {
@@ -478,6 +461,14 @@ button:hover {
   padding: 8px 12px;
   position: absolute;
   top: 0;
+}
+
+.menu-box {
+  position: fixed;
+  left: 0;
+  z-index: 3;
+  width: 20em;
+  background-color: #fff;
 }
 
 .fade {
@@ -502,6 +493,7 @@ button:hover {
 
 .active {
   color: #2F261D;
+  font-weight: bold;
   margin-left: -0.6em;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -523,10 +515,6 @@ button:hover {
   box-shadow: 4px 4px 6px #000;
 }
 
-.btn-container {
-  display: flex;
-  flex-direction: row;
-}
 
 .slideshow-caption {
   top: 5%;
@@ -566,7 +554,6 @@ body {
 
 .shopping-cart {
   display: block;
-  flex: 1;
 }
 
 .product-price {
@@ -645,9 +632,9 @@ body.img-size img {
   text-align: center;
 }
 
-.cart-close-btn-layout {
+.close-btn-layout {
   display: block;
-  flex: 2;
+  flex: 1;
   color: #fff;
   font-size: 1rem;
   background-color: #2F261D;
@@ -680,6 +667,16 @@ body.img-size img {
   color: #fff;
 }
 
+ul li {
+  font-size: 1.1rem;
+  list-style-type: none;
+  padding-top: 1em;
+}
+
+ul li a {
+  color: #2F261D;
+}
+
 .checkout-btn {
   flex: 1;
   margin-top: 0.5em;
@@ -701,6 +698,10 @@ body.img-size img {
     flex-direction: row;
   }
 
+  .menu-btn, .menu-box {
+    visibility: hidden;
+  }
+
   #dropdown-basic-button {
     display: block;
     background-color: transparent;
@@ -715,10 +716,6 @@ body.img-size img {
     display: block;
     flex: 2;
     list-style-type: none;
-  }
-
-  .menu-btn {
-    visibility: hidden;
   }
 
   .accessibility-btn {
