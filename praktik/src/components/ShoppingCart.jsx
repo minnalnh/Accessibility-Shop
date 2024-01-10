@@ -53,7 +53,7 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                     <div className="shopping-box pop-up" tabIndex="1">
                             <div className="flex-container">
                                 <h3 className="your-items">Your Items:</h3>
-                                <button className="close-btn close-btn-layout" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img><span className="close-btn"> Close Cart</span></button>
+                                <button className="cart-close-btn close-btn close-btn-layout" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img><span className="close-btn"> Close Cart</span></button>
                             </div>
                     {cartItems.length === 0 ? (
                         <p className="cart-empty-msg">Your cart is empty</p>

@@ -60,17 +60,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
 
             setAlertText("Font size has been decreased");
 
-        } else if(isChecked === "Keyboard") {
-            overlayRef.current.classList.remove("disable-click");
-            contrastRef.current.classList.remove("overlay");
-            window.addEventListener("keydown", handleKeyPress); // inaktiverar även musklick
-
-            document.body.classList.remove("img-size");
-            document.body.classList.remove("change-font-size");
-            document.body.classList.remove("hide-btn-text");
-
-            setAlertText("Keyboard navigation is disabled");
-
         } else if(isChecked === "HideButtonText") {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
@@ -90,6 +79,8 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             window.removeEventListener("keydown", handleKeyPress);
             document.body.classList.add("hide-btn-text");
             document.body.classList.remove("change-font-size");
+
+            setAlertText("Image size has been decreased");
 
         } else {
             overlayRef.current.classList.remove("disable-click");
@@ -157,13 +148,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
                             <label className="radio-container">
                             <span className="radio-label">Disable mouse click</span>
                                 <input type="radio" id="mouse" name="setting" value="Mouse" checked={isChecked === "Mouse"} onChange={handleRadioChange}></input>
-                                <span className="custom-radio"></span>
-                            </label>
-                            <hr />
-
-                            <label className="radio-container">
-                            <span className="radio-label">Disable keyboard navigation</span>
-                                <input type="radio" id="keyboard" name="setting" value="Keyboard" checked={isChecked === "Keyboard"} onChange={handleRadioChange}></input>
                                 <span className="custom-radio"></span>
                             </label>
                             <hr />

@@ -6,7 +6,9 @@
     "material": "Acrylic",
     "description": "High-quality titanium white acrylic paint for artists.",
     "brand": "Artisan Colors",
-    "price": 99
+    "price": 99,
+    "image": "images/acrylic-paint.jpg",
+    "alt": "F"
   },
   {
     "id": 17,

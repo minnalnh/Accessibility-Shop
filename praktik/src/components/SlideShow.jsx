@@ -12,12 +12,13 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
     const plusSlides = (n) => {
         setSlideIndex(slideIndex + n);
     }
-// funkar inte om jag trycker på föregående slide
+    
     const showSlides = (n) => {
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
 
         if(n > slides.length) {
+            console.log(slideRef);
             setSlideIndex(1);
         } else if(n < 1) {
             setSlideIndex(slides.length);
@@ -39,20 +40,26 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
         }
 
         if(slideIndex === 1) {
-            slideRef.current.classList.remove("slide-3")
+            slideRef.current.classList.remove("slide-3");
+            slideRef.current.classList.remove("slide-2")
             slideRef.current.classList.add("slide-1");
+            slideRef.current.classList.add("img-size");
 
             setSrText("Woman painting on a mural wall"); // lösning för alt-text, då den är osynlig men fångas upp av skärmläsare
 
         } else if(slideIndex === 2) {
             slideRef.current.classList.remove("slide-1");
+            slideRef.current.classList.remove("slide-3");
             slideRef.current.classList.add("slide-2");
+            slideRef.current.classList.add("img-size");
 
             setSrText("Man painting by the ocean");
 
         } else if(slideIndex === 3) {
             slideRef.current.classList.remove("slide-2");
+            slideRef.current.classList.remove("slide-1");
             slideRef.current.classList.add("slide-3");
+            slideRef.current.classList.add("img-size");
 
             setSrText("Woman painting a house in her garden");
         }
@@ -60,13 +67,12 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
 
     return (
         <div ref={slideRef} className="slideshow-container">
-
             <div className="mySlides fade">
             <p className="sr-only">{srText}</p>
                 <div className="numbertext">1 / 3</div>
                 <section className="slideshow-box">
                     <h1 className="slideshow-caption">Paint With Class</h1>
-                    <p className="slideshow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
+                    <p className="slideshow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitatiofslinem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
                 </section>
             </div>
 

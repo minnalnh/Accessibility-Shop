@@ -116,7 +116,7 @@ const Header = () => {
             <nav className="flex-container">
 
             <DropdownButton id="dropdown-basic-button" title="Brushes">
-                <Dropdown.Item><NavLink to="/fan-brushes" className="dropdown-content">Fan Brushes</NavLink></Dropdown.Item>
+                <Dropdown.Item className="dropdown-item"><NavLink to="/fan-brushes" className="dropdown-content">Fan Brushes</NavLink></Dropdown.Item>
                 <Dropdown.Item><NavLink to="/round-brushes" className="dropdown-content">Round Brushes</NavLink></Dropdown.Item>
                 <Dropdown.Item><NavLink to="/flat-brushes" className="dropdown-content">Flat Brushes</NavLink></Dropdown.Item>
             </DropdownButton>

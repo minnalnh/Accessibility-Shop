@@ -6,7 +6,9 @@
     "material": "Synthetic",
     "description": "Ideal for blending and softening edges.",
     "brand": "Artisan Brushes",
-    "price": 129
+    "price": 129,
+    "image": "images/fan-brush.jpg",
+    "alt": "Soft Fan Brush"
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "material": "Natural Bristles",
     "description": "Great for creating texture and foliage in landscapes.",
     "brand": "Masterpiece Brushes",
-    "price": 189
+    "price": 189,
+    "image": "images/fan-brush.jpg",
+    "alt": "Fan Brush"
   },
   {
     "id": 3,
