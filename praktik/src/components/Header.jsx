@@ -140,7 +140,7 @@ const Header = () => {
             </DropdownButton>
 
                 <div className="btn-container">
-                    <div className="menu-button">
+                    <div>
                         <MenuButton isBox3Visible={isBox3Visible}
                             toggleBoxVisibility={toggleBoxVisibility}
                             handleCloseButtonClick={handleCloseButtonClick}

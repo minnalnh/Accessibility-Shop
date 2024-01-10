@@ -10,7 +10,6 @@ const Product = ({ id, name, type, size, shape, material, description, brand, pr
         
         if(isCartMsgVisible === false) {
             setCartMsgVisibility((prevVisibility) => !prevVisibility);
-
         } 
     }
 
@@ -24,13 +23,16 @@ const Product = ({ id, name, type, size, shape, material, description, brand, pr
             <div className="product-img-container">
                 <img src={image} alt={alt} className="product-img"></img>
             </div>
-            <h2>{name}</h2>
-            <p className="product-price">Price: <b>{price} kr</b></p>
-            <button className="cart-btn" onClick={handleAddToCart}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add to Cart</span></button>
+            <section className="product-info-container">
+                <h2>{name}</h2>
+                <p className="product-price">Price: <b>{price} kr</b></p>
+                <button className="cart-btn" onClick={handleAddToCart}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add to Cart</span></button>
+            </section>
 
             {isCartMsgVisible && (
                 <div className="cart-msg-box">
-                    <p>hej</p>
+                    <span>Added to your cart</span>
+                    <button className="close-btn close-btn-layout"><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img>Close</button>
                 </div>
 
             )}

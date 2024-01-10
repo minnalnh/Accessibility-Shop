@@ -69,7 +69,7 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
                                 Price: <b>{item.price * counters[item.id]} kr</b>
                                 <br />
                                 Quantity:<br />
-                                <div className="add-quantity-remove"><button className="cart-add-btn" onClick={() => addQuantity(item.id)}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add</span></button><b className="quantity">{counters[item.id] || 1}</b><button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon cart-close-btn"></img><span> Remove</span></button>
+                                <div className="add-quantity-remove"><button className="cart-add-btn" onClick={() => addQuantity(item.id)}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add</span></button><b className="quantity">{counters[item.id] || 1}</b><button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon"></img><span> Remove</span></button>
                                 </div>
                                 </div>
                             </div>

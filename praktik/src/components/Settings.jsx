@@ -6,6 +6,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
     const [isChecked, setIsChecked] = useState(null);
     const [isClickDisabled, setClickDisabled] = useState(false);
     const [alertText, setAlertText] = useState();
+    const [isTabDisabled, setIsTabDisabled] = useState(false);
 
     const overlayRef = useRef(null);
     const contrastRef = useRef(null);
@@ -17,13 +18,26 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
 
     const resetSettings = () => {
         setIsChecked(null);
+        setIsTabDisabled(false);
     };
 
+    const handleToggleTab = () => {
+        setIsTabDisabled((prevIsTabDisabled) => !prevIsTabDisabled);
+    }
+
     const handleKeyPress = (event) => {
-        if(event.key === "Tab") {
+        if (event.key === 'Tab' && isTabDisabled) {
             event.preventDefault();
         }
     }
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyPress);
+    
+        return () => {
+                window.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [isTabDisabled]);
 
     useEffect(() => {
         if(isChecked === "Mouse") {
@@ -60,6 +74,20 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
 
             setAlertText("Font size has been decreased");
 
+        } else if(isChecked === "Keyboard") {
+            overlayRef.current.classList.remove("disable-click");
+            contrastRef.current.classList.remove("overlay");
+            setIsTabDisabled(true);
+
+            document.body.classList.remove("img-size");
+            document.body.classList.remove("change-font-size");
+            document.body.classList.remove("hide-btn-text");
+            document.body.classList.add("disable-tab-key");
+
+            setIsTabDisabled(true);
+
+            setAlertText("Keyboard navigation is disabled");
+
         } else if(isChecked === "HideButtonText") {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
@@ -80,7 +108,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             document.body.classList.add("hide-btn-text");
             document.body.classList.remove("change-font-size");
 
-            setAlertText("Image size has been decreased");
+            setAlertText("Image size has been decreased")
 
         } else {
             overlayRef.current.classList.remove("disable-click");
@@ -151,6 +179,11 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
                                 <span className="custom-radio"></span>
                             </label>
                             <hr />
+                            <label className="radio-container">
+                            <span className="radio-label">Disable keyboard navigation</span>
+                                <input type="radio" id="keyboard" name="setting" value="Keyboard" checked={isChecked === "Mouse"} onChange={handleRadioChange}></input>
+                                <span className="custom-radio"></span>
+                            </label>
                     </div>
                 )}
             </div>

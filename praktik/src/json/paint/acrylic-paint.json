@@ -1,7 +1,7 @@
 [
   {
     "id": 16,
-    "name": "Artist Acrylic Paint - Titanium White",
+    "name": "Titanium White",
     "size": "120ml",
     "material": "Acrylic",
     "description": "High-quality titanium white acrylic paint for artists.",
@@ -12,7 +12,7 @@
   },
   {
     "id": 17,
-    "name": "Heavy Body Acrylic Paint - Cadmium Red",
+    "name": "Cadmium Red",
     "size": "60ml",
     "material": "Acrylic",
     "description": "Rich cadmium red with a heavy body for textured effects.",
@@ -21,7 +21,7 @@
   },
   {
     "id": 18,
-    "name": "Fluid Acrylic Paint - Ultramarine Blue",
+    "name": " Ultramarine Blue",
     "size": "50ml",
     "material": "Acrylic",
     "description": "Smooth-flowing ultramarine blue for fluid painting techniques.",
@@ -30,7 +30,7 @@
   },
   {
     "id": 19,
-    "name": "Matte Acrylic Paint - Burnt Sienna",
+    "name": "Burnt Sienna",
     "size": "75ml",
     "material": "Acrylic",
     "description": "Matte finish burnt sienna for a subdued and earthy appearance.",
@@ -39,7 +39,7 @@
   },
   {
     "id": 20,
-    "name": "Glow-in-the-Dark Acrylic Paint - Luminous Green",
+    "name": "Luminous Green",
     "size": "30ml",
     "material": "Acrylic",
     "description": "Glow-in-the-dark acrylic paint for unique artistic effects.",

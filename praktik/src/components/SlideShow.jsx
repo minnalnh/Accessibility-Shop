@@ -12,7 +12,7 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
     const plusSlides = (n) => {
         setSlideIndex(slideIndex + n);
     }
-    
+
     const showSlides = (n) => {
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
@@ -43,7 +43,6 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
             slideRef.current.classList.remove("slide-3");
             slideRef.current.classList.remove("slide-2")
             slideRef.current.classList.add("slide-1");
-            slideRef.current.classList.add("img-size");
 
             setSrText("Woman painting on a mural wall"); // lösning för alt-text, då den är osynlig men fångas upp av skärmläsare
 
@@ -51,7 +50,6 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
             slideRef.current.classList.remove("slide-1");
             slideRef.current.classList.remove("slide-3");
             slideRef.current.classList.add("slide-2");
-            slideRef.current.classList.add("img-size");
 
             setSrText("Man painting by the ocean");
 
@@ -59,7 +57,6 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
             slideRef.current.classList.remove("slide-2");
             slideRef.current.classList.remove("slide-1");
             slideRef.current.classList.add("slide-3");
-            slideRef.current.classList.add("img-size");
 
             setSrText("Woman painting a house in her garden");
         }
@@ -67,7 +64,7 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
 
     return (
         <div ref={slideRef} className="slideshow-container">
-            <div className="mySlides fade">
+            <div className="mySlides">
             <p className="sr-only">{srText}</p>
                 <div className="numbertext">1 / 3</div>
                 <section className="slideshow-box">
@@ -76,7 +73,7 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
                 </section>
             </div>
 
-            <div className="mySlides fade">
+            <div className="mySlides">
             <p className="sr-only">{srText}</p>
                 <div className="numbertext">2 / 3</div>
                 <section className="slideshow-box">
@@ -85,7 +82,7 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
                 </section>
             </div>
 
-            <div className="mySlides fade">
+            <div className="mySlides">
             <p className="sr-only">{srText}</p>
                 <div className="numbertext">3 / 3</div>
                 <section className="slideshow-box">

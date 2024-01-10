@@ -240,7 +240,7 @@ input[type="radio"] {
 }
 
 .cart-btn {
-  position: absolute;
+  margin-top: auto;
   display: block;
   color: #fff;
   background-color: #2F261D;
@@ -255,13 +255,25 @@ input[type="radio"] {
 }
 
 .product {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
   padding: 1em 1em 1em 1em;
   background-color: #fff;
   border-style: inset;
   border-radius: 10px;
-  margin-left: 0.3em;
-  margin-right: 0.3em;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.product-img-container {
+  flex: 1;
+}
+
+.product-info-container {
+  flex: 1;
+  margin-top: 2em;
 }
 
 body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, body.change-font-size h4, body.change-font-size p, body.change-font-size button span, body.change-font-size nav ul li, body.change-font-size a {
@@ -520,6 +532,8 @@ button:hover {
 
 .slideshow-caption {
   top: 5%;
+  color: #2F261D;
+  font-size: 1.5rem;
 }
 
 .slideshow-text {
@@ -560,6 +574,7 @@ body {
 
 .product-price {
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .brush-page-img {
@@ -600,9 +615,14 @@ body.img-size img {
   height: 20%;
 }
 
+body {
+  background-size: 20%;
+}
+
 .your-items {
   flex: 3;
   padding-left: 2em;
+  margin-top: 0.5em;
 }
 
 .cart-flex-container {
@@ -614,7 +634,7 @@ body.img-size img {
 }
 
 .cart-img {
-  flex: 3;
+  flex: 2;
 }
 
 .cart-add-btn, .cart-remove-btn {
@@ -664,13 +684,13 @@ body.img-size img {
 .total-sum {
   flex: 2;
   margin-top: 1.3em;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-left: 3em;
 }
 
 #dropdown-basic-button {
   display: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .dropdown-item {
@@ -697,19 +717,22 @@ body.img-size img {
   color: #fff;
 }
 
-ul li {
+.menu-li {
   font-size: 1.1rem;
-  margin-top: -1.3em;
-  margin-left: -1em;
   list-style-type: none;
-  padding-top: 1.9em;
+  margin-left: -2em;
+}
+
+ul {
+  list-style-type: none;
 }
 
 ul li a {
   color: #2F261D;
+  text-decoration: none;
 }
 
-ul li a:hover {
+.menu-li a:hover {
   color: #fff;
   background-color: #2F261D;
 }
@@ -747,7 +770,7 @@ ul li b {
     display: block;
     background-color: transparent;
     color: #2F261D;
-    border-color: #2F261D;
+    border-style: none;
     margin-left: 0.5em;
     margin-right: 0.5em;
     margin-top: 1.3em;
@@ -761,5 +784,11 @@ ul li b {
 
   .accessibility-btn {
     margin-top: 0;
+  }
+
+  .product {
+    flex-direction: column;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
   }
 }
