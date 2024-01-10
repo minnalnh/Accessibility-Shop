@@ -6,7 +6,9 @@
     "material": "Synthetic",
     "description": "Ideal for detailed work and fine lines.",
     "brand": "Artisan Brushes",
-    "price": 79
+    "price": 79,
+    "image": "json-images/precision-round-brush.png",
+    "alt": "Precision Round Brush"
   },
   {
     "id": 7,
@@ -15,7 +17,9 @@
     "material": "Mixed Bristles",
     "description": "Suitable for various painting techniques.",
     "brand": "Masterpiece Brushes",
-    "price": 99
+    "price": 99,
+    "image": "json-images/versatile-round-brush.png",
+    "alt": "Versatile Round Brush"
   },
   {
     "id": 8,
@@ -24,7 +28,9 @@
     "material": "Sable",
     "description": "High-quality brush for professional artists.",
     "brand": "Premium Art Supplies",
-    "price": 149
+    "price": 149,
+    "image": "json-images/fine-art-round-brush.png",
+    "alt": "Fine Art Round Brush"
   },
   {
     "id": 9,
@@ -33,15 +39,8 @@
     "material": "Synthetic",
     "description": "A set of round brushes for various applications.",
     "brand": "Creative Expressions",
-    "price": 119
-  },
-  {
-    "id": 10,
-    "name": "Watercolor Round Brush",
-    "size": "Medium",
-    "material": "Squirrel Hair",
-    "description": "Specifically designed for watercolor painting.",
-    "brand": "Aquatic Artistry",
-    "price": 129
+    "price": 119,
+    "image": "json-images/round-brush-set-of-3.png",
+    "alt": "Round Brush Set of 3"
   }
 ]

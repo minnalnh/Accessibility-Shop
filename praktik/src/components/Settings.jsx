@@ -21,10 +21,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
         setIsTabDisabled(false);
     };
 
-    const handleToggleTab = () => {
-        setIsTabDisabled((prevIsTabDisabled) => !prevIsTabDisabled);
-    }
-
     const handleKeyPress = (event) => {
         if (event.key === 'Tab' && isTabDisabled) {
             event.preventDefault();
@@ -74,20 +70,6 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
 
             setAlertText("Font size has been decreased");
 
-        } else if(isChecked === "Keyboard") {
-            overlayRef.current.classList.remove("disable-click");
-            contrastRef.current.classList.remove("overlay");
-            setIsTabDisabled(true);
-
-            document.body.classList.remove("img-size");
-            document.body.classList.remove("change-font-size");
-            document.body.classList.remove("hide-btn-text");
-            document.body.classList.add("disable-tab-key");
-
-            setIsTabDisabled(true);
-
-            setAlertText("Keyboard navigation is disabled");
-
         } else if(isChecked === "HideButtonText") {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
@@ -110,6 +92,18 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
 
             setAlertText("Image size has been decreased")
 
+        } else if(isChecked === "Keyboard") {
+            overlayRef.current.classList.remove("disable-click");
+            contrastRef.current.classList.remove("overlay");
+
+            document.body.classList.remove("img-size");
+            document.body.classList.remove("change-font-size");
+            document.body.classList.remove("hide-btn-text");
+
+            setIsTabDisabled(true);
+
+            setAlertText("Keyboard navigation is disabled");
+
         } else {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
@@ -121,6 +115,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
   
             setAlertText("");
             setClickDisabled(false);
+
         }
     }, [isChecked]);
 

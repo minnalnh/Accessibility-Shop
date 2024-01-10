@@ -4,11 +4,12 @@ import Product from '../../Product';
 
 const CharcoalPencilsPage = () => {
     return (
-        <div>
+        <div className="charcoal-pencils-page">
             <a className="page-title">Brushes</a>
             <div className="shopping-page-img">
                 <p className="sr-only">Painting brush getting dipped in paint</p>
             </div>
+            <h2>Charcoal Pencils</h2>
             <div className="flex-container">
             {artSupplies.map(artSupply => (
                         <Product key={artSupply.id} {...artSupply} />

@@ -417,7 +417,7 @@ button:hover {
 }
 
 .slide-1 {
-  background-image: url('../public/images/wall-painting.jpg'); /* byt ut beroende på slide */
+  background-image: url('../public/images/wall-painting.jpg');
 }
 
 .slide-2 {
@@ -615,10 +615,6 @@ body.img-size img {
   height: 20%;
 }
 
-body {
-  background-size: 20%;
-}
-
 .your-items {
   flex: 3;
   padding-left: 2em;
@@ -634,7 +630,7 @@ body {
 }
 
 .cart-img {
-  flex: 2;
+  flex: 1;
 }
 
 .cart-add-btn, .cart-remove-btn {
@@ -658,6 +654,7 @@ body {
 }
 
 .cart-msg-box {
+  visibility: hidden;
   position: absolute;
   z-index: -5em;
   margin-top: 5em;

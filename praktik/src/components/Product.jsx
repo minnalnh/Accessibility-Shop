@@ -3,19 +3,21 @@ import { CartContext } from './CartContext';
 
 const Product = ({ id, name, type, size, shape, material, description, brand, price, image, alt }) => {
     const { addToCart } = useContext(CartContext);
-
     const [isCartMsgVisible, setCartMsgVisibility] = useState(false);
+    const [counter, setCounter] = useState(0);
+
+    const product = { id, name, price, image, alt };
 
     const addedToCartMsg = () => {
-        
-        if(isCartMsgVisible === false) {
-            setCartMsgVisibility((prevVisibility) => !prevVisibility);
-        } 
+
+        setCartMsgVisibility(true);
+        console.log(isCartMsgVisible);
     }
 
     const handleAddToCart = () => {
-        addToCart({ id, name, price, image, alt });
+        addToCart(product);
         addedToCartMsg();
+        setCounter((prevCounter) => prevCounter + 1);
     }
 
     return (
@@ -31,7 +33,7 @@ const Product = ({ id, name, type, size, shape, material, description, brand, pr
 
             {isCartMsgVisible && (
                 <div className="cart-msg-box">
-                    <span>Added to your cart</span>
+                    <span>{counter}x of {product.name} added to your cart</span>
                     <button className="close-btn close-btn-layout"><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img>Close</button>
                 </div>
 
