@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { CartContext } from './CartContext';
 
-const Product = ({ id, name, type, size, shape, material, description, brand, price, image, alt }) => {
+const Product = ({ id, name, size, material, description, brand, price, image, alt }) => {
     const { addToCart } = useContext(CartContext);
     const [isCartMsgVisible, setCartMsgVisibility] = useState(false);
     const [counter, setCounter] = useState(0);
@@ -27,7 +27,7 @@ const Product = ({ id, name, type, size, shape, material, description, brand, pr
             </div>
             <section className="product-info-container">
                 <h2>{name}</h2>
-                <p className="product-price">Price: <b>{price} kr</b></p>
+                <span className="product-price">Price: <b>{price} kr</b></span>
                 <div className="cart-btn-container">
                     <button className="cart-btn" onClick={handleAddToCart}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add to Cart</span></button>
                 </div>

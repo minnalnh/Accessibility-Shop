@@ -116,27 +116,50 @@ const Header = () => {
             <nav className="flex-container">
 
             <DropdownButton id="dropdown-basic-button" title="Brushes">
-                <Dropdown.Item className="dropdown-item"><NavLink to="/fan-brushes" className="dropdown-content"><span>Fan Brushes</span></NavLink></Dropdown.Item>
-                <Dropdown.Item className="dropdown-item"><NavLink to="/round-brushes" className="dropdown-content"><span>Round Brushes</span></NavLink></Dropdown.Item>
-                <Dropdown.Item className="dropdown-item"><NavLink to="/flat-brushes" className="dropdown-content"><span>Flat Brushes</span></NavLink></Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/fan-brushes" className="dropdown-item">Fan Brushes
+                </Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/round-brushes" className="dropdown-item">
+                    Round Brushes
+                </Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/flat-brushes" className="dropdown-item">
+                    Flat Brushes
+                </Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Paint">
-            <Dropdown.Item className="dropdown-item"><NavLink to="/acrylic-paint" className="dropdown-content"><span>Acrylic Paint</span></NavLink></Dropdown.Item>
-            <Dropdown.Item className="dropdown-item"><NavLink to="/oil-paint" className="dropdown-content"><span>Oil Paint</span></NavLink></Dropdown.Item>
-            <Dropdown.Item className="dropdown-item"><NavLink to="/watercolor-paint" className="dropdown-content"><span>Watercolor Paint</span></NavLink></Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/acrylic-paint" className="dropdown-item">
+                Acrylic Paint
+            </Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/oil-paint" className="dropdown-item">
+                Oil Paint
+            </Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/watercolor-paint" className="dropdown-item">
+                Watercolor Paint
+            </Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Paper">
-            <Dropdown.Item className="dropdown-item"><NavLink to="/watercolor-paper" className="dropdown-content"><span>Watercolor Paper</span></NavLink></Dropdown.Item>
-            <Dropdown.Item className="dropdown-item"><NavLink to="/drawing-paper" className="dropdown-content"><span>Drawing Paper</span></NavLink></Dropdown.Item>
-            <Dropdown.Item className="dropdown-item"><NavLink to="/canvas-paper" className="dropdown-content"><span>Canvas Paper</span></NavLink></Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/watercolor-paper" className="dropdown-item">
+                Watercolor Paper
+            </Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/drawing-paper" className="dropdown-item">
+                Drawing Paper
+            </Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/canvas-paper" className="dropdown-item">
+                Canvas Paper
+            </Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Pencils">
-            <Dropdown.Item className="dropdown-item"><NavLink to="/graphite-pencils" className="dropdown-content"><span>Graphite Pencils</span></NavLink></Dropdown.Item>
-            <Dropdown.Item className="dropdown-item"><NavLink to="/colored-pencils" className="dropdown-content"><span>Colored Pencils</span></NavLink></Dropdown.Item>
-            <Dropdown.Item className="dropdown-item"><NavLink to="/charcoal-pencils" className="dropdown-content"><span>Charcoal Pencils</span></NavLink></Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/graphite-pencils" className="dropdown-item">
+                Graphite Pencils
+            </Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/colored-pencils" className="dropdown-item">
+                Colored Pencils
+            </Dropdown.Item>
+            <Dropdown.Item as={NavLink} to="/charcoal-pencils" className="dropdown-item">
+                Charcoal Pencils
+            </Dropdown.Item>
             </DropdownButton>
 
                 <div className="btn-container">

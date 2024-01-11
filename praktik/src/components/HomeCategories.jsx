@@ -8,29 +8,29 @@ const HomeCategories = () => {
                 <div className="item">
                     <h3 className="category-title">Brushes</h3>
                     <div className="category product-img-container">
-                            <img src="images/mottler-brush.jpg" alt="Mottler Brush" className="product-img home-img"></img>
-                        <img src="images/goat-brush.jpg" alt="Goat Brush" className="product-img home-img"></img>
+                            <img src="json-images/round-brush-set-of-3.png" alt="Round Brush Set of 3" className="product-img home-img"></img>
+                        <img src="json-images/bristle-fan-brush.png" alt="Bristle Fan Brush" className="product-img home-img"></img>
                     </div>
                 </div>
                 <div className="item">
                     <h3 className="category-title">Paint</h3>
                     <div className="category product-img-container">
-                            <img src="images/watercolor-paint.jpg" alt="Watercolor Paint" className="product-img home-img"></img>
-                            <img src="images/body-paint.jpg" alt="Body Paint" className="product-img home-img"></img>
+                            <img src="json-images/cadmium-yellow.png" alt="Cadmium Yellow Paint" className="product-img home-img"></img>
+                            <img src="json-images/cobalt-blue.png" alt="Cobalt Blue Paint" className="product-img home-img"></img>
                     </div>
                 </div>
                 <div className="item">
                     <h3 className="category-title">Paper</h3>
                     <div className="category product-img-container">
-                            <img src="images/sketch-paper.jpg" alt="Sketch Paper" className="product-img home-img"></img>
-                            <img src="images/watercolor-paper.jpg" alt="Watercolor Paper" className="product-img home-img"></img>
+                            <img src="json-images/canvas-panel-set.png" alt="Canvas Panel Set Paper" className="product-img home-img"></img>
+                            <img src="json-images/cold-pressed-watercolor-pad.png" alt="Cold-Pressed Watercolor Pad" className="product-img home-img"></img>
                     </div>
                 </div>
                 <div className="item">
                     <h3 className="category-title">Pencils</h3>
                     <div className="category product-img-container">
-                            <img src="images/colored-pencils.jpg" alt="Colored Pencils" className="product-img home-img"></img>
-                            <img src="images/graphite-pencils.jpg" alt="Graphite Pencils" className="product-img home-img"></img>
+                            <img src="json-images/premium-graphite-pencil-set.png" alt="Premium Graphite Pencil Set" className="product-img home-img"></img>
+                            <img src="json-images/watercolor-pencil-set.png" alt="Watercolor Pencil Set" className="product-img home-img"></img>
                     </div>
                 </div>
             </div>

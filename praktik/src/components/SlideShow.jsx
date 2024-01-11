@@ -18,7 +18,6 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
         let dots = document.getElementsByClassName("dot");
 
         if(n > slides.length) {
-            console.log(slideRef);
             setSlideIndex(1);
         } else if(n < 1) {
             setSlideIndex(slides.length);
@@ -66,28 +65,28 @@ const SlideShow = ( { btnTextRef_3, btnTextRef_4 }) => {
         <div ref={slideRef} className="slideshow-container">
             <div className="mySlides">
             <p className="sr-only">{srText}</p>
-                <div className="numbertext">1 / 3</div>
+                <div className="numbertext"><span className="slide-number">1 / 3</span></div>
                 <section className="slideshow-box">
                     <h1 className="slideshow-caption">Paint With Class</h1>
-                    <p className="slideshow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitatiofslinem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
+                    <p className="slideshow-text">Formal concerns establishment biomorphic token a vague whole the actuality of dialectics the work is an. Ontological nature of nonspatial space phenomenology artistic production suggestive but never didactic unpacked antieconomical. In reference to the political expectations while also place making imbricates.</p>
                 </section>
             </div>
 
             <div className="mySlides">
             <p className="sr-only">{srText}</p>
-                <div className="numbertext">2 / 3</div>
+            <div className="numbertext"><span className="slide-number">2 / 3</span></div>
                 <section className="slideshow-box">
-                    <h1 className="slideshow-caption">Paint With Style</h1>
-                    <p className="slideshow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
+                    <h1 className="slideshow-caption">Paint With Class</h1>
+                    <p className="slideshow-text">Suggestive but never didactic reality ontological metadata a level of artifice perception of. The gallery assemblage spatial space social simultaneously nonspatial. Oeuvre alien trompe l'oeil antieconomical autonomy is encoded onto aporia of establishment it subversively inverts of the built environment resembles anti-structural.</p>
                 </section>
             </div>
 
             <div className="mySlides">
             <p className="sr-only">{srText}</p>
-                <div className="numbertext">3 / 3</div>
+            <div className="numbertext"><span className="slide-number">3 / 3</span></div>
                 <section className="slideshow-box">
                     <h1 className="slideshow-caption">Paint With Class</h1>
-                    <p className="slideshow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia maxime deleniti repellat, nisi, delectus, quod libero quidem accusantium excepturi assumenda unde aperiam totam harum porro aliquam itaque tempore dolore ad id exercitationem consequuntur corrupti minus nesciunt corporis. Praesentium rem, quis natus modi minus a atque eos ducimus. Quos, autem aliquam.</p>
+                    <p className="slideshow-text">Arte Povera subverts expressively punctum painted through the virtual inescapability artist-run fantasy the work is a reality jump-cut. Metadata incorporating material elements grawlix conditions of possibility expectations lexical hermeticism. Reification virtual inescapability abstraction corpus biopolitical the political.</p>
                 </section>
             </div>
 

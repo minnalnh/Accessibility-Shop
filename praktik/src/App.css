@@ -246,7 +246,7 @@ input[type="radio"] {
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
+  margin-top: 3em;
 }
 
 .cart-btn:hover {
@@ -293,11 +293,6 @@ body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, bo
   margin-right: 0.2em;
 }
 
-.product-img-container {
-  height: 150px;
-  overflow: hidden;
-}
-
 .product-img {
   display: block;
   margin-left: auto;
@@ -330,11 +325,11 @@ h1, h2, h4, p, a {
 
 .footer a {
   color: #2F261D;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
-.page-title {
-  text-decoration: underline;
+.footer a:hover {
+  font-weight: bold;
 }
 
 .category-title {
@@ -351,6 +346,10 @@ h1, h2, h4, p, a {
   border-radius: 3px;
 }
 
+.slide-number {
+  font-size: 1rem;
+}
+
 .mySlides {
   display: none;
 }
@@ -365,7 +364,7 @@ h1, h2, h4, p, a {
   padding: 16px;
   color: #2F261D;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -534,7 +533,7 @@ button:hover {
 
 .slideshow-box {
   position: absolute;
-  top: 7%;
+  top: 10%;
   width: 300px;
   left: 0;
   background-color: #FFF8F8;
@@ -551,6 +550,7 @@ button:hover {
 }
 
 .slideshow-text {
+  font-size: 1rem;
   top: 12%;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -587,8 +587,10 @@ body {
 }
 
 .product-price {
+  display: block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  margin-top: 1em;
 }
 
 .brush-page-img {
@@ -703,30 +705,8 @@ body.img-size img {
   font-size: 1.2rem;
 }
 
-.dropdown-content {
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-}
-
-.dropdown-item .active {
-  font-weight: bold;
-  border-style: solid;
-}
-
-.dropdown-content {
-  color: #2F261D;
-  text-decoration: none;
-}
-
-.dropdown-item span {
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.dropdown-content:hover {
+.dropdown-item:hover {
   text-decoration: underline;
-  color: #fff;
-  background-color: #2F261D;
 }
 
 #dropdown-basic-button:hover {
