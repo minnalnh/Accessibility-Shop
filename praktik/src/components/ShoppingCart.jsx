@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from './CartContext';
 
-const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClick }) => {
+const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonClick, isCartMsgVisible }) => {
     const { cartItems, setCartItems, counters, setCounters } = useContext(CartContext);
     const [price, setPrice] = useState([]);
     const [totalSum, setTotalSum] = useState(0);
@@ -25,12 +25,10 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
         setCounters((prevCounters) => {
             const updatedCounters = { ...prevCounters };
 
-            if(updatedCounters[removedItem.id] && updatedCounters[removedItem.id] > 1) {
+            if (updatedCounters[removedItem.id] && updatedCounters[removedItem.id] > 1) {
                 updatedCounters[removedItem.id]--;
-
             } else {
                 delete updatedCounters[removedItem.id];
-
                 currentCartItems.splice(index, 1);
                 setCartItems(currentCartItems);
             }
@@ -40,8 +38,8 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
     };
 
     const addQuantity = (itemId) => {
-        if(counters[itemId] && counters[itemId] >= 1) {
-            setCounters((prevCounters) => ({...prevCounters, [itemId]: (prevCounters[itemId] || 0) + 1}));
+        if (counters[itemId] && counters[itemId] >= 1) {
+            setCounters((prevCounters) => ({ ...prevCounters, [itemId]: (prevCounters[itemId] || 0) + 1 }));
         }
     }
 
@@ -50,41 +48,48 @@ const ShoppingCart = ({ isBox2Visible, toggleBoxVisibility, handleCloseButtonCli
             <button className="header-btn shopping-btn shopping-btn-layout" onClick={toggleBoxVisibility}><img src="icons/bag-shopping-solid.svg" alt="Shopping Cart" className="icon shopping-btn"></img><span className="shopping-btn"> Your Cart</span></button>
 
             {isBox2Visible && (
-                    <div className="shopping-box pop-up" tabIndex="1">
-                            <div className="flex-container">
-                                <h3 className="your-items">Your Items:</h3>
-                                <button className="cart-close-btn close-btn close-btn-layout" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img><span className="close-btn"> Close Cart</span></button>
-                            </div>
+                <div className="shopping-box pop-up" tabIndex="1">
+                    <div className="flex-container">
+                        <h3 className="your-items">Your Items:</h3>
+                        <button className="cart-close-btn close-btn close-btn-layout" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img><span className="close-btn"> Close Cart</span></button>
+                    </div>
+                    {isCartMsgVisible && (
+                        <div className="cart-msg-box">
+                            <span>Your cart message</span>
+                            <button className="close-btn close-btn-layout"><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img>Close Message</button>
+                        </div>
+                    )}
                     {cartItems.length === 0 ? (
                         <p className="cart-empty-msg">Your cart is empty</p>
                     ) : (
-                    <>
-                    <div>
-                        {cartItems.map((item, index) => (
-                            <div key={index} className="cart-flex-container">
-                                <img src={item.image} alt={item.alt} style={{ width: "100px", height: "85px" }} className="cart-img" />
-                                <div className="cart-item-info">
-                                {item.name}
-                                <br />
-                                Price: <b>{item.price * counters[item.id]} kr</b>
-                                <br />
-                                Quantity:<br />
-                                <div className="add-quantity-remove"><button className="cart-add-btn" onClick={() => addQuantity(item.id)}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add</span></button><b className="quantity">{counters[item.id] || 1}</b><button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon"></img><span> Remove</span></button>
+                            <>
+                                <div>
+                                    {cartItems.map((item, index) => (
+                                        <div key={index} className="cart-flex-container">
+                                            <img src={item.image} alt={item.alt} style={{ width: "100px", height: "85px" }} className="cart-img" />
+                                            <div className="cart-item-info">
+                                                {item.name}
+                                                <br />
+                                                Price: <b>{item.price * counters[item.id]} kr</b>
+                                                <br />
+                                                Quantity:<br />
+                                                <div className="add-quantity-remove">
+                                                    <button className="cart-add-btn" onClick={() => addQuantity(item.id)}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add</span></button>
+                                                    <b className="quantity">{counters[item.id] || 1}</b>
+                                                    <button className="cart-remove-btn" onClick={() => removeItem(index)}><img src="icons/minus-solid.svg" alt="Minus Mark" className="icon"></img><span> Remove</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
+                                <div className="flex-container">
+                                    <p className="total-sum">Total sum: <b>{totalSum} kr</b></p>
+                                    <button className="checkout-btn"><img src="icons/cash-register-solid.svg" alt="Cash Register" className="icon shopping-btn"></img><span> Checkout</span></button>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="flex-container">
-                        <p className="total-sum">Total sum: <b>{totalSum} kr</b></p>
-                        <button className="checkout-btn"><img src="icons/cash-register-solid.svg" alt="Cash Register" className="icon shopping-btn"></img><span> Checkout</span></button>
-                    </div>
-                    </>
-                    )}
-                    </div>
-
+                            </>
+                        )}
+                </div>
             )}
-
         </div>
     );
 };
