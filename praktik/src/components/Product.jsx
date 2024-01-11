@@ -19,7 +19,7 @@ const Product = ({ id, name, size, material, description, brand, price, image, a
 
     const handleCloseButtonClick = () => {
         setCartMsgVisibility(false);
-
+        setCounter(0);
     };
 
     return (
@@ -38,7 +38,7 @@ const Product = ({ id, name, size, material, description, brand, price, image, a
 
             {isCartMsgVisible && latestProduct && (
                 <div className="cart-msg-box">
-                    <span>{counter}x of {product.name} was added to your cart</span>
+                    <span><b>{counter}x {product.name}</b> added to cart</span>
                     <button className="msg-close-btn" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img>Close Message</button>
                 </div>
 

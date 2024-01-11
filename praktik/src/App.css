@@ -214,6 +214,11 @@ input[type="radio"] {
   margin-right: 0.4em;
 }
 
+.home-page-breadcrumb:hover {
+  background-color: #2F261D;
+  color: #fff;
+}
+
 .breadcrumb-navlink {
   background-color: #fff;
   padding-bottom: 0.3em;
@@ -299,9 +304,10 @@ body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, bo
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
-  height: 200px;
+  width: 80%;
+  height: auto;
   object-fit: cover;
+  margin-bottom: 1em;
 }
 
 .home-img {
@@ -676,7 +682,6 @@ body.img-size img {
   display: flex;
   top: 0;
   left: 0;
-  width: 100%;
   padding-left: 0.3em;
   padding-right: 0.3em;
   background-color: #fff;
@@ -730,6 +735,7 @@ body.img-size img {
 
 .dropdown-item:hover {
   text-decoration: underline;
+  font-weight: bold;
 }
 
 #dropdown-basic-button:hover {
@@ -777,8 +783,13 @@ ul li b {
 }
 
 @media (min-width: 48rem) and (max-width: 61.25rem) {
-  .item {
-    width: 30%;
+  .product {
+    width: 2em;
+  }
+
+  .product-img {
+    width: 100%;
+    height: auto;
   }
 }
 
