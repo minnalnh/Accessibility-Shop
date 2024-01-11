@@ -42,10 +42,12 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
 
             setAlertText("Mouse click is disabled");
             setClickDisabled(true);
+            setIsTabDisabled(false);
 
         } else if(isChecked === "ColorContrast") {
             contrastRef.current.classList.add("overlay");
             overlayRef.current.classList.remove("disable-click");
+            setIsTabDisabled(false);
 
             window.removeEventListener("keydown", handleKeyPress);
             document.body.classList.remove("img-size");
@@ -57,6 +59,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
         } else if(isChecked === "FontSize") {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
+            setIsTabDisabled(false);
 
             document.body.classList.remove("img-size");
             document.body.classList.add("change-font-size");
@@ -68,6 +71,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
         } else if(isChecked === "HideButtonText") {
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
+            setIsTabDisabled(false);
 
             window.removeEventListener("keydown", handleKeyPress);
             document.body.classList.remove("img-size");
@@ -80,6 +84,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             document.body.classList.add("img-size");
             overlayRef.current.classList.remove("disable-click");
             contrastRef.current.classList.remove("overlay");
+            setIsTabDisabled(false);
 
             window.removeEventListener("keydown", handleKeyPress);
             document.body.classList.add("hide-btn-text");
@@ -111,6 +116,7 @@ function Settings({ isBox1Visible, toggleBoxVisibility, handleCloseButtonClick, 
             document.body.classList.remove("img-size");
             document.body.classList.remove("hide-btn-text");
             document.body.classList.remove("change-font-size");
+            setIsTabDisabled(false);
             window.removeEventListener("keydown", handleKeyPress);
   
             setAlertText("");
