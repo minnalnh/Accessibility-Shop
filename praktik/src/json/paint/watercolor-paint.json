@@ -1,47 +1,46 @@
 [
   {
     "id": 26,
-    "name": "Premium Watercolor - Cobalt Blue",
+    "name": "Cobalt Blue",
     "size": "15ml",
     "material": "Watercolor",
     "description": "High-quality cobalt blue watercolor paint for professional artists.",
     "brand": "Artisan Watercolors",
-    "price": 119
+    "price": 119,
+    "image": "json-images/cobalt-blue.png",
+    "alt": "Cobalt Blue"
   },
   {
     "id": 27,
-    "name": "Vivid Watercolor Set - Tropical Palette",
-    "size": "12 colors, 5ml each",
-    "material": "Watercolor",
-    "description": "Vibrant tropical palette watercolor set for diverse artistic applications.",
-    "brand": "Masterpiece Watercolors",
-    "price": 229
-  },
-  {
-    "id": 28,
-    "name": "Transparent Watercolor - Quinacridone Rose",
+    "name": "Quinacridone Rose",
     "size": "10ml",
     "material": "Watercolor",
     "description": "Transparent quinacridone rose watercolor for delicate washes and layering.",
     "brand": "Clear Hue Art Supplies",
-    "price": 159
+    "price": 159,
+    "image": "json-images/quinacridone-rose.png",
+    "alt": "Quinacridone Rose"
+  },
+  {
+    "id": 28,
+    "name": "Cerulean Blue",
+    "size": "10ml",
+    "material": "Metallic pan with watercolor paint",
+    "description": "A premium watercolor pan filled with Cerulean Blue paint. This paint is celebrated for its rich, vibrant blue hue, offering outstanding translucency and smooth application. Ideal for artists and enthusiasts seeking quality and reliability.",
+    "brand": "Aquarelle Masters",
+    "price": 129,
+    "image": "json-images/cerulean-blue.png",
+    "alt": "Cerulean Blue"
   },
   {
     "id": 29,
-    "name": "Granulating Watercolor - Raw Sienna",
+    "name": "Raw Sienna",
     "size": "20ml",
     "material": "Watercolor",
     "description": "Granulating raw sienna watercolor for textured and granulated effects.",
     "brand": "Textura Colors",
-    "price": 139
-  },
-  {
-    "id": 30,
-    "name": "Metallic Watercolor - Gold Glitter",
-    "size": "8ml",
-    "material": "Watercolor",
-    "description": "Metallic gold glitter watercolor paint for shimmering highlights.",
-    "brand": "Metallic Radiance",
-    "price": 179
+    "price": 139,
+    "image": "json-images/raw-sienna.png",
+    "alt": "Raw Sienna"
   }
 ]

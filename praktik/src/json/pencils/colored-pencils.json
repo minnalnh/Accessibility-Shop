@@ -6,7 +6,9 @@
     "material": "Wax-Based",
     "description": "High-quality professional colored pencil set with a wide range of vibrant colors.",
     "brand": "Artisan Colors",
-    "price": 249
+    "price": 249,
+    "image": "json-images/professional-colored-pencil-set.png",
+    "alt": "Professional Colored Pencil Set"
   },
   {
     "id": 52,
@@ -15,7 +17,9 @@
     "material": "Water-Soluble",
     "description": "Set of watercolor pencils that can be used dry or blended with water for watercolor effects.",
     "brand": "Masterpiece Colors",
-    "price": 189
+    "price": 189,
+    "image": "json-images/watercolor-pencil-set.png",
+    "alt": "Watercolor Pencil Set"
   },
   {
     "id": 53,
@@ -24,7 +28,9 @@
     "material": "Wax-Based",
     "description": "Soft core colored pencil for smooth and blendable coloring.",
     "brand": "SmoothBlend Colors",
-    "price": 149
+    "price": 149,
+    "image": "json-images/soft-core-colored-pencil.png",
+    "alt": "Soft Core Colored Pencil"
   },
   {
     "id": 54,
@@ -33,15 +39,8 @@
     "material": "Wax-Based",
     "description": "Set of pastel-colored pencils for delicate and subtle coloring.",
     "brand": "Pastel Hues",
-    "price": 299
-  },
-  {
-    "id": 55,
-    "name": "Metallic Colored Pencil",
-    "size": "Assorted",
-    "material": "Wax-Based",
-    "description": "Colored pencil set with metallic finishes for adding shimmer to artworks.",
-    "brand": "Metallic Elegance",
-    "price": 229
+    "price": 299,
+    "image": "json-images/pastel-colored-pencil-set.png",
+    "alt": "Pastel Colored Pencil Set"
   }
 ]

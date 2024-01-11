@@ -1,47 +1,46 @@
 [
   {
     "id": 21,
-    "name": "Professional Oil Paint - Ivory Black",
+    "name": "Ivory Black",
     "size": "37ml",
     "material": "Oil",
     "description": "High-quality ivory black oil paint for professional artists.",
     "brand": "Masterpiece Oils",
-    "price": 169
+    "price": 169,
+    "image": "json-images/ivory-black.png",
+    "alt": "Ivory Black"
   },
   {
     "id": 22,
-    "name": "Classic Oil Color - Cadmium Yellow",
+    "name": "Cadmium Yellow",
     "size": "45ml",
     "material": "Oil",
     "description": "Vibrant cadmium yellow with a classic oil consistency.",
     "brand": "Heritage Colors",
-    "price": 199
+    "price": 199,
+    "image": "json-images/cadmium-yellow.png",
+    "alt": "Cadmium Yellow"
   },
   {
     "id": 23,
-    "name": "Impasto Oil Paint - Alizarin Crimson",
+    "name": "Alizarin Crimson",
     "size": "60ml",
     "material": "Oil",
     "description": "Rich alizarin crimson with a thick impasto texture for expressive strokes.",
     "brand": "Palette Knives Studios",
-    "price": 249
+    "price": 249,
+    "image": "json-images/alizarin-crimson.png",
+    "alt": "Alizarin Crimson"
   },
   {
     "id": 24,
-    "name": "Fast-Drying Oil Paint - Raw Umber",
+    "name": "Raw Umber",
     "size": "40ml",
     "material": "Oil",
     "description": "Quick-drying raw umber oil paint for efficient painting sessions.",
     "brand": "Rapid Dry Colors",
-    "price": 189
-  },
-  {
-    "id": 25,
-    "name": "Metallic Oil Paint - Silver Shimmer",
-    "size": "50ml",
-    "material": "Oil",
-    "description": "Metallic silver shimmer oil paint for a luminous and reflective finish.",
-    "brand": "Metallic Elegance",
-    "price": 219
+    "price": 189,
+    "image": "json-images/raw-umber.png",
+    "alt": "Raw Umber"
   }
 ]

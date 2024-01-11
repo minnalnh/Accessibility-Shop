@@ -6,7 +6,9 @@
     "material": "Drawing Paper",
     "description": "High-quality sketchbook with heavyweight paper suitable for various dry media.",
     "brand": "Artisan Sketchbooks",
-    "price": 129
+    "price": 129,
+    "image": "json-images/premium-sketchbook.png",
+    "alt": "Premium Sketchbook"
   },
   {
     "id": 37,
@@ -15,7 +17,9 @@
     "material": "Drawing Paper",
     "description": "Pad of smooth drawing paper ideal for detailed work and precise lines.",
     "brand": "Masterpiece Papers",
-    "price": 149
+    "price": 149,
+    "image": "json-images/smooth-drawing-paper-pad.png",
+    "alt": "Smooth Drawing Paper Pad"
   },
   {
     "id": 38,
@@ -24,7 +28,9 @@
     "material": "Drawing Paper",
     "description": "Set of toned drawing papers for creating unique value studies.",
     "brand": "ToneMaster Papers",
-    "price": 169
+    "price": 169,
+    "image": "json-images/toned-drawing-paper-set.png",
+    "alt": "Smooth Drawing Paper Set"
   },
   {
     "id": 39,
@@ -33,15 +39,8 @@
     "material": "Newsprint",
     "description": "Large sketch pad with newsprint paper for quick sketches and practice.",
     "brand": "QuickSketch Pads",
-    "price": 99
-  },
-  {
-    "id": 40,
-    "name": "Charcoal Drawing Paper Roll",
-    "size": "24 inches x 10 yards",
-    "material": "Drawing Paper",
-    "description": "Charcoal drawing paper roll for creating expressive charcoal artworks.",
-    "brand": "Charcoal Creations",
-    "price": 199
+    "price": 99,
+    "image": "json-images/newsprint-sketch-pad.png",
+    "alt": "Newsprint Sketch Pad"
   }
 ]

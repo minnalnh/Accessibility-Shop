@@ -7,8 +7,8 @@
     "description": "High-quality titanium white acrylic paint for artists.",
     "brand": "Artisan Colors",
     "price": 99,
-    "image": "images/acrylic-paint.jpg",
-    "alt": "F"
+    "image": "json-images/titanium-white.png",
+    "alt": "Titanium White"
   },
   {
     "id": 17,
@@ -17,7 +17,9 @@
     "material": "Acrylic",
     "description": "Rich cadmium red with a heavy body for textured effects.",
     "brand": "Masterpiece Acrylics",
-    "price": 129
+    "price": 129,
+    "image": "json-images/cadmium-red.png",
+    "alt": "Cadmium Red"
   },
   {
     "id": 18,
@@ -26,7 +28,9 @@
     "material": "Acrylic",
     "description": "Smooth-flowing ultramarine blue for fluid painting techniques.",
     "brand": "FlowMaster Colors",
-    "price": 89
+    "price": 89,
+    "image": "json-images/ultramarine-blue.png",
+    "alt": "Ultramarine Blue"
   },
   {
     "id": 19,
@@ -35,15 +39,8 @@
     "material": "Acrylic",
     "description": "Matte finish burnt sienna for a subdued and earthy appearance.",
     "brand": "Creative Matte Hues",
-    "price": 109
-  },
-  {
-    "id": 20,
-    "name": "Luminous Green",
-    "size": "30ml",
-    "material": "Acrylic",
-    "description": "Glow-in-the-dark acrylic paint for unique artistic effects.",
-    "brand": "Innovative Luminosity",
-    "price": 149
+    "price": 109,
+    "image": "json-images/burnt-sienna.png",
+    "alt": "Burnt Sienna"
   }
 ]

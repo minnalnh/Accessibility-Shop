@@ -6,7 +6,9 @@
     "material": "Vine Charcoal",
     "description": "High-quality professional charcoal pencil set with assorted sizes for versatile sketching.",
     "brand": "Artisan Charcoals",
-    "price": 159
+    "price": 159,
+    "image": "json-images/professional-charcoal-pencil-set.png",
+    "alt": "Professional Charcoal Pencil Set"
   },
   {
     "id": 47,
@@ -15,7 +17,9 @@
     "material": "Compressed Charcoal",
     "description": "Soft compressed charcoal pencil for smooth shading and expressive strokes.",
     "brand": "Masterpiece Charcoals",
-    "price": 89
+    "price": 89,
+    "image": "json-images/soft-charcoal-pencil.png",
+    "alt": "Soft Charcoal Pencil"
   },
   {
     "id": 48,
@@ -24,7 +28,9 @@
     "material": "Willow Charcoal",
     "description": "Hard willow charcoal pencil for fine lines and detailed charcoal work.",
     "brand": "Precision Charcoal Tools",
-    "price": 109
+    "price": 109,
+    "image": "json-images/hard-charcoal-pencil.png",
+    "alt": "Hard Charcoal Pencil"
   },
   {
     "id": 49,
@@ -33,15 +39,8 @@
     "material": "Compressed Charcoal",
     "description": "Extra-soft compressed charcoal pencil for bold and expressive charcoal drawings.",
     "brand": "Expressive Charcoals",
-    "price": 129
-  },
-  {
-    "id": 50,
-    "name": "White Charcoal Pencil",
-    "size": "Medium",
-    "material": "White Charcoal",
-    "description": "White charcoal pencil for highlights and adding contrast to charcoal sketches.",
-    "brand": "Creative Contrast Charcoals",
-    "price": 69
+    "price": 129,
+    "image": "json-images/extra-soft-charcoal-pencil.png",
+    "alt": "Extra-Soft Charcoal Pencil"
   }
 ]

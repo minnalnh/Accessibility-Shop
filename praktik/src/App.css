@@ -121,7 +121,6 @@ img {
 }
 
 .menu-btn:active {
-  border-color: #2F261D;
   text-decoration: underline;
 }
 
@@ -317,6 +316,16 @@ h1, h2, h4, p, a {
   margin-left: 0.5em;
   font-family: 'Yuji Syuku', sans-serif;
   font-size: 2rem;
+}
+
+.footer h3 {
+  font-family: 'Yuji Syuku', sans-serif;
+  font-size: 1.7rem;
+}
+
+.footer a {
+  color: #2F261D;
+  font-size: 1.1rem;
 }
 
 .page-title {
@@ -690,17 +699,24 @@ body.img-size img {
   font-size: 1.2rem;
 }
 
-.dropdown-item {
-  background-color: black;
+.dropdown-content {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 .dropdown-item .active {
+  font-weight: bold;
   border-style: solid;
 }
 
 .dropdown-content {
   color: #2F261D;
   text-decoration: none;
+}
+
+.dropdown-item span {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .dropdown-content:hover {

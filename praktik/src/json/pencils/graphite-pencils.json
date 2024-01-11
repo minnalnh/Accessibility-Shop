@@ -6,7 +6,9 @@
     "material": "Graphite",
     "description": "High-quality graphite pencil set with assorted hardness levels for drawing and shading.",
     "brand": "Artisan Pencils",
-    "price": 149
+    "price": 149,
+    "image": "json-images/premium-graphite-pencil-set.png",
+    "alt": "Premium Graphite Pencil Set"
   },
   {
     "id": 57,
@@ -15,7 +17,9 @@
     "material": "Graphite",
     "description": "HB graphite pencil for general-purpose drawing, writing, and shading.",
     "brand": "Masterpiece Pencils",
-    "price": 79
+    "price": 79,
+    "image": "json-images/hb-drawing-pencil.png",
+    "alt": "HB Drawing Pencil"
   },
   {
     "id": 58,
@@ -24,7 +28,9 @@
     "material": "Graphite",
     "description": "4B graphite sketching pencil for expressive and dark lines in sketches.",
     "brand": "SketchPro Tools",
-    "price": 99
+    "price": 99,
+    "image": "json-images/4b-sketching-pencil.png",
+    "alt": "4B Sketching Pencil"
   },
   {
     "id": 59,
@@ -33,15 +39,8 @@
     "material": "Graphite",
     "description": "2H graphite technical pencil for precise and technical drawing.",
     "brand": "Precision Drawing Supplies",
-    "price": 119
-  },
-  {
-    "id": 60,
-    "name": "6B Art Pencil",
-    "size": "Soft",
-    "material": "Graphite",
-    "description": "6B graphite art pencil for soft and bold strokes in artistic drawings.",
-    "brand": "Creative Artistry",
-    "price": 89
+    "price": 119,
+    "image": "json-images/2h-technical-pencil.png",
+    "alt": "2H Technical Pencil"
   }
 ]

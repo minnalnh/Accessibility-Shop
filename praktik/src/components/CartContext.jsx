@@ -8,7 +8,7 @@ const CartProvider = ({ children }) => {
     const addToCart = (item) => {
         const isItemInCart = cartItems.some(cartItem => cartItem.id === item.id);
         
-        if (!isItemInCart) {    // om produkten precis lades till för första gången
+        if (!isItemInCart) {    // om produkten lades till för första gången i varukorgen
             setCartItems((prevItems) => [...prevItems, item]);
             setCounters((prevCounters) => ({...prevCounters, [item.id]: (prevCounters[item.id] || 0) + 1}));
 

@@ -6,7 +6,9 @@
     "material": "Canvas Paper",
     "description": "High-quality canvas paper pad for acrylic and oil painting.",
     "brand": "Artisan Canvases",
-    "price": 149
+    "price": 149,
+    "image": "json-images/artist-canvas-pad.png",
+    "alt": "Artist Canvas Pad"
   },
   {
     "id": 32,
@@ -15,7 +17,9 @@
     "material": "Canvas Paper",
     "description": "Set of canvas panels suitable for various painting techniques.",
     "brand": "Masterpiece Canvas Co.",
-    "price": 229
+    "price": 229,
+    "image": "json-images/canvas-panel-set.png",
+    "alt": "Canvas Panel Set"
   },
   {
     "id": 33,
@@ -24,7 +28,9 @@
     "material": "Canvas Paper",
     "description": "Textured canvas paper roll for large-scale artworks and custom sizes.",
     "brand": "Textured Artistry",
-    "price": 299
+    "price": 299,
+    "image": "json-images/textured-canvas-paper-roll.png",
+    "alt": "Textured Canvas Paper Roll"
   },
   {
     "id": 34,
@@ -33,15 +39,8 @@
     "material": "Canvas Paper",
     "description": "Primed canvas sheets for quick sketching and painting.",
     "brand": "QuickDraw Canvases",
-    "price": 179
-  },
-  {
-    "id": 35,
-    "name": "Stretched Canvas Board",
-    "size": "16x20 inches",
-    "material": "Canvas Paper",
-    "description": "Stretched canvas board for ready-to-hang artworks.",
-    "brand": "Gallery Essentials",
-    "price": 269
+    "price": 179,
+    "image": "json-images/primed-canvas-sheets.png",
+    "alt": "Primed Canvas Sheets"
   }
 ]

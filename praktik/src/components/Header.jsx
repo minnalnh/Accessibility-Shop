@@ -116,27 +116,27 @@ const Header = () => {
             <nav className="flex-container">
 
             <DropdownButton id="dropdown-basic-button" title="Brushes">
-                <Dropdown.Item className="dropdown-item"><NavLink to="/fan-brushes" className="dropdown-content">Fan Brushes</NavLink></Dropdown.Item>
-                <Dropdown.Item><NavLink to="/round-brushes" className="dropdown-content">Round Brushes</NavLink></Dropdown.Item>
-                <Dropdown.Item><NavLink to="/flat-brushes" className="dropdown-content">Flat Brushes</NavLink></Dropdown.Item>
+                <Dropdown.Item className="dropdown-item"><NavLink to="/fan-brushes" className="dropdown-content"><span>Fan Brushes</span></NavLink></Dropdown.Item>
+                <Dropdown.Item className="dropdown-item"><NavLink to="/round-brushes" className="dropdown-content"><span>Round Brushes</span></NavLink></Dropdown.Item>
+                <Dropdown.Item className="dropdown-item"><NavLink to="/flat-brushes" className="dropdown-content"><span>Flat Brushes</span></NavLink></Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Paint">
-            <Dropdown.Item><NavLink to="/acrylic-paint" className="dropdown-content">Acrylic Paint</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/oil-paint" className="dropdown-content">Oil Paint</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/watercolor-paint" className="dropdown-content">Watercolor Paint</NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/acrylic-paint" className="dropdown-content"><span>Acrylic Paint</span></NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/oil-paint" className="dropdown-content"><span>Oil Paint</span></NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/watercolor-paint" className="dropdown-content"><span>Watercolor Paint</span></NavLink></Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Paper">
-            <Dropdown.Item><NavLink to="/watercolor-paper" className="dropdown-content">Watercolor Paper</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/drawing-paper" className="dropdown-content">Drawing Paper</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/canvas-paper" className="dropdown-content">Canvas Paper</NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/watercolor-paper" className="dropdown-content"><span>Watercolor Paper</span></NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/drawing-paper" className="dropdown-content"><span>Drawing Paper</span></NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/canvas-paper" className="dropdown-content"><span>Canvas Paper</span></NavLink></Dropdown.Item>
             </DropdownButton>
 
             <DropdownButton id="dropdown-basic-button" title="Pencils">
-            <Dropdown.Item><NavLink to="/graphite-pencils" className="dropdown-content">Graphite Pencils</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/colored-pencils" className="dropdown-content">Colored Pencils</NavLink></Dropdown.Item>
-            <Dropdown.Item><NavLink to="/charcoal-pencils" className="dropdown-content">Charcoal Pencils</NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/graphite-pencils" className="dropdown-content"><span>Graphite Pencils</span></NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/colored-pencils" className="dropdown-content"><span>Colored Pencils</span></NavLink></Dropdown.Item>
+            <Dropdown.Item className="dropdown-item"><NavLink to="/charcoal-pencils" className="dropdown-content"><span>Charcoal Pencils</span></NavLink></Dropdown.Item>
             </DropdownButton>
 
                 <div className="btn-container">
