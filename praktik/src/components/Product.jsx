@@ -29,8 +29,8 @@ const Product = ({ id, name, size, material, description, brand, price, image, a
             </div>
             <section className="product-info-container">
                 <h2 className="product-name">{name}</h2>
-                <span className="product-price">Price: <b>{price} kr</b></span>
-                <span className="product-description">{description}</span>
+                <p className="product-price">Price: <b>{price} kr</b></p>
+                <p className="product-description">{description}</p>
                 <div className="cart-btn-container">
                     <button className="cart-btn" onClick={handleAddToCart}><img src="icons/plus-solid.svg" alt="Plus Mark"></img><span> Add to Cart</span></button>
                 </div>
@@ -39,7 +39,7 @@ const Product = ({ id, name, size, material, description, brand, price, image, a
             {isCartMsgVisible && latestProduct && (
                 <div className="cart-msg-box">
                     <span><b>{counter}x {product.name}</b> added to cart</span>
-                    <button className="msg-close-btn" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img>Close Message</button>
+                    <button className="msg-close-btn" onClick={handleCloseButtonClick}><img src="icons/xmark-solid.svg" alt="X Mark" className="icon close-btn"></img><span>Close Message</span></button>
                 </div>
 
             )}

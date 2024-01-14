@@ -286,7 +286,7 @@ input[type="radio"] {
   display: block;
 }
 
-body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, body.change-font-size h4, body.change-font-size p, body.change-font-size button span, body.change-font-size nav ul li, body.change-font-size a {
+body.change-font-size h1, body.change-font-size h2, body.change-font-size h3, body.change-font-size h4, body.change-font-size p, body.change-font-size button span, body.change-font-size nav ul li, body.change-font-size a, body.change-font-size #dropdown-basic-button {
   font-size: 0.7rem;
 }
 
